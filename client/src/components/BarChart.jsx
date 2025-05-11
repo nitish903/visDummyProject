@@ -2,15 +2,35 @@ import React, { useRef, useEffect, useState } from 'react';
 import * as d3 from 'd3';
 import './styles/BarChart.css'
 
-const BarChart = ({ data, onChangeType }) => {
+const BarChart = ({ onChangeType }) => {
   const svgRef = useRef();
   const [newType, setNewType] = useState('all');
-
-  useEffect(()=>{
-    onChangeType(newType);
-  },[newType])
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/channel-types');
+        const jsonData = await response.json();
+        setData(jsonData);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    onChangeType(newType);
+  }, [newType, onChangeType]);
+
+  useEffect(() => {
+    if (loading) return;
+
     d3.select(svgRef.current).selectAll("*").remove();
 
     let dataArray = Object.entries(data);
@@ -24,9 +44,9 @@ const BarChart = ({ data, onChangeType }) => {
       dataArray = topNine;
     }
 
-    data = {}
+    const processedData = {};
     for (let i = 0; i < dataArray.length; i++) {
-      data[dataArray[i][0]] = dataArray[i][1];
+      processedData[dataArray[i][0]] = dataArray[i][1];
     }
 
     const svg = d3.select(svgRef.current);
@@ -38,12 +58,12 @@ const BarChart = ({ data, onChangeType }) => {
     const chartHeight = height - margin.top - margin.bottom;
 
     const xScale = d3.scaleBand()
-      .domain(Object.keys(data))
+      .domain(Object.keys(processedData))
       .range([0, chartWidth])
       .padding(0.1);
 
     const yScale = d3.scaleLinear()
-      .domain([0, d3.max(Object.values(data))])
+      .domain([0, d3.max(Object.values(processedData))])
       .range([chartHeight, 0]);
 
     const xAxis = d3.axisBottom(xScale);
@@ -88,7 +108,7 @@ const BarChart = ({ data, onChangeType }) => {
       .text('Youtubers per Channel Type');
 
     svg.selectAll('.bar')
-      .data(Object.entries(data))
+      .data(Object.entries(processedData))
       .enter()
       .append('rect')
       .attr('class', 'bar')
@@ -96,18 +116,22 @@ const BarChart = ({ data, onChangeType }) => {
       .attr('y', d => margin.top + yScale(d[1]))
       .attr('width', xScale.bandwidth())
       .attr('height', d => chartHeight - yScale(d[1]))
-      .attr('fill', d =>{
-        if(d[0] == newType) return '#a10802';
+      .attr('fill', d => {
+        if(d[0] === newType) return '#a10802';
         else return '#db6e6a'
       })
       .on('click', (_, i) => { 
         setNewType(i[0]); 
       })
-      .on('mouseover', function(event, d) { 
+      .on('mouseover', function() { 
         d3.select(this).style('cursor', 'pointer'); 
       });
 
-  }, [data, newType]);
+  }, [data, newType, loading]);
+
+  if (loading) {
+    return <div className="loading">Loading...</div>;
+  }
 
   return (
     <div className='bar-chart'>

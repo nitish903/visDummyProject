@@ -1,12 +1,30 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import "./styles/LineGraph.css"
 
-const LineGraph = ({ data }) => {
+const LineGraph = () => {
   const svgRef = useRef();
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!data || data.length === 0) return;
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/linegraph-data');
+        const jsonData = await response.json();
+        setData(jsonData);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (!data || data.length === 0 || loading) return;
 
     const margin = { top: 20, right: 20, bottom: 50, left: 50 }; 
     const width = 550 - margin.left - margin.right;
@@ -33,13 +51,13 @@ const LineGraph = ({ data }) => {
     const line = d3.line()
       .x(d => x(d[0]) + x.bandwidth() / 2)
       .y(d => y(d[1]))
-      .curve(d3.curveMonotoneX); // Use a curvier interpolation
+      .curve(d3.curveMonotoneX);
 
     const area = d3.area()
       .x(d => x(d[0]) + x.bandwidth() / 2)
       .y0(height)
       .y1(d => y(d[1]))
-      .curve(d3.curveMonotoneX); 
+      .curve(d3.curveMonotoneX);
 
     svg.append("linearGradient")
       .attr("id", "area-gradient")
@@ -59,14 +77,16 @@ const LineGraph = ({ data }) => {
       .datum(data)
       .attr("class", "area")
       .attr("d", area)
-      .attr("fill", "url(#area-gradient)"); 
+      .attr("fill", "url(#area-gradient)");
+
     svg.append("path")
       .datum(data)
       .attr("class", "line")
       .attr("d", line)
       .attr("fill", "none")
       .attr("stroke", "#a10802")
-      .attr("stroke-width", 3); 
+      .attr("stroke-width", 3);
+
     svg.append("g")
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(x))
@@ -90,7 +110,6 @@ const LineGraph = ({ data }) => {
       .style("text-anchor", "middle")
       .text("No. of Channels");
 
-    
     svg.append('text')
       .attr('x', width / 2)
       .attr('y', margin.top / 2 - 15)
@@ -99,11 +118,15 @@ const LineGraph = ({ data }) => {
       .style('text-decoration', 'underline')
       .text('Channels created per year');
 
-  }, [data]);
+  }, [data, loading]);
+
+  if (loading) {
+    return <div className="loading">Loading...</div>;
+  }
 
   return (
     <div className='line-graph'>
-    <svg ref={svgRef}></svg>
+      <svg ref={svgRef}></svg>
     </div>
   );
 };

@@ -1,13 +1,31 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import * as d3 from 'd3';
 import "./styles/BiPlot.css"
 
-const BiPlot = ({ xData, yData, clusters, variables, xVars, yVars }) => {
+const BiPlot = () => {
   const svgRef = useRef();
   const colors = ["#D35859", "#FFD700", "#8A2BE2", "#00FFFF", "#FF6347", "#9932CC", "#FFA500"];
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!xData || !yData) return;
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/biplot-data');
+        const jsonData = await response.json();
+        setData(jsonData);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (!data || loading) return;
 
     const margin = { top: 30, right: 20, bottom: 45, left: 50 }; 
     const width = 550 - margin.left - margin.right;
@@ -21,8 +39,8 @@ const BiPlot = ({ xData, yData, clusters, variables, xVars, yVars }) => {
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    const xExtent = d3.extent([...xData, ...xVars]);
-    const yExtent = d3.extent([...yData, ...yVars]);
+    const xExtent = d3.extent([...data.xData, ...data.xVars]);
+    const yExtent = d3.extent([...data.yData, ...data.yVars]);
 
     const xScale = d3.scaleLinear()
       .domain(xExtent)
@@ -40,20 +58,20 @@ const BiPlot = ({ xData, yData, clusters, variables, xVars, yVars }) => {
       .call(d3.axisLeft(yScale));
 
     svg.append('text')
-    .attr('x', width / 2)
-    .attr('y', margin.top / 2 - 25)
-    .attr('text-anchor', 'middle')
-    .style('font-size', '1.2em')
-    .style('text-decoration', 'underline')
-    .text('BiPlot');
+      .attr('x', width / 2)
+      .attr('y', margin.top / 2 - 25)
+      .attr('text-anchor', 'middle')
+      .style('font-size', '1.2em')
+      .style('text-decoration', 'underline')
+      .text('BiPlot');
 
     svg.selectAll("circle")
-      .data(xData.map((d, i) => [d, yData[i]]))
+      .data(data.xData.map((d, i) => [d, data.yData[i]]))
       .enter().append("circle")
       .attr("cx", d => xScale(d[0]))
       .attr("cy", d => yScale(d[1]))
       .attr("r", 2)
-      .style("fill",(d, i) => colors[clusters[i]]);
+      .style("fill", (d, i) => colors[data.clusters[i]]);
 
     svg.append("text")
       .attr("transform", `translate(${width / 2},${height + margin.top + 10})`)
@@ -68,12 +86,12 @@ const BiPlot = ({ xData, yData, clusters, variables, xVars, yVars }) => {
       .style("text-anchor", "middle")
       .text("PC2 values");
 
-    variables.forEach(label => {
+    data.variables.forEach(label => {
       const line = svg.append("line")
         .attr("x1", xScale(0))
         .attr("y1", yScale(0))
-        .attr("x2", xScale(xVars[variables.indexOf(label)]))
-        .attr("y2", yScale(yVars[variables.indexOf(label)]))
+        .attr("x2", xScale(data.xVars[data.variables.indexOf(label)]))
+        .attr("y2", yScale(data.yVars[data.variables.indexOf(label)]))
         .attr("stroke", "#cc4c47")
         .attr("stroke-width", 3)
         .style("opacity", 0);
@@ -94,7 +112,11 @@ const BiPlot = ({ xData, yData, clusters, variables, xVars, yVars }) => {
       });
     });
 
-  }, [xData, yData]);
+  }, [data, loading]);
+
+  if (loading) {
+    return <div className="loading">Loading...</div>;
+  }
 
   return (
     <div className='biPlot'>

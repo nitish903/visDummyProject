@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './styles/DataTab.css'
 
 function formatNumber(number) {
-  if (number==undefined) {
+  if (number === undefined) {
     return;
   }
   if (number >= 1000000000) {
@@ -16,32 +16,54 @@ function formatNumber(number) {
   }
 }
 
-function DataTab({ data, country }) {
+function DataTab({ country }) {
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`http://localhost:5000/api/datatab-stats/${country}`);
+        const jsonData = await response.json();
+        setData(jsonData);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [country]);
+
+  if (loading) {
+    return <div className="loading">Loading...</div>;
+  }
+
   return (
     <div className='dataTab'>
-    <div className='heading'>
-        <h3>YouTube Stats of {country == 'all' ? "World":  (country === "United States" ? "USA" : country)}</h3>
+      <div className='heading'>
+        <h3>YouTube Stats of {country === 'all' ? "World" : (country === "United States" ? "USA" : country)}</h3>
+      </div>
+      <div className='dataStats'>
+        <div className="card">
+          <div className="card-heading">Avg Views</div>
+          <div className="card-number">{data["views"] !== undefined ? formatNumber(data["views"].toFixed(1)) : <p></p>}</div>
+        </div>
+        <div className="card">
+          <div className="card-heading">Avg Earnings</div>
+          <div className="card-number">{data["views"] !== undefined ? formatNumber(data["earnings"].toFixed(1)) : <p></p>}</div>
+        </div>
+        <div className="card">
+          <div className="card-heading">Avg Subscribers</div>
+          <div className="card-number">{data["views"] !== undefined ? formatNumber(data["subscribers"].toFixed(1)) : <p></p>}</div>
+        </div>
+        <div className="card">
+          <div className="card-heading">Avg Uploads</div>
+          <div className="card-number">{data["views"] !== undefined ? formatNumber(data["uploads"].toFixed(1)) : <p></p>}</div>
+        </div>
+      </div>
     </div>
-    <div className='dataStats'>
-        <div className="card">
-            <div className="card-heading">Avg Views</div>
-            <div className="card-number">{data["views"]!=undefined?formatNumber(data["views"].toFixed(1)):<p></p>}</div>
-        </div>
-        <div className="card">
-            <div className="card-heading">Avg Earnings</div>
-            <div className="card-number">{data["views"]!=undefined?formatNumber(data["earnings"].toFixed(1)):<p></p>}</div>
-        </div>
-        <div className="card">
-            <div className="card-heading">Avg Subscribers</div>
-            <div className="card-number">{data["views"]!=undefined?formatNumber(data["subscribers"].toFixed(1)):<p></p>}</div>
-        </div>
-        <div className="card">
-            <div className="card-heading">Avg Uploads</div>
-            <div className="card-number">{data["views"]!=undefined?formatNumber(data["uploads"].toFixed(1)):<p></p>}</div>
-        </div>
-    </div>
-</div>
-
   );
 }
 
