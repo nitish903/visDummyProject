@@ -1,109 +1,191 @@
-// ParallelCoordinatesPlot.js
-import React, { useRef, useEffect } from 'react';
-import * as d3 from 'd3';
+import React, { useRef, useEffect } from "react";
+import * as d3 from "d3";
+import "../App.css";
 
 const ParallelCoordinatesPlot = ({ data, onBrush }) => {
-const svgRef = useRef();
-useEffect(() => {
-if (!data.length) return;
+  const svgRef = useRef();
 
-const margin = { top: 30, right: 30, bottom: 30, left: 60 };
-const width = 1000 - margin.left - margin.right;
-const height = 300 - margin.top - margin.bottom;
+  useEffect(() => {
+    if (!data.length) return;
 
-const svg = d3.select(svgRef.current)
-.attr('width', width + margin.left + margin.right)
-.attr('height', height + margin.top + margin.bottom)
-.append('g')
-.attr('transform', `translate(${margin.left},${margin.top})`);
-const dimensions = ['profession', 'salary', 'debtRatio', 'financialStress', 'depression'];
+    // SVG dimensions
+    const margin = { top: 30, right: 30, bottom: 30, left: 60 };
+    const width = 1000 - margin.left - margin.right;
+    const height = 300 - margin.top - margin.bottom;
 
-const y = {};
-for (const dim of dimensions) {
-y[dim] = d3.scaleLinear()
-.domain(d3.extent(data, d => typeof d[dim] === 'string' ? d[dim].length : d[dim]))
-.range([height, 0]);
-}
+    // Clear previous SVG content
+    d3.select(svgRef.current).selectAll("*").remove();
 
+    // Create main group
+    const svg = d3
+      .select(svgRef.current)
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
 
-const x = d3.scalePoint()
-.range([0, width])
-.domain(dimensions)
-.padding(0.5);
+    // Dimensions to plot
+    const dimensions = [
+      "profession",
+      "salary",
+      "debtRatio",
+      "financialStress",
+      "depression",
+    ];
 
-// Draw lines
-svg.selectAll('path')
-.data(data)
-.enter()
-.append('path')
-.attr('d', d => {
-return d3.line()(dimensions.map(p => [x(p), y[p](typeof d[p] === 'string' ? d[p].length : d[p])]));
-})
-.style('fill', 'none')
-.style('stroke', '#69b3a2')
-.style('opacity', 0.5);
+    // Y scales
+    const y = {};
+    for (const dim of dimensions) {
+      y[dim] = d3
+        .scaleLinear()
+        .domain(
+          d3.extent(data, (d) =>
+            typeof d[dim] === "string" ? d[dim].length : d[dim]
+          )
+        )
+        .range([height, 0]);
+    }
 
-// Draw axes
-dimensions.forEach(dim => {
-svg.append('g')
-.attr('transform', `translate(${x(dim)},0)`)
-.attr('class', 'brush')
-.call(d3.axisLeft(y[dim]));
-});
+    // X scale
+    const x = d3.scalePoint().range([0, width]).domain(dimensions).padding(0.5);
 
-// Add brushing
-const brush = d3.brushY()
-.on('start brush end', brushed);
+    // Path generator
+    const lineGen = d3.line();
 
-dimensions.forEach(dim => {
-svg.append('g')
-.attr('transform', `translate(${x(dim)},0)`)
-.attr('class', 'brush')
-.call(brush);
-});
+    // Draw lines (one per data row)
+    const paths = svg
+      .selectAll(".pcp-line")
+      .data(data, (d, i) => i)
+      .join("path")
+      .attr("class", "pcp-line")
+      .attr("d", (d) =>
+        lineGen(
+          dimensions.map((p) => [
+            x(p),
+            y[p](typeof d[p] === "string" ? d[p].length : d[p]),
+          ])
+        )
+      )
+      .style("fill", "none")
+      .style("stroke", "#69b3a2")
+      .style("stroke-width", 1)
+      .style("opacity", 0.5)
+      .on("mouseover", function (event, d) {
+        if (!d3.select(this).classed("selected")) {
+          d3.select(this)
+            .style("stroke", "orange")
+            .style("stroke-width", 3)
+            .style("opacity", 1);
+        }
+      })
+      .on("mouseout", function (event, d) {
+        if (!d3.select(this).classed("selected")) {
+          d3.select(this)
+            .style("stroke", "#69b3a2")
+            .style("stroke-width", 1)
+            .style("opacity", 0.5);
+        }
+      })
+      .on("click", function (event, d) {
+        // Deselect all
+        svg.selectAll(".pcp-line")
+          .classed("selected", false)
+          .style("stroke", "#69b3a2")
+          .style("stroke-width", 1)
+          .style("opacity", 0.5);
 
-function brushed(event) {
-const actives = [];
+        // Select this
+        d3.select(this)
+          .classed("selected", true)
+          .style("stroke", "red")
+          .style("stroke-width", 3)
+          .style("opacity", 1);
 
-// Select all brush groups
-svg.selectAll('.brush')
-.each(function(dim, i) {
-const brushSelection = d3.brushSelection(this); // [y0, y1]
-if (brushSelection) {
-actives.push({
-dimension: dimensions[i],
-extent: brushSelection
-});
-}
-});
+        // Notify parent
+        if (onBrush) onBrush([d]);
+      });
 
-// Filter the data
-const selected = data.filter(d => {
-return actives.every(active => {
-const dim = active.dimension;
-const scale = y[dim];
-let val = d[dim];
+    // Draw axes
+    svg
+      .selectAll(".axis")
+      .data(dimensions)
+      .join("g")
+      .attr("class", "axis")
+      .attr("transform", (d) => `translate(${x(d)},0)`)
+      .each(function (dim) {
+        d3.select(this).call(d3.axisLeft(y[dim]));
+      });
 
-// If the value is a string, use its length (or better: encode strings separately)
-if (typeof val === 'string') val = val.length;
+    // Brushing
+    const brush = d3.brushY()
+      .extent([
+        [-10, 0],
+        [10, height]
+      ])
+      .on("start brush end", brushed);
 
-const pos = scale(val);
-return pos >= active.extent[0] && pos <= active.extent[1];
-});
-});
+    // Add one brush per axis
+    svg
+      .selectAll(".brush")
+      .data(dimensions)
+      .join("g")
+      .attr("class", "brush")
+      .attr("transform", (d) => `translate(${x(d)},0)`)
+      .each(function (dim) {
+        d3.select(this).call(brush);
+      });
 
-// Send filtered data to parent
-if (onBrush) {
-onBrush(selected);
-}
-}
+    function brushed(event) {
+      // Deselect all lines
+      svg.selectAll(".pcp-line")
+        .classed("selected", false)
+        .style("stroke", "#69b3a2")
+        .style("stroke-width", 1)
+        .style("opacity", 0.5);
 
-}, [data]);
+      // Find active brushes
+      const actives = [];
+      svg.selectAll(".brush").each(function (dim, i) {
+        const brushSelection = d3.brushSelection(this);
+        if (brushSelection) {
+          actives.push({
+            dimension: dimensions[i],
+            extent: brushSelection,
+          });
+        }
+      });
 
-return <svg
-ref={svgRef}
-/>
-;
+      // Filter data
+      const selected = data.filter((d) =>
+        actives.every((active) => {
+          const dim = active.dimension;
+          const scale = y[dim];
+          let val = d[dim];
+          if (typeof val === "string") val = val.length;
+          const pos = scale(val);
+          return pos >= active.extent[0] && pos <= active.extent[1];
+        })
+      );
+
+      // Highlight selected lines
+      svg.selectAll(".pcp-line")
+        .filter((d) => selected.includes(d))
+        .classed("selected", true)
+        .style("stroke", "red")
+        .style("stroke-width", 3)
+        .style("opacity", 1);
+
+      // Notify parent
+      if (onBrush) onBrush(selected);
+    }
+
+    // Cleanup function
+    return () => {
+      d3.select(svgRef.current).selectAll("*").remove();
+    };
+  }, [data, onBrush]);
+
+  return <svg ref={svgRef} />;
 };
 
 export default ParallelCoordinatesPlot;

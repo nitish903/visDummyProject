@@ -98,3 +98,6 @@ rect {
   font-weight: bold;
   opacity: 0.7;
 }
+path {
+  transition: stroke 0.3s ease, opacity 0.3s ease;
+}
