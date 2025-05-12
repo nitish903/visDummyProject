@@ -63,7 +63,13 @@ const LinePlot = ({
       .x(d => xScale(d.age))
       .y(d => yScale(d[yAxisProp]))
       .curve(d3.curveMonotoneX);
-
+  g.append("text")
+    .attr("x", width / 2)
+    .attr("y", -10) // Just above the plot area
+    .attr("text-anchor", "middle")
+    .style("font-size", "28px")
+    .style("font-weight", "bold")
+    .text("Line Plot");
     // Draw line
     g.append("path")
       .datum(groupedData)

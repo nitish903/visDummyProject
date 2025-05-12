@@ -15,7 +15,7 @@ const App = () => {
   const [filteredData, setFilteredData] = useState([]);
   const [selectedInfo, setSelectedInfo] = useState(null);
   const [lineplotData, setLinePlotData] = useState([]);
-  const [yaxisValue, setYaxisValue] = useState(null);
+  const [yaxisValue, setYaxisValue] = useState("financialStress");
 
   useEffect(() => {
     const processData = async () => {
@@ -52,9 +52,10 @@ const App = () => {
           return m ? { ...f, ...m } : null;
         })
         .filter((d) => d && d.financialStress && d.depression);
-      setLinePlotData(merged);
-      const debtBins = [20000, 25000, 30000, 35000, 40000, 45000, 50000];
 
+      setLinePlotData(merged);
+
+      const debtBins = [20000, 25000, 30000, 35000, 40000, 45000, 50000];
       const heatmap = d3
         .rollups(
           merged,
@@ -63,14 +64,11 @@ const App = () => {
           (d) => debtBins.find((bin) => d.debtAmount < bin) || 50000
         )
         .flatMap(([profession, bins]) =>
-          bins.map(([bin, stress]) => {
-            const lower = bin - 5000;
-            return {
-              profession,
-              debtLevel: `$${lower / 1000}k-$${bin / 1000}k`,
-              stress: stress || 0,
-            };
-          })
+          bins.map(([bin, stress]) => ({
+            profession,
+            debtLevel: `$${(bin - 5000) / 1000}k-$${bin / 1000}k`,
+            stress: stress || 0,
+          }))
         );
 
       const depressionScale = { Low: 1, Medium: 2, High: 3 };
@@ -95,8 +93,28 @@ const App = () => {
   }, [pcpData]);
 
   const handleCellClick = (profession, debtLevel) => {
-    const lower = +debtLevel.split("-")[0].replace(/[$k]/g, "") * 1000;
-    const upper = +debtLevel.split("-")[1].replace(/[$k]/g, "") * 1000;
+    const heatmapEntry = heatmapData.find(
+      (d) => d.profession === profession && d.debtLevel === debtLevel
+    );
+    const stressValue = heatmapEntry?.stress || 0;
+
+    // Get all stress values for dynamic calculation
+    const allStressValues = heatmapData
+      .map((d) => d.stress)
+      .filter((v) => !isNaN(v));
+    const sortedStress = [...allStressValues].sort((a, b) => a - b);
+
+    // Calculate quartiles dynamically
+    const q1 = d3.quantile(sortedStress, 0.25); // 25th percentile
+    const q3 = d3.quantile(sortedStress, 0.75); // 75th percentile
+
+    let stressLevel = "Moderate";
+    if (stressValue > q3) stressLevel = "High";
+    else if (stressValue < q1) stressLevel = "Low";
+
+    const lower = +debtLevel.split("-")[0].replace(/[^\d]/g, "") * 1000;
+    const upper = +debtLevel.split("-")[1].replace(/[^\d]/g, "") * 1000;
+
     const matches = financialData.filter(
       (d) =>
         d.profession === profession &&
@@ -119,133 +137,162 @@ const App = () => {
         maritalStatus: matches[0].marital_status,
         hasKids: matches[0].has_kids,
         costOfLiving: matches[0].cost_of_living,
-        stressLevel: "Moderate", // Placeholder - could compute based on logic
+        stressLevel,
+        stressValue: stressValue.toFixed(2),
       });
     } else {
-      setSelectedInfo({ profession, debtLevel });
+      setSelectedInfo({
+        profession,
+        debtLevel,
+        stressLevel,
+        stressValue: stressValue.toFixed(2),
+      });
     }
   };
 
   if (loading) return <div className="loading">Processing data...</div>;
 
   return (
-    <div className="App">
-      <h1>Debt, Profession & Mental Health Analytics</h1>
-      <div className="dashboard5">
-        <div className="dashboard-row">
-          <div className="heatmap-component chart-container">
-            <h3>Financial Stress by Profession & Debt</h3>
-            <Heatmap data={heatmapData} onCellClick={handleCellClick} />
-          </div>
-          <div className="heatmap-component chart-container">
-            <h3>Information Tab</h3>
+<div className="App">
+  <h1>Debt, Profession & Mental Health Analytics</h1>
+  <div className="dashboard5">
+    <div className="dashboard-row">
+      {/* Heatmap */}
+      <div className="heatmap-component chart-container">
+        <div className="chart-inner">
+          <Heatmap data={heatmapData} onCellClick={handleCellClick} />
+        </div>
+      </div>
+      {/* Info Tab */}
+      <div className="chart-container" style={{flex: 0.8}}>
+        <h4>Information Tab</h4>
             {selectedInfo ? (
               <div className="info-tab">
                 <p>
-                  <strong>Profession:</strong>{" "}
-                  <strong>{selectedInfo.profession}</strong>
+                  <strong>Profession:</strong> {selectedInfo.profession}
                 </p>
                 <p>
-                  <strong>Debt Level:</strong>{" "}
-                  <strong>{selectedInfo.debtLevel}</strong>
+                  <strong>Debt Level:</strong> {selectedInfo.debtLevel}
                 </p>
                 {selectedInfo.matches && (
                   <>
                     <p>
-                      <strong>Matching Individuals:</strong>{" "}
-                      <strong>{selectedInfo.matches}</strong>
+                      <strong>Individuals:</strong> {selectedInfo.matches}
                     </p>
                     <p>
                       <button
-                        id="financialStress"
-                        onClick={(e) => setYaxisValue(e.target.id)}
+                        className="info-button"
+                        onClick={() => setYaxisValue("financialStress")}
                       >
-                        Financial Stress Level:
-                      </button>{" "}
-                      <strong>{selectedInfo.stressLevel}</strong>
+                        Stress Level:
+                      </button>
+                      <span
+                        className={`stress-${selectedInfo.stressLevel.toLowerCase()}`}
+                      >
+                        {selectedInfo.stressLevel} ({selectedInfo.stressValue})
+                      </span>
                     </p>
+
                     <p>
                       <button
-                        id="salary"
-                        onClick={(e) => setYaxisValue(e.target.id)}
+                        className="info-button"
+                        onClick={() => setYaxisValue("salary")}
                       >
-                        Average Salary:
-                      </button>{" "}
+                        Avg Salary:
+                      </button>
                       ${selectedInfo.avgSalary}
                     </p>
+
                     <p>
                       <button
-                        id="debtAmount"
-                        onClick={(e) => setYaxisValue(e.target.id)}
+                        className="info-button"
+                        onClick={() => setYaxisValue("monthlyDebt")}
                       >
-                        Avg. Monthly Debt Payment:
-                      </button>{" "}
+                        Avg Debt:
+                      </button>
                       ${selectedInfo.avgDebt}
                     </p>
+
                     <p>
                       <button
-                        id="savings"
-                        onClick={(e) => setYaxisValue(e.target.id)}
+                        className="info-button"
+                        onClick={() => setYaxisValue("savings")}
                       >
-                        Avg. Savings:
-                      </button>{" "}
+                        Avg Savings:
+                      </button>
                       ${selectedInfo.avgSavings}
                     </p>
+
                     <p>
                       <button
-                        id="costOfLiving"
-                        onClick={(e) => setYaxisValue(e.target.id)}
+                        className="info-button"
+                        onClick={() => setYaxisValue("costOfLiving")}
                       >
-                        Avg. Cost of Living:
-                      </button>{" "}
+                        Cost of Living:
+                      </button>
                       {selectedInfo.costOfLiving}
                     </p>
+
                     <p>
                       <button
-                        id="maritalStatus"
-                        onClick={(e) => setYaxisValue(e.target.id)}
+                        className="info-button"
+                        onClick={() => setYaxisValue("maritalStatus")}
                       >
                         Marital Status:
-                      </button>{" "}
+                      </button>
                       {selectedInfo.maritalStatus}
                     </p>
+
                     <p>
                       <button
-                        id="hasKids"
-                        onClick={(e) => setYaxisValue(e.target.id)}
+                        className="info-button"
+                        onClick={() => setYaxisValue("hasKids")}
                       >
                         Has Kids:
-                      </button>{" "}
+                      </button>
                       {selectedInfo.hasKids}
                     </p>
                   </>
                 )}
               </div>
             ) : (
-              <p>Click a block to see details.</p>
+              <p>Click a heatmap block to see details</p>
             )}
           </div>
-          <div className="pcp-component chart-container">
-            <h3>Multivariate Relationships</h3>
-            <ParallelCoordinatesPlot data={pcpData} onBrush={setFilteredData} />
-          </div>
-        </div>
-        <div className="dashboard-row">
-          <div className="chart-container small-plot-3">
-            <h3>Line Plot</h3>
-            <LinePlot data={lineplotData} yAxisProp={yaxisValue} />
-          </div>
-          <div className="chart-container small-plot-2">
-            <h3>Bee Swarm Plot</h3>
-            <BeeSwarmPlot data={filteredData} />
-          </div>
-          <div className="chart-container small-plot-1">
-            <h3>Radar Chart</h3>
-            <Plot3RadarContainer financialData={financialData} />
-          </div>
+          {/* Parallel Coordinates */}
+      <div className="pcp-component chart-container">
+        <h3>Multivariate Relationships</h3>
+        <div className="chart-inner">
+          <ParallelCoordinatesPlot data={pcpData} onBrush={setFilteredData} />
         </div>
       </div>
     </div>
+
+    <div className="dashboard-row">
+      <div className="chart-container small-plot-3">
+        <div className="chart-inner">
+          <LinePlot data={lineplotData} yAxisProp={yaxisValue} />
+        </div>
+      </div>
+
+      {/* Bee Swarm */}
+      <div className="chart-container small-plot-2">
+        <h3>Bee Swarm Plot</h3>
+        <div className="chart-inner">
+          <BeeSwarmPlot data={filteredData} />
+        </div>
+      </div>
+
+      {/* Radar Chart */}
+      <div className="chart-container small-plot-1">
+        <h3>Radar Chart</h3>
+        <div className="chart-inner">
+          <Plot3RadarContainer financialData={financialData} />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   );
 };
 

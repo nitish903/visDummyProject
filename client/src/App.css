@@ -46,13 +46,37 @@ h1 {
   margin: 20px;
   border-radius: 30px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
-  min-height: 300px;
+  min-height: 400px;
   min-width: 300px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.chart-inner {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+/* Ensure D3 charts fill their containers */
+.chart-inner > svg,
+.chart-inner > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.stress-low { color: #4CAF50; }
+.stress-moderate { color: #FFC107; }
+.stress-high { color: #F44336; }
+.info-tab button {
+  background: none;
+  border: none;
+  color: #2196F3;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
 }
 
 /* Second row: three small plots */
@@ -113,4 +137,23 @@ rect {
 }
 path {
   transition: stroke 0.3s ease, opacity 0.3s ease;
+}
+/* buttons */
+.info-button {
+  background-color: #f0f4f8;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-right: 8px;
+}
+
+.info-button:hover {
+  background-color: #dceeff;
+  border-color: #66b2ff;
+  color: #0056b3;
 }

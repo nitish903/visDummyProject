@@ -6,7 +6,7 @@ const RadarChart = ({ data, variables, width = 300, height = 300 }) => {
 
   useEffect(() => {
     if (!data || !variables.length) return;
-
+    console.log("DATA IS ",data)
     d3.select(svgRef.current).selectAll("*").remove();
 
     const radius = Math.min(width, height) / 2 - 40;
