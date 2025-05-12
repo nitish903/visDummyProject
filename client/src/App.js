@@ -139,18 +139,45 @@ const App = () => {
             <h3>Information Tab</h3>
             {selectedInfo ? (
               <div className="info-tab">
-                <p><strong>Profession:</strong> <strong>{selectedInfo.profession}</strong></p>
-                <p><strong>Debt Level:</strong> <strong>{selectedInfo.debtLevel}</strong></p>
+                <p>
+                  <strong>Profession:</strong>{" "}
+                  <strong>{selectedInfo.profession}</strong>
+                </p>
+                <p>
+                  <strong>Debt Level:</strong>{" "}
+                  <strong>{selectedInfo.debtLevel}</strong>
+                </p>
                 {selectedInfo.matches && (
                   <>
-                    <p><strong> Financial Stress Level:</strong> <strong>{selectedInfo.stressLevel}</strong></p>
-                    <p><strong>Matching Individuals:</strong> {selectedInfo.matches}</p>
-                    <p><strong>Average Salary:</strong> ${selectedInfo.avgSalary}</p>
-                    <p><strong>Avg. Monthly Debt Payment:</strong> ${selectedInfo.avgDebt}</p>
-                    <p><strong>Avg. Savings:</strong> ${selectedInfo.avgSavings}</p>
-                    <p><strong>Avg. Cost of Living:</strong> {selectedInfo.costOfLiving}</p>
-                    <p><strong>Marital Status:</strong> {selectedInfo.maritalStatus}</p>
-                    <p><strong>Has Kids:</strong> {selectedInfo.hasKids}</p>
+                    <p>
+                      <strong>Financial Stress Level:</strong>{" "}
+                      <strong>{selectedInfo.stressLevel}</strong>
+                    </p>
+                    <p>
+                      <strong>Matching Individuals:</strong>{" "}
+                      {selectedInfo.matches}
+                    </p>
+                    <p>
+                      <strong>Average Salary:</strong> ${selectedInfo.avgSalary}
+                    </p>
+                    <p>
+                      <strong>Avg. Monthly Debt Payment:</strong> $
+                      {selectedInfo.avgDebt}
+                    </p>
+                    <p>
+                      <strong>Avg. Savings:</strong> ${selectedInfo.avgSavings}
+                    </p>
+                    <p>
+                      <strong>Avg. Cost of Living:</strong>{" "}
+                      {selectedInfo.costOfLiving}
+                    </p>
+                    <p>
+                      <strong>Marital Status:</strong>{" "}
+                      {selectedInfo.maritalStatus}
+                    </p>
+                    <p>
+                      <strong>Has Kids:</strong> {selectedInfo.hasKids}
+                    </p>
                   </>
                 )}
               </div>
@@ -164,17 +191,17 @@ const App = () => {
           </div>
         </div>
         <div className="dashboard-row">
-          <div className="chart-container small-plot-1">
-            <h3>Radar Chart</h3>
-            <Plot3RadarContainer financialData={financialData} />
+          <div className="chart-container small-plot-3">
+            <h3>New chart here</h3>
+            <div>Loading...</div>
           </div>
           <div className="chart-container small-plot-2">
             <h3>Bee Swarm Plot</h3>
             <BeeSwarmPlot data={filteredData} />
           </div>
-          <div className="chart-container small-plot-3">
-            <h3>Plot 5 Title</h3>
-            <div className="placeholder-content">Coming soon...</div>
+          <div className="chart-container small-plot-1">
+            <h3>Radar Chart</h3>
+            <Plot3RadarContainer financialData={financialData} />
           </div>
         </div>
       </div>

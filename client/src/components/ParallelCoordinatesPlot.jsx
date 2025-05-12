@@ -88,7 +88,8 @@ const ParallelCoordinatesPlot = ({ data, onBrush }) => {
       })
       .on("click", function (event, d) {
         // Deselect all
-        svg.selectAll(".pcp-line")
+        svg
+          .selectAll(".pcp-line")
           .classed("selected", false)
           .style("stroke", "#69b3a2")
           .style("stroke-width", 1)
@@ -117,10 +118,11 @@ const ParallelCoordinatesPlot = ({ data, onBrush }) => {
       });
 
     // Brushing
-    const brush = d3.brushY()
+    const brush = d3
+      .brushY()
       .extent([
         [-10, 0],
-        [10, height]
+        [10, height],
       ])
       .on("start brush end", brushed);
 
@@ -137,7 +139,8 @@ const ParallelCoordinatesPlot = ({ data, onBrush }) => {
 
     function brushed(event) {
       // Deselect all lines
-      svg.selectAll(".pcp-line")
+      svg
+        .selectAll(".pcp-line")
         .classed("selected", false)
         .style("stroke", "#69b3a2")
         .style("stroke-width", 1)
@@ -168,7 +171,8 @@ const ParallelCoordinatesPlot = ({ data, onBrush }) => {
       );
 
       // Highlight selected lines
-      svg.selectAll(".pcp-line")
+      svg
+        .selectAll(".pcp-line")
         .filter((d) => selected.includes(d))
         .classed("selected", true)
         .style("stroke", "red")

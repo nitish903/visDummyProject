@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import RadarChart from "./RadarChart";
-import * as d3 from 'd3';
+import * as d3 from "d3";
 
 // Example: variables to show on radar
 const radarVariables = [
@@ -13,24 +13,28 @@ const radarVariables = [
 const Plot3RadarContainer = ({ financialData }) => {
   // Get unique professions
   const professions = useMemo(
-    () => Array.from(new Set(financialData.map(d => d.profession))).sort(),
+    () => Array.from(new Set(financialData.map((d) => d.profession))).sort(),
     [financialData]
   );
-  const [selectedProfession, setSelectedProfession] = useState(professions[0] || "");
+  const [selectedProfession, setSelectedProfession] = useState(
+    professions[0] || ""
+  );
 
   // Aggregate data for the selected profession
   const professionData = useMemo(() => {
-    const rows = financialData.filter(d => d.profession === selectedProfession);
+    const rows = financialData.filter(
+      (d) => d.profession === selectedProfession
+    );
     if (!rows.length) return {};
     // Use mean for each variable
-    const mean = key => d3.mean(rows, r => +r[key] || 0);
+    const mean = (key) => d3.mean(rows, (r) => +r[key] || 0);
     const result = {};
-    radarVariables.forEach(v => {
+    radarVariables.forEach((v) => {
       result[v.key] = mean(v.key);
     });
     return result;
   }, [financialData, selectedProfession]);
-console.log("DATA IS",professionData)
+  console.log("DATA IS", professionData);
   return (
     <div>
       <div style={{ marginBottom: "12px" }}>
@@ -38,11 +42,13 @@ console.log("DATA IS",professionData)
           <b>Profession:&nbsp;</b>
           <select
             value={selectedProfession}
-            onChange={e => setSelectedProfession(e.target.value)}
+            onChange={(e) => setSelectedProfession(e.target.value)}
             style={{ fontSize: "1em", padding: "4px 8px", borderRadius: "6px" }}
           >
-            {professions.map(p => (
-              <option key={p} value={p}>{p}</option>
+            {professions.map((p) => (
+              <option key={p} value={p}>
+                {p}
+              </option>
             ))}
           </select>
         </label>
