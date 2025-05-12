@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Heatmap from "./components/Heatmap";
-import BiPlot from "./components/BiPlot";
 import ParallelCoordinatesPlot from "./components/ParallelCoordinatesPlot";
 import Plot3RadarContainer from "./components/RadarContainer";
 import BeeSwarmPlot from "./components/BeeSwarm";
 import * as d3 from "d3";
+import LinePlot from "./components/LinePlot";
 
 const App = () => {
   const [heatmapData, setHeatmapData] = useState([]);
@@ -14,6 +14,8 @@ const App = () => {
   const [financialData, setFinancialData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const [selectedInfo, setSelectedInfo] = useState(null);
+  const [lineplotData, setLinePlotData] = useState([]);
+  const [yaxisValue, setYaxisValue] = useState(null);
 
   useEffect(() => {
     const processData = async () => {
@@ -50,7 +52,7 @@ const App = () => {
           return m ? { ...f, ...m } : null;
         })
         .filter((d) => d && d.financialStress && d.depression);
-
+      setLinePlotData(merged);
       const debtBins = [20000, 25000, 30000, 35000, 40000, 45000, 50000];
 
       const heatmap = d3
@@ -150,33 +152,71 @@ const App = () => {
                 {selectedInfo.matches && (
                   <>
                     <p>
-                      <strong>Financial Stress Level:</strong>{" "}
+                      <strong>Matching Individuals:</strong>{" "}
+                      <strong>{selectedInfo.matches}</strong>
+                    </p>
+                    <p>
+                      <button
+                        id="financialStress"
+                        onClick={(e) => setYaxisValue(e.target.id)}
+                      >
+                        Financial Stress Level:
+                      </button>{" "}
                       <strong>{selectedInfo.stressLevel}</strong>
                     </p>
                     <p>
-                      <strong>Matching Individuals:</strong>{" "}
-                      {selectedInfo.matches}
+                      <button
+                        id="salary"
+                        onClick={(e) => setYaxisValue(e.target.id)}
+                      >
+                        Average Salary:
+                      </button>{" "}
+                      ${selectedInfo.avgSalary}
                     </p>
                     <p>
-                      <strong>Average Salary:</strong> ${selectedInfo.avgSalary}
+                      <button
+                        id="debtAmount"
+                        onClick={(e) => setYaxisValue(e.target.id)}
+                      >
+                        Avg. Monthly Debt Payment:
+                      </button>{" "}
+                      ${selectedInfo.avgDebt}
                     </p>
                     <p>
-                      <strong>Avg. Monthly Debt Payment:</strong> $
-                      {selectedInfo.avgDebt}
+                      <button
+                        id="savings"
+                        onClick={(e) => setYaxisValue(e.target.id)}
+                      >
+                        Avg. Savings:
+                      </button>{" "}
+                      ${selectedInfo.avgSavings}
                     </p>
                     <p>
-                      <strong>Avg. Savings:</strong> ${selectedInfo.avgSavings}
-                    </p>
-                    <p>
-                      <strong>Avg. Cost of Living:</strong>{" "}
+                      <button
+                        id="costOfLiving"
+                        onClick={(e) => setYaxisValue(e.target.id)}
+                      >
+                        Avg. Cost of Living:
+                      </button>{" "}
                       {selectedInfo.costOfLiving}
                     </p>
                     <p>
-                      <strong>Marital Status:</strong>{" "}
+                      <button
+                        id="maritalStatus"
+                        onClick={(e) => setYaxisValue(e.target.id)}
+                      >
+                        Marital Status:
+                      </button>{" "}
                       {selectedInfo.maritalStatus}
                     </p>
                     <p>
-                      <strong>Has Kids:</strong> {selectedInfo.hasKids}
+                      <button
+                        id="hasKids"
+                        onClick={(e) => setYaxisValue(e.target.id)}
+                      >
+                        Has Kids:
+                      </button>{" "}
+                      {selectedInfo.hasKids}
                     </p>
                   </>
                 )}
@@ -192,8 +232,8 @@ const App = () => {
         </div>
         <div className="dashboard-row">
           <div className="chart-container small-plot-3">
-            <h3>New chart here</h3>
-            <div>Loading...</div>
+            <h3>Line Plot</h3>
+            <LinePlot data={lineplotData} yAxisProp={yaxisValue} />
           </div>
           <div className="chart-container small-plot-2">
             <h3>Bee Swarm Plot</h3>

@@ -34,7 +34,6 @@ const Plot3RadarContainer = ({ financialData }) => {
     });
     return result;
   }, [financialData, selectedProfession]);
-  console.log("DATA IS", professionData);
   return (
     <div>
       <div style={{ marginBottom: "12px" }}>
