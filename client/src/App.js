@@ -13,19 +13,27 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [financialData, setFinancialData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const [selectedInfo, setSelectedInfo] = useState(null);
 
   useEffect(() => {
     const processData = async () => {
       const financial = await d3.csv("/Data/financial_data.csv");
       setFinancialData(financial);
       const mental = await d3.csv("/Data/mental_health_data.csv");
+
       const cleanFinancial = financial.map((d) => ({
         profession: d.profession,
         debtAmount: +d.debt_amount,
         salary: +d.salary,
         age: +d.age,
         debtType: d.debt_type,
+        maritalStatus: d.marital_status,
+        hasKids: d.has_kids,
+        savings: +d.savings,
+        monthlyDebt: +d.monthly_debt_payment,
+        costOfLiving: d.cost_of_living,
       }));
+
       const cleanMental = mental.map((d) => ({
         profession: d.Profession,
         financialStress: +d["Financial Stress"],
@@ -33,15 +41,15 @@ const App = () => {
         workHours: +d["Work/Study Hours"],
         age: +d.Age,
       }));
+
       const merged = cleanFinancial
         .map((f) => {
           const m = cleanMental.find(
             (m) => m.profession === f.profession && m.age === f.age
           );
-          console.log("DATA IS", m);
-          return m ? { ...f, ...m } : f;
+          return m ? { ...f, ...m } : null;
         })
-        .filter((d) => d.financialStress && d.depression);
+        .filter((d) => d && d.financialStress && d.depression);
 
       const debtBins = [20000, 25000, 30000, 35000, 40000, 45000, 50000];
 
@@ -79,9 +87,42 @@ const App = () => {
 
     processData();
   }, []);
+
   useEffect(() => {
     if (pcpData.length) setFilteredData(pcpData);
   }, [pcpData]);
+
+  const handleCellClick = (profession, debtLevel) => {
+    const lower = +debtLevel.split("-")[0].replace(/[$k]/g, "") * 1000;
+    const upper = +debtLevel.split("-")[1].replace(/[$k]/g, "") * 1000;
+    const matches = financialData.filter(
+      (d) =>
+        d.profession === profession &&
+        +d.debt_amount >= lower &&
+        +d.debt_amount < upper
+    );
+
+    if (matches.length > 0) {
+      const avgSalary = d3.mean(matches, (d) => +d.salary);
+      const avgDebt = d3.mean(matches, (d) => +d.monthly_debt_payment);
+      const avgSavings = d3.mean(matches, (d) => +d.savings);
+
+      setSelectedInfo({
+        profession,
+        debtLevel,
+        matches: matches.length,
+        avgSalary: avgSalary.toFixed(0),
+        avgDebt: avgDebt.toFixed(0),
+        avgSavings: avgSavings.toFixed(0),
+        maritalStatus: matches[0].marital_status,
+        hasKids: matches[0].has_kids,
+        costOfLiving: matches[0].cost_of_living,
+        stressLevel: "Moderate", // Placeholder - could compute based on logic
+      });
+    } else {
+      setSelectedInfo({ profession, debtLevel });
+    }
+  };
 
   if (loading) return <div className="loading">Processing data...</div>;
 
@@ -89,18 +130,39 @@ const App = () => {
     <div className="App">
       <h1>Debt, Profession & Mental Health Analytics</h1>
       <div className="dashboard5">
-        {/* First row */}
         <div className="dashboard-row">
           <div className="heatmap-component chart-container">
             <h3>Financial Stress by Profession & Debt</h3>
-            <Heatmap data={heatmapData} />
+            <Heatmap data={heatmapData} onCellClick={handleCellClick} />
+          </div>
+          <div className="heatmap-component chart-container">
+            <h3>Information Tab</h3>
+            {selectedInfo ? (
+              <div className="info-tab">
+                <p><strong>Profession:</strong> <strong>{selectedInfo.profession}</strong></p>
+                <p><strong>Debt Level:</strong> <strong>{selectedInfo.debtLevel}</strong></p>
+                {selectedInfo.matches && (
+                  <>
+                    <p><strong> Financial Stress Level:</strong> <strong>{selectedInfo.stressLevel}</strong></p>
+                    <p><strong>Matching Individuals:</strong> {selectedInfo.matches}</p>
+                    <p><strong>Average Salary:</strong> ${selectedInfo.avgSalary}</p>
+                    <p><strong>Avg. Monthly Debt Payment:</strong> ${selectedInfo.avgDebt}</p>
+                    <p><strong>Avg. Savings:</strong> ${selectedInfo.avgSavings}</p>
+                    <p><strong>Avg. Cost of Living:</strong> {selectedInfo.costOfLiving}</p>
+                    <p><strong>Marital Status:</strong> {selectedInfo.maritalStatus}</p>
+                    <p><strong>Has Kids:</strong> {selectedInfo.hasKids}</p>
+                  </>
+                )}
+              </div>
+            ) : (
+              <p>Click a block to see details.</p>
+            )}
           </div>
           <div className="pcp-component chart-container">
             <h3>Multivariate Relationships</h3>
             <ParallelCoordinatesPlot data={pcpData} onBrush={setFilteredData} />
           </div>
         </div>
-        {/* Second row */}
         <div className="dashboard-row">
           <div className="chart-container small-plot-1">
             <h3>Radar Chart</h3>

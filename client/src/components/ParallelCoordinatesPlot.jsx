@@ -9,9 +9,9 @@ const ParallelCoordinatesPlot = ({ data, onBrush }) => {
     if (!data.length) return;
 
     // SVG dimensions
-    const margin = { top: 30, right: 30, bottom: 30, left: 60 };
+    const margin = { top: 10, right: 30, bottom: 40, left: 60 };
     const width = 1000 - margin.left - margin.right;
-    const height = 300 - margin.top - margin.bottom;
+    const height = 280 - margin.top - margin.bottom;
 
     // Clear previous SVG content
     d3.select(svgRef.current).selectAll("*").remove();
