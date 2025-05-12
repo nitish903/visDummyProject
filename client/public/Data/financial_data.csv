@@ -1,0 +1,1001 @@
+﻿gender,age,profession,occupation,urban_rural,owns_car,salary,cost_of_living,marital_status,has_kids,num_kids,debt_type,debt_amount,monthly_debt_payment,savings
+Male,27,Marketing Specialist,Full-Time,Urban,Yes (Loan),42929,Medium,Single,No,0,Student Loan,41999,5946,11612
+Female,40,Pilot,Full-Time,Rural,Yes (Loan),69733,High,Single,Yes,1,Student Loan,39599,4459,16244
+Female,40,Writer,Full-Time,Rural,Yes (Owned),116838,High,Single,No,1,Student Loan,38987,4953,10657
+Female,37,Writer,Full-Time,Rural,No,49245,High,Married,No,0,Student Loan,27108,735,12349
+Male,23,Musician,Full-Time,Rural,Yes (Loan),45168,Medium,Married,No,0,Student Loan,23551,6588,19260
+Male,34,Firefighter,Full-Time,Urban,Yes (Owned),60766,High,Married,Yes,1,Student Loan,36018,2617,6358
+Male,40,Mechanic,Full-Time,Urban,Yes (Owned),106105,Medium,Single,Yes,0,Student Loan,33728,4882,5593
+Female,26,Architect,Full-Time,Urban,Yes (Owned),103144,Medium,Married,Yes,1,Student Loan,20386,200,5400
+Female,33,Chef,Full-Time,Rural,Yes (Owned),85906,High,Married,No,1,Student Loan,36095,7225,24898
+Male,36,Marketing Specialist,Full-Time,Urban,Yes (Loan),103330,Medium,Single,No,0,Student Loan,43343,2541,1803
+Male,25,Architect,Full-Time,Rural,No,74431,Medium,Single,No,2,Student Loan,25994,1347,16273
+Female,40,Doctor,Full-Time,Rural,Yes (Loan),107400,Medium,Single,Yes,1,Student Loan,37847,4722,23641
+Female,40,Mechanic,Full-Time,Rural,Yes (Owned),40394,Medium,Married,No,2,Student Loan,39010,4401,19319
+Female,29,Doctor,Full-Time,Urban,Yes (Loan),119295,Medium,Married,Yes,1,Student Loan,22545,4258,10260
+Male,39,Writer,Full-Time,Urban,Yes (Owned),103669,High,Married,No,2,Student Loan,25039,5174,14116
+Female,40,Pilot,Full-Time,Rural,Yes (Owned),104459,High,Single,No,1,Student Loan,39865,4821,24749
+Male,28,Mechanic,Full-Time,Urban,Yes (Owned),105022,High,Single,Yes,2,Student Loan,36465,5793,22519
+Male,28,Pilot,Full-Time,Rural,No,58180,High,Single,Yes,0,Student Loan,26794,6424,7833
+Male,35,Mechanic,Full-Time,Urban,No,113850,Medium,Single,Yes,0,Student Loan,48970,1512,23919
+Female,24,Architect,Full-Time,Rural,Yes (Loan),49366,Medium,Single,No,1,Student Loan,45936,1588,21646
+Male,30,Teacher,Full-Time,Urban,Yes (Loan),107947,Medium,Married,No,1,Student Loan,39787,4803,11247
+Male,36,Firefighter,Full-Time,Rural,Yes (Loan),85856,Medium,Married,No,0,Student Loan,29468,2545,11376
+Male,25,Musician,Full-Time,Urban,No,117502,High,Married,No,1,Student Loan,41339,6736,20898
+Female,30,Musician,Full-Time,Rural,No,80142,Medium,Married,Yes,2,Student Loan,27151,6336,16167
+Male,30,Teacher,Full-Time,Rural,Yes (Owned),98142,High,Married,Yes,2,Student Loan,24706,5440,18214
+Female,39,Firefighter,Full-Time,Urban,No,97257,High,Single,No,0,Student Loan,24760,7897,17985
+Male,23,Chef,Full-Time,Urban,No,102066,Medium,Married,Yes,1,Student Loan,42239,5373,4366
+Male,23,Pilot,Full-Time,Rural,Yes (Loan),54566,High,Married,No,0,Student Loan,46723,6656,12190
+Male,26,Firefighter,Full-Time,Rural,Yes (Owned),105983,High,Married,Yes,0,Student Loan,34565,5238,291
+Female,31,Mechanic,Full-Time,Urban,Yes (Loan),92589,High,Married,No,1,Student Loan,44538,708,1881
+Female,23,Mechanic,Full-Time,Rural,Yes (Loan),48966,Medium,Married,No,2,Student Loan,24388,3951,5842
+Female,22,Marketing Specialist,Full-Time,Urban,No,61297,Medium,Married,No,2,Student Loan,37641,2639,18156
+Female,27,Pilot,Full-Time,Urban,No,103508,Medium,Married,No,0,Student Loan,30766,5577,18000
+Male,23,Marketing Specialist,Full-Time,Rural,Yes (Loan),87980,Medium,Married,No,0,Student Loan,38732,7366,14595
+Male,39,Writer,Full-Time,Rural,Yes (Owned),105491,Medium,Married,Yes,0,Student Loan,25089,4003,3959
+Male,35,Firefighter,Full-Time,Urban,Yes (Loan),105934,Medium,Married,Yes,2,Student Loan,34081,6364,6503
+Female,29,Chef,Full-Time,Rural,No,52829,Medium,Married,Yes,1,Student Loan,32847,211,22535
+Male,32,Pilot,Full-Time,Urban,Yes (Owned),61283,High,Single,No,2,Student Loan,21949,2919,14153
+Female,31,Musician,Full-Time,Urban,Yes (Owned),79197,Medium,Married,Yes,2,Student Loan,31889,4633,205
+Female,34,Doctor,Full-Time,Urban,No,85741,Medium,Married,Yes,2,Student Loan,40943,3479,4867
+Male,28,Firefighter,Full-Time,Urban,Yes (Owned),60613,Medium,Single,Yes,1,Student Loan,20867,6334,10165
+Male,33,Mechanic,Full-Time,Urban,Yes (Owned),64056,Medium,Married,Yes,1,Student Loan,29709,705,3857
+Male,38,Firefighter,Full-Time,Urban,Yes (Loan),100335,High,Single,Yes,1,Student Loan,48533,403,6889
+Male,31,Architect,Full-Time,Rural,Yes (Owned),101427,Medium,Married,Yes,0,Student Loan,48383,6002,14820
+Female,23,Chef,Full-Time,Urban,Yes (Owned),69995,High,Married,Yes,0,Student Loan,27467,859,8579
+Female,32,Musician,Full-Time,Rural,Yes (Loan),46201,High,Single,Yes,1,Student Loan,31966,243,17629
+Female,39,Chef,Full-Time,Rural,Yes (Owned),94893,Medium,Single,No,1,Student Loan,31253,5557,1445
+Male,40,Doctor,Full-Time,Urban,No,74435,Medium,Single,Yes,2,Student Loan,24395,5235,19683
+Female,32,Teacher,Full-Time,Rural,No,76737,High,Married,Yes,2,Student Loan,29975,878,18530
+Male,32,Firefighter,Full-Time,Urban,No,70404,Medium,Single,No,0,Student Loan,30270,3225,17289
+Female,33,Chef,Full-Time,Rural,Yes (Loan),86913,Medium,Single,No,2,Student Loan,37740,2086,1703
+Female,34,Architect,Full-Time,Rural,Yes (Owned),74233,Medium,Married,No,0,Student Loan,49056,5691,9135
+Female,38,Musician,Full-Time,Rural,Yes (Loan),80129,High,Single,Yes,1,Student Loan,30713,7353,23148
+Male,32,Musician,Full-Time,Urban,Yes (Owned),61673,High,Single,No,0,Student Loan,21883,2137,22059
+Male,24,Chef,Full-Time,Rural,No,114613,High,Married,Yes,0,Student Loan,33208,2199,3708
+Female,22,Writer,Full-Time,Rural,Yes (Loan),112153,High,Married,No,0,Student Loan,42044,1646,7500
+Female,32,Doctor,Full-Time,Urban,No,54468,High,Single,Yes,1,Student Loan,43568,3900,2016
+Female,30,Mechanic,Full-Time,Urban,Yes (Owned),96490,High,Single,Yes,1,Student Loan,29997,7537,18112
+Male,27,Architect,Full-Time,Urban,Yes (Loan),117584,High,Married,Yes,2,Student Loan,38924,6409,14545
+Female,24,Doctor,Full-Time,Urban,No,98876,Medium,Married,Yes,1,Student Loan,35766,6974,12979
+Male,39,Teacher,Full-Time,Rural,Yes (Loan),56088,High,Single,No,0,Student Loan,36401,830,5142
+Female,25,Musician,Full-Time,Urban,No,63824,High,Single,Yes,0,Student Loan,29131,1677,18543
+Female,23,Teacher,Full-Time,Rural,Yes (Owned),49904,High,Single,No,1,Student Loan,29731,3714,20480
+Male,40,Marketing Specialist,Full-Time,Urban,Yes (Loan),90206,Medium,Married,No,2,Student Loan,20237,1587,1236
+Female,29,Teacher,Full-Time,Urban,Yes (Loan),67204,High,Single,No,2,Student Loan,21496,6576,6876
+Male,28,Mechanic,Full-Time,Rural,Yes (Loan),97835,High,Married,No,0,Student Loan,23363,5622,11671
+Female,34,Marketing Specialist,Full-Time,Rural,No,100164,Medium,Single,Yes,1,Student Loan,43123,4695,20426
+Female,32,Pilot,Full-Time,Urban,No,69061,Medium,Married,No,1,Student Loan,34633,2177,15299
+Male,32,Architect,Full-Time,Rural,Yes (Loan),48799,Medium,Single,Yes,0,Student Loan,42412,1295,2763
+Female,22,Chef,Full-Time,Rural,No,105424,High,Married,No,1,Student Loan,47589,2559,8267
+Male,28,Writer,Full-Time,Rural,Yes (Owned),46999,Medium,Single,No,0,Student Loan,32869,759,4535
+Male,23,Chef,Full-Time,Urban,Yes (Owned),47751,High,Single,Yes,2,Student Loan,20086,6392,7348
+Male,23,Doctor,Full-Time,Rural,Yes (Owned),84409,Medium,Married,Yes,2,Student Loan,27408,4152,6292
+Male,40,Marketing Specialist,Full-Time,Rural,Yes (Owned),116927,High,Single,Yes,1,Student Loan,35972,2779,18138
+Female,33,Doctor,Full-Time,Urban,No,41959,High,Married,No,1,Student Loan,27469,5418,264
+Male,36,Chef,Full-Time,Rural,Yes (Loan),52655,Medium,Single,No,2,Student Loan,28017,5383,22335
+Male,33,Pilot,Full-Time,Urban,Yes (Loan),47891,High,Married,No,1,Student Loan,20822,5760,18444
+Female,39,Mechanic,Full-Time,Urban,No,117164,High,Married,Yes,2,Student Loan,25802,7027,3635
+Male,25,Doctor,Full-Time,Urban,Yes (Loan),70534,High,Married,No,1,Student Loan,38192,5589,3713
+Male,26,Marketing Specialist,Full-Time,Rural,Yes (Loan),99101,High,Married,Yes,1,Student Loan,34961,4112,426
+Female,38,Doctor,Full-Time,Rural,Yes (Loan),93362,Medium,Single,Yes,1,Student Loan,49919,2255,21692
+Male,33,Mechanic,Full-Time,Urban,Yes (Owned),119383,High,Single,No,0,Student Loan,40604,6161,8679
+Male,25,Mechanic,Full-Time,Urban,No,81225,High,Married,No,1,Student Loan,32921,1915,12336
+Female,40,Doctor,Full-Time,Rural,Yes (Owned),54988,Medium,Single,Yes,0,Student Loan,33947,190,2814
+Female,29,Firefighter,Full-Time,Rural,Yes (Loan),44520,Medium,Married,Yes,0,Student Loan,42569,5261,9186
+Male,27,Writer,Full-Time,Urban,Yes (Owned),94797,Medium,Single,No,2,Student Loan,28759,1813,4586
+Female,33,Teacher,Full-Time,Urban,No,96115,Medium,Married,Yes,0,Student Loan,32406,1635,20497
+Female,33,Teacher,Full-Time,Urban,Yes (Loan),40106,Medium,Married,No,0,Student Loan,49632,5024,10530
+Female,37,Mechanic,Full-Time,Urban,Yes (Loan),49656,High,Single,No,1,Student Loan,45186,6936,9379
+Male,38,Chef,Full-Time,Rural,Yes (Owned),65728,High,Married,Yes,0,Student Loan,32491,4190,23984
+Male,36,Teacher,Full-Time,Rural,No,76944,Medium,Married,No,1,Student Loan,38445,1635,20098
+Female,37,Marketing Specialist,Full-Time,Urban,No,114284,Medium,Single,Yes,2,Student Loan,22796,6626,18631
+Male,28,Architect,Full-Time,Rural,Yes (Loan),74797,High,Married,Yes,0,Student Loan,36586,3758,24338
+Female,22,Pilot,Full-Time,Urban,No,119313,High,Married,No,0,Student Loan,21354,1106,2578
+Female,36,Chef,Full-Time,Urban,No,59517,High,Married,No,1,Student Loan,35229,2822,15400
+Male,28,Architect,Full-Time,Urban,Yes (Owned),77405,Medium,Married,No,2,Student Loan,20889,4415,4358
+Female,27,Architect,Full-Time,Rural,Yes (Loan),65492,High,Single,No,2,Student Loan,25064,4222,9623
+Female,31,Pilot,Full-Time,Urban,Yes (Loan),81089,High,Single,Yes,2,Student Loan,46136,6985,7860
+Female,24,Firefighter,Full-Time,Urban,Yes (Loan),56867,High,Married,Yes,0,Student Loan,27878,5603,5667
+Male,27,Teacher,Full-Time,Urban,No,50004,High,Single,Yes,2,Student Loan,38011,7740,14120
+Female,35,Marketing Specialist,Full-Time,Rural,Yes (Owned),90038,High,Single,Yes,2,Student Loan,20774,2602,10002
+Male,33,Writer,Full-Time,Urban,No,57107,Medium,Single,Yes,0,Student Loan,43131,5739,4080
+Male,38,Mechanic,Full-Time,Urban,Yes (Owned),101774,High,Single,No,0,Student Loan,30539,2311,17674
+Male,40,Chef,Full-Time,Urban,No,116458,Medium,Single,Yes,2,Student Loan,30022,7395,1021
+Female,34,Writer,Full-Time,Urban,No,90470,High,Married,Yes,1,Student Loan,45098,5762,2613
+Female,33,Teacher,Full-Time,Urban,Yes (Owned),43739,Medium,Married,Yes,0,Student Loan,33585,217,3690
+Male,22,Marketing Specialist,Full-Time,Urban,Yes (Loan),45338,High,Single,Yes,2,Student Loan,42297,373,8041
+Female,38,Chef,Full-Time,Urban,Yes (Owned),88323,Medium,Single,No,2,Student Loan,45686,6025,19902
+Female,40,Doctor,Full-Time,Rural,No,59573,Medium,Single,No,1,Student Loan,30967,4826,15226
+Female,39,Musician,Full-Time,Rural,No,115955,Medium,Married,Yes,2,Student Loan,30961,4922,17075
+Male,33,Pilot,Full-Time,Urban,No,53364,Medium,Married,Yes,2,Student Loan,27432,6949,23440
+Male,26,Firefighter,Full-Time,Urban,No,111061,High,Married,No,2,Student Loan,22834,4067,1701
+Male,37,Pilot,Full-Time,Urban,No,90546,Medium,Married,Yes,0,Student Loan,20882,7345,8161
+Female,23,Teacher,Full-Time,Rural,Yes (Loan),40180,High,Single,No,2,Student Loan,45279,4999,24061
+Male,26,Musician,Full-Time,Urban,No,106846,High,Single,Yes,1,Student Loan,38505,2551,5046
+Male,27,Chef,Full-Time,Urban,Yes (Loan),107877,Medium,Married,No,0,Student Loan,25414,416,10163
+Female,33,Pilot,Full-Time,Urban,No,71180,Medium,Married,No,0,Student Loan,20772,4632,11199
+Female,31,Doctor,Full-Time,Rural,No,41848,Medium,Single,No,1,Student Loan,41852,4268,18272
+Female,23,Writer,Full-Time,Rural,Yes (Loan),76372,High,Married,No,0,Student Loan,34481,3495,19028
+Male,28,Writer,Full-Time,Rural,Yes (Loan),98121,Medium,Single,Yes,0,Student Loan,22049,7969,3287
+Male,31,Architect,Full-Time,Rural,Yes (Loan),68613,Medium,Married,No,1,Student Loan,20314,1302,2030
+Male,31,Marketing Specialist,Full-Time,Urban,No,61131,High,Married,Yes,0,Student Loan,32096,4223,10282
+Male,37,Firefighter,Full-Time,Urban,No,68639,High,Married,Yes,2,Student Loan,46435,2836,19846
+Male,23,Doctor,Full-Time,Urban,Yes (Owned),92027,High,Married,No,2,Student Loan,48231,5630,20222
+Female,25,Chef,Full-Time,Urban,Yes (Owned),110375,High,Married,No,0,Student Loan,23117,3048,23217
+Female,35,Teacher,Full-Time,Urban,Yes (Owned),109924,High,Married,Yes,2,Student Loan,26460,504,18824
+Female,28,Doctor,Full-Time,Urban,No,51021,Medium,Single,Yes,1,Student Loan,44023,2849,5596
+Female,37,Mechanic,Full-Time,Rural,Yes (Loan),65177,Medium,Single,No,1,Student Loan,37038,5127,12234
+Female,33,Chef,Full-Time,Rural,Yes (Loan),104083,Medium,Married,No,0,Student Loan,28835,1915,15620
+Female,38,Doctor,Full-Time,Rural,No,79873,High,Married,Yes,0,Student Loan,24641,4329,15615
+Male,26,Doctor,Full-Time,Urban,Yes (Owned),44515,Medium,Single,No,1,Student Loan,44434,7293,22687
+Male,40,Firefighter,Full-Time,Urban,Yes (Owned),115524,Medium,Single,Yes,0,Student Loan,37608,1571,597
+Female,34,Pilot,Full-Time,Urban,No,49029,High,Married,Yes,2,Student Loan,48006,5500,10502
+Female,29,Mechanic,Full-Time,Rural,No,80643,Medium,Married,Yes,1,Student Loan,47159,7627,20603
+Female,40,Chef,Full-Time,Rural,Yes (Owned),63249,High,Married,No,1,Student Loan,44264,3660,7240
+Female,38,Teacher,Full-Time,Rural,Yes (Owned),102110,High,Single,No,0,Student Loan,44104,7865,5943
+Female,34,Chef,Full-Time,Urban,No,83501,High,Married,No,1,Student Loan,23994,6811,8273
+Female,22,Doctor,Full-Time,Urban,Yes (Owned),76890,High,Married,Yes,2,Student Loan,39631,6476,14475
+Female,25,Chef,Full-Time,Rural,Yes (Loan),44303,High,Single,No,2,Student Loan,36777,5067,3433
+Male,37,Teacher,Full-Time,Rural,No,62851,Medium,Single,Yes,0,Student Loan,42232,3803,8967
+Female,22,Musician,Full-Time,Rural,Yes (Loan),76113,Medium,Married,No,0,Student Loan,29344,7545,24846
+Female,28,Chef,Full-Time,Rural,Yes (Loan),67400,High,Married,No,1,Student Loan,28181,5513,9194
+Male,35,Pilot,Full-Time,Urban,Yes (Loan),82569,High,Married,Yes,0,Student Loan,30208,6661,16389
+Female,32,Pilot,Full-Time,Rural,Yes (Owned),89614,High,Single,No,2,Student Loan,37699,6217,3704
+Female,36,Marketing Specialist,Full-Time,Rural,Yes (Loan),58944,High,Married,No,0,Student Loan,47168,6781,11727
+Male,33,Marketing Specialist,Full-Time,Rural,No,42569,High,Married,Yes,0,Student Loan,43527,1538,1510
+Male,34,Pilot,Full-Time,Rural,No,82341,High,Married,Yes,2,Student Loan,29153,7890,13864
+Female,25,Architect,Full-Time,Urban,Yes (Loan),54977,Medium,Married,Yes,1,Student Loan,46663,3849,23448
+Female,29,Architect,Full-Time,Rural,Yes (Owned),84362,High,Single,No,2,Student Loan,31335,6578,1433
+Female,37,Doctor,Full-Time,Urban,Yes (Loan),82321,High,Married,No,0,Student Loan,42724,5531,6740
+Male,27,Architect,Full-Time,Rural,Yes (Loan),74958,High,Married,No,2,Student Loan,34406,4305,12746
+Male,29,Musician,Full-Time,Urban,No,110904,High,Married,Yes,0,Student Loan,28533,1951,24448
+Female,40,Doctor,Full-Time,Rural,Yes (Owned),65720,Medium,Single,No,1,Student Loan,23801,4598,8626
+Female,34,Doctor,Full-Time,Rural,No,115879,High,Single,No,2,Student Loan,22079,3916,6881
+Male,34,Chef,Full-Time,Rural,Yes (Owned),67807,Medium,Married,No,1,Student Loan,30696,7280,19352
+Female,34,Firefighter,Full-Time,Urban,Yes (Loan),61943,High,Single,Yes,1,Student Loan,43497,1654,10987
+Male,36,Pilot,Full-Time,Urban,No,114483,Medium,Married,Yes,2,Student Loan,44954,932,1623
+Female,37,Writer,Full-Time,Urban,Yes (Owned),62260,High,Single,Yes,0,Student Loan,43287,638,2124
+Male,36,Marketing Specialist,Full-Time,Rural,No,90975,High,Married,No,2,Student Loan,44092,4846,18699
+Male,32,Doctor,Full-Time,Rural,No,58076,High,Married,Yes,0,Student Loan,42326,2466,13485
+Male,25,Pilot,Full-Time,Urban,No,41320,Medium,Single,Yes,0,Student Loan,26079,999,4483
+Female,28,Musician,Full-Time,Urban,No,55647,High,Married,No,2,Student Loan,37030,6881,524
+Female,25,Architect,Full-Time,Urban,No,46509,Medium,Single,No,2,Student Loan,40129,2692,14118
+Male,40,Doctor,Full-Time,Urban,Yes (Loan),48633,Medium,Single,No,0,Student Loan,21756,995,9566
+Female,32,Pilot,Full-Time,Rural,Yes (Owned),109341,Medium,Single,Yes,2,Student Loan,34804,5945,14291
+Male,29,Firefighter,Full-Time,Urban,No,112918,Medium,Single,Yes,2,Student Loan,32541,3305,2189
+Female,37,Firefighter,Full-Time,Rural,Yes (Loan),101447,High,Single,No,0,Student Loan,28807,5610,15756
+Male,35,Doctor,Full-Time,Urban,Yes (Owned),54070,High,Married,Yes,2,Student Loan,32729,2159,5020
+Male,30,Mechanic,Full-Time,Urban,No,76879,Medium,Single,Yes,2,Student Loan,24908,3565,5735
+Female,31,Architect,Full-Time,Rural,Yes (Owned),108011,High,Married,Yes,0,Student Loan,26306,3373,23755
+Male,33,Mechanic,Full-Time,Urban,Yes (Owned),89973,High,Married,Yes,0,Student Loan,36855,7374,5855
+Female,35,Chef,Full-Time,Urban,Yes (Loan),75829,High,Married,No,1,Student Loan,40096,7219,20414
+Male,29,Musician,Full-Time,Urban,Yes (Loan),75049,Medium,Single,No,2,Student Loan,21010,5306,7768
+Male,33,Doctor,Full-Time,Urban,Yes (Owned),97813,High,Single,Yes,2,Student Loan,42723,3997,12339
+Female,25,Firefighter,Full-Time,Urban,Yes (Loan),100205,Medium,Single,Yes,2,Student Loan,25724,121,5810
+Male,33,Firefighter,Full-Time,Rural,Yes (Loan),70175,Medium,Single,No,1,Student Loan,33550,917,3186
+Female,30,Writer,Full-Time,Urban,No,80417,High,Married,No,0,Student Loan,31506,1218,20218
+Male,33,Firefighter,Full-Time,Urban,Yes (Owned),99534,High,Single,Yes,2,Student Loan,35328,402,112
+Male,33,Architect,Full-Time,Urban,Yes (Loan),71491,High,Married,No,1,Student Loan,45856,5743,957
+Male,29,Marketing Specialist,Full-Time,Urban,Yes (Owned),48384,Medium,Married,Yes,1,Student Loan,41278,5445,14851
+Male,38,Teacher,Full-Time,Urban,No,84761,Medium,Married,No,0,Student Loan,27490,6049,18910
+Female,32,Teacher,Full-Time,Rural,Yes (Loan),46940,Medium,Married,No,1,Student Loan,48848,377,12993
+Female,22,Marketing Specialist,Full-Time,Rural,Yes (Loan),62447,High,Single,Yes,0,Student Loan,32074,1784,21454
+Female,28,Teacher,Full-Time,Rural,No,97832,Medium,Married,No,0,Student Loan,38868,1901,12718
+Female,34,Mechanic,Full-Time,Urban,No,67292,Medium,Single,No,0,Student Loan,27718,3223,1030
+Male,27,Firefighter,Full-Time,Rural,No,118804,Medium,Single,Yes,1,Student Loan,49509,5679,13317
+Male,27,Musician,Full-Time,Urban,No,65195,Medium,Single,Yes,2,Student Loan,26493,1697,18200
+Male,25,Writer,Full-Time,Urban,No,73052,High,Married,No,1,Student Loan,31848,3717,22123
+Male,30,Chef,Full-Time,Rural,Yes (Loan),42894,High,Single,Yes,2,Student Loan,34182,7644,17554
+Female,22,Chef,Full-Time,Rural,Yes (Loan),57968,High,Married,No,1,Student Loan,39713,7589,20436
+Female,27,Firefighter,Full-Time,Rural,No,51982,Medium,Single,No,1,Student Loan,40070,3278,5341
+Male,30,Musician,Full-Time,Rural,No,104315,Medium,Married,No,1,Student Loan,20713,3167,11395
+Male,32,Teacher,Full-Time,Urban,No,94116,High,Single,No,0,Student Loan,20312,5220,17912
+Male,32,Pilot,Full-Time,Rural,No,49782,Medium,Married,Yes,0,Student Loan,30198,3226,14176
+Male,31,Musician,Full-Time,Rural,Yes (Owned),119866,High,Married,No,0,Student Loan,35730,4406,12519
+Female,26,Writer,Full-Time,Urban,Yes (Loan),55481,High,Single,Yes,1,Student Loan,26063,7917,15272
+Female,27,Mechanic,Full-Time,Rural,No,114674,High,Single,Yes,2,Student Loan,42910,1020,476
+Female,39,Marketing Specialist,Full-Time,Rural,Yes (Owned),99510,High,Single,No,0,Student Loan,44310,1118,2863
+Female,23,Writer,Full-Time,Urban,Yes (Loan),89457,Medium,Married,Yes,1,Student Loan,49030,1338,7052
+Male,30,Chef,Full-Time,Urban,Yes (Owned),65296,Medium,Married,Yes,1,Student Loan,47801,6608,1474
+Male,27,Pilot,Full-Time,Urban,No,85424,Medium,Single,Yes,2,Student Loan,24436,2692,7578
+Female,24,Writer,Full-Time,Urban,No,108370,Medium,Single,Yes,2,Student Loan,28465,2310,9091
+Male,39,Pilot,Full-Time,Urban,Yes (Loan),74197,High,Single,No,2,Student Loan,34744,4036,5359
+Female,40,Musician,Full-Time,Urban,No,65117,High,Married,No,2,Student Loan,41600,5231,3522
+Female,40,Marketing Specialist,Full-Time,Urban,No,61023,Medium,Married,Yes,0,Student Loan,33830,5633,14758
+Female,22,Writer,Full-Time,Rural,Yes (Owned),109834,Medium,Single,Yes,2,Student Loan,33768,3932,1675
+Female,27,Musician,Full-Time,Urban,No,86929,High,Single,Yes,1,Student Loan,28204,3206,16695
+Female,25,Musician,Full-Time,Urban,No,79710,High,Single,No,1,Student Loan,36875,4691,7527
+Female,27,Chef,Full-Time,Rural,Yes (Loan),88602,High,Married,No,2,Student Loan,46428,5524,13291
+Female,32,Doctor,Full-Time,Urban,Yes (Loan),70833,Medium,Married,No,2,Student Loan,26990,2414,41
+Female,29,Chef,Full-Time,Urban,No,92317,High,Married,Yes,2,Student Loan,33922,1553,14302
+Female,38,Pilot,Full-Time,Rural,Yes (Owned),114341,Medium,Single,Yes,2,Student Loan,49233,6924,19511
+Female,22,Pilot,Full-Time,Rural,No,70052,High,Married,No,2,Student Loan,32061,1192,17158
+Male,31,Doctor,Full-Time,Rural,No,111470,High,Single,Yes,1,Student Loan,22159,4157,21305
+Female,23,Teacher,Full-Time,Rural,No,118759,High,Single,No,2,Student Loan,26113,7244,4448
+Female,40,Firefighter,Full-Time,Rural,No,108106,High,Single,No,0,Student Loan,32111,4019,21373
+Male,24,Musician,Full-Time,Urban,No,106757,High,Single,Yes,0,Student Loan,28351,7582,22643
+Female,40,Writer,Full-Time,Rural,Yes (Owned),66481,High,Married,No,0,Student Loan,40154,6143,16274
+Male,37,Writer,Full-Time,Rural,No,85191,High,Single,Yes,2,Student Loan,32950,157,19157
+Male,34,Architect,Full-Time,Urban,Yes (Owned),103022,High,Married,Yes,1,Student Loan,34474,7529,3198
+Female,38,Writer,Full-Time,Urban,Yes (Owned),111328,Medium,Married,Yes,0,Student Loan,29885,7661,22734
+Male,31,Marketing Specialist,Full-Time,Urban,Yes (Loan),59693,High,Single,No,2,Student Loan,24342,651,8789
+Female,38,Musician,Full-Time,Rural,Yes (Owned),100496,High,Single,No,1,Student Loan,22804,4705,20394
+Male,36,Writer,Full-Time,Urban,Yes (Loan),60196,Medium,Married,No,1,Student Loan,36688,2710,24550
+Female,25,Marketing Specialist,Full-Time,Rural,Yes (Owned),66257,Medium,Married,No,0,Student Loan,34669,853,16010
+Male,40,Doctor,Full-Time,Urban,Yes (Owned),90047,Medium,Single,Yes,0,Student Loan,26986,7110,5049
+Male,26,Writer,Full-Time,Urban,No,66160,High,Single,No,1,Student Loan,32560,2284,4448
+Female,23,Musician,Full-Time,Rural,Yes (Owned),69759,Medium,Married,No,0,Student Loan,24484,2340,14935
+Female,33,Pilot,Full-Time,Rural,Yes (Loan),54697,High,Married,No,1,Student Loan,45815,4210,582
+Female,32,Firefighter,Full-Time,Rural,No,60196,Medium,Married,Yes,2,Student Loan,46774,1914,426
+Female,32,Writer,Full-Time,Urban,Yes (Owned),45290,Medium,Married,Yes,1,Student Loan,45870,641,19177
+Female,26,Musician,Full-Time,Rural,Yes (Loan),117307,High,Married,Yes,2,Student Loan,21476,495,24803
+Male,28,Chef,Full-Time,Rural,Yes (Owned),74883,Medium,Single,Yes,1,Student Loan,42553,3285,22491
+Female,35,Marketing Specialist,Full-Time,Rural,Yes (Owned),115968,High,Single,Yes,1,Student Loan,46648,3047,21087
+Female,33,Mechanic,Full-Time,Urban,No,74504,High,Married,Yes,0,Student Loan,33354,7954,10587
+Male,32,Marketing Specialist,Full-Time,Urban,No,72153,High,Married,No,2,Student Loan,49207,1229,24723
+Male,22,Architect,Full-Time,Rural,No,112557,Medium,Single,No,0,Student Loan,29598,5787,14711
+Female,32,Marketing Specialist,Full-Time,Rural,No,95397,Medium,Married,No,1,Student Loan,38373,1119,8288
+Female,39,Firefighter,Full-Time,Rural,Yes (Loan),85734,Medium,Single,No,2,Student Loan,32387,2157,13793
+Male,26,Doctor,Full-Time,Urban,Yes (Owned),58205,High,Married,No,0,Student Loan,22856,1646,9825
+Male,24,Firefighter,Full-Time,Rural,Yes (Owned),97362,Medium,Single,No,2,Student Loan,22994,2034,22281
+Female,35,Chef,Full-Time,Rural,Yes (Owned),47496,Medium,Married,No,2,Student Loan,48023,1409,5453
+Male,39,Mechanic,Full-Time,Urban,Yes (Loan),70581,High,Single,No,2,Student Loan,38771,7671,12172
+Female,36,Musician,Full-Time,Urban,Yes (Owned),98396,High,Single,Yes,1,Student Loan,39340,2046,23916
+Female,39,Teacher,Full-Time,Urban,No,45155,Medium,Single,Yes,2,Student Loan,27384,7735,2183
+Male,26,Firefighter,Full-Time,Urban,No,47321,High,Married,No,0,Student Loan,39140,5894,5647
+Male,30,Writer,Full-Time,Rural,Yes (Owned),109478,Medium,Married,Yes,1,Student Loan,25017,5165,19416
+Male,28,Firefighter,Full-Time,Urban,Yes (Loan),71039,High,Single,No,2,Student Loan,47676,4596,3285
+Male,26,Chef,Full-Time,Rural,Yes (Owned),107227,Medium,Single,No,1,Student Loan,36126,3752,9184
+Male,31,Chef,Full-Time,Rural,No,86984,High,Single,Yes,1,Student Loan,36786,1324,3334
+Male,39,Teacher,Full-Time,Rural,Yes (Owned),108323,Medium,Married,Yes,1,Student Loan,49665,3324,2057
+Female,30,Doctor,Full-Time,Rural,Yes (Owned),79879,High,Married,No,2,Student Loan,34672,3226,23139
+Female,31,Pilot,Full-Time,Rural,No,84658,High,Single,Yes,1,Student Loan,30982,3561,12189
+Female,27,Marketing Specialist,Full-Time,Rural,Yes (Owned),64977,Medium,Married,No,0,Student Loan,30951,780,12047
+Female,23,Mechanic,Full-Time,Rural,No,84186,High,Single,No,1,Student Loan,35996,2107,7903
+Female,29,Doctor,Full-Time,Rural,No,52775,Medium,Married,No,2,Student Loan,32085,3656,16673
+Male,29,Teacher,Full-Time,Rural,Yes (Owned),67243,High,Single,No,2,Student Loan,35957,3095,24637
+Male,28,Writer,Full-Time,Urban,Yes (Owned),54282,High,Married,Yes,2,Student Loan,46161,2442,7570
+Female,22,Pilot,Full-Time,Urban,Yes (Owned),53517,High,Single,No,2,Student Loan,43846,4265,5947
+Female,29,Marketing Specialist,Full-Time,Urban,No,81226,Medium,Married,Yes,2,Student Loan,25608,5817,23136
+Male,25,Chef,Full-Time,Rural,Yes (Loan),82120,High,Single,No,0,Student Loan,30073,103,3409
+Male,28,Doctor,Full-Time,Rural,No,47309,High,Single,No,0,Student Loan,47708,3334,3002
+Female,26,Mechanic,Full-Time,Rural,No,119856,High,Married,Yes,1,Student Loan,49674,7149,18144
+Male,29,Writer,Full-Time,Rural,Yes (Owned),107400,High,Married,No,2,Student Loan,22116,6594,4140
+Male,23,Writer,Full-Time,Urban,No,119972,High,Single,No,0,Student Loan,34369,5145,20100
+Male,36,Architect,Full-Time,Rural,Yes (Loan),60610,High,Married,Yes,2,Student Loan,45868,6923,22894
+Male,25,Pilot,Full-Time,Urban,Yes (Loan),65799,High,Married,No,1,Student Loan,46515,2614,22982
+Female,29,Doctor,Full-Time,Urban,Yes (Owned),116175,Medium,Married,Yes,2,Student Loan,21908,1128,13685
+Female,30,Chef,Full-Time,Rural,No,54748,Medium,Single,No,2,Student Loan,23505,150,4718
+Female,34,Chef,Full-Time,Rural,No,45857,Medium,Married,No,1,Student Loan,26670,3915,5780
+Male,25,Musician,Full-Time,Urban,No,43438,High,Married,No,0,Student Loan,48711,4223,17787
+Male,37,Firefighter,Full-Time,Rural,Yes (Owned),62797,Medium,Single,Yes,1,Student Loan,47415,6627,11633
+Female,24,Musician,Full-Time,Rural,Yes (Owned),90558,High,Single,Yes,2,Student Loan,47530,517,9406
+Female,35,Marketing Specialist,Full-Time,Rural,Yes (Loan),62487,High,Single,No,2,Student Loan,36051,679,1677
+Female,31,Teacher,Full-Time,Rural,Yes (Owned),50015,High,Married,No,2,Student Loan,45291,5239,15384
+Female,37,Teacher,Full-Time,Rural,No,62846,Medium,Single,No,0,Student Loan,42320,2697,6823
+Female,30,Pilot,Full-Time,Rural,No,99501,High,Single,No,0,Student Loan,24628,2696,5040
+Female,36,Pilot,Full-Time,Rural,No,71064,High,Single,Yes,1,Student Loan,40734,7089,24440
+Male,39,Architect,Full-Time,Rural,Yes (Owned),57039,High,Married,Yes,2,Student Loan,32284,6644,14681
+Female,33,Marketing Specialist,Full-Time,Rural,Yes (Owned),105703,Medium,Married,No,0,Student Loan,28031,7810,14061
+Male,25,Teacher,Full-Time,Rural,Yes (Loan),92857,Medium,Single,No,1,Student Loan,38287,6554,19433
+Male,27,Pilot,Full-Time,Urban,No,109343,High,Married,Yes,0,Student Loan,48264,3286,20725
+Female,38,Mechanic,Full-Time,Urban,Yes (Loan),118083,Medium,Single,No,2,Student Loan,44844,6927,21341
+Female,40,Teacher,Full-Time,Rural,No,81115,High,Single,Yes,1,Student Loan,20034,1028,10628
+Female,37,Musician,Full-Time,Urban,Yes (Loan),78594,Medium,Married,Yes,2,Student Loan,24504,918,8179
+Female,22,Mechanic,Full-Time,Rural,Yes (Owned),101720,Medium,Married,No,2,Student Loan,31495,2714,78
+Male,29,Musician,Full-Time,Rural,No,48422,High,Single,No,2,Student Loan,38397,178,12475
+Male,22,Firefighter,Full-Time,Rural,No,87752,Medium,Single,Yes,0,Student Loan,48768,438,19571
+Male,32,Mechanic,Full-Time,Urban,No,114139,Medium,Single,No,2,Student Loan,37750,3153,19640
+Female,31,Marketing Specialist,Full-Time,Rural,No,118064,High,Single,No,0,Student Loan,31068,7150,10683
+Male,27,Mechanic,Full-Time,Urban,No,73373,Medium,Single,Yes,0,Student Loan,34082,6875,21259
+Male,27,Marketing Specialist,Full-Time,Rural,No,90974,High,Married,No,2,Student Loan,34440,5097,1743
+Female,29,Writer,Full-Time,Urban,Yes (Loan),91484,Medium,Single,Yes,0,Student Loan,36854,6405,17940
+Male,37,Doctor,Full-Time,Urban,Yes (Loan),111186,High,Single,Yes,0,Student Loan,46011,4637,1873
+Male,26,Doctor,Full-Time,Urban,Yes (Owned),42666,High,Married,Yes,1,Student Loan,21873,7417,13144
+Male,36,Firefighter,Full-Time,Rural,Yes (Owned),64173,Medium,Single,No,1,Student Loan,40121,6807,6084
+Female,29,Chef,Full-Time,Urban,Yes (Owned),76405,Medium,Married,No,0,Student Loan,34751,3860,17858
+Female,31,Chef,Full-Time,Rural,No,91931,Medium,Married,No,2,Student Loan,23875,2236,4049
+Male,33,Mechanic,Full-Time,Rural,No,62615,High,Married,Yes,1,Student Loan,36243,4273,19187
+Female,31,Marketing Specialist,Full-Time,Rural,No,61259,Medium,Single,Yes,0,Student Loan,34430,2832,16861
+Male,22,Musician,Full-Time,Rural,Yes (Owned),104268,Medium,Married,Yes,0,Student Loan,31011,834,23606
+Male,31,Chef,Full-Time,Urban,Yes (Loan),66282,High,Single,Yes,2,Student Loan,25231,7475,4484
+Female,25,Pilot,Full-Time,Urban,No,43196,High,Married,No,1,Student Loan,32610,6836,14842
+Female,29,Teacher,Full-Time,Urban,Yes (Owned),93190,Medium,Single,Yes,1,Student Loan,23329,6276,18029
+Female,33,Doctor,Full-Time,Rural,No,88340,Medium,Married,Yes,0,Student Loan,47531,3137,24627
+Female,31,Doctor,Full-Time,Urban,Yes (Owned),83812,High,Single,No,2,Student Loan,48152,2373,2707
+Female,33,Chef,Full-Time,Rural,No,105186,High,Single,No,2,Student Loan,49057,248,11435
+Female,22,Pilot,Full-Time,Urban,Yes (Owned),52239,High,Married,Yes,1,Student Loan,20581,2540,14578
+Female,26,Doctor,Full-Time,Urban,Yes (Owned),56803,High,Married,No,0,Student Loan,24972,7120,16493
+Male,22,Firefighter,Full-Time,Rural,No,48410,Medium,Married,Yes,2,Student Loan,23195,2093,1853
+Male,37,Chef,Full-Time,Rural,Yes (Owned),79109,Medium,Married,Yes,2,Student Loan,21485,1592,24434
+Male,26,Architect,Full-Time,Rural,No,50311,Medium,Married,Yes,0,Student Loan,31010,4615,11459
+Male,33,Musician,Full-Time,Rural,Yes (Owned),40448,High,Married,No,1,Student Loan,25837,194,4879
+Male,34,Marketing Specialist,Full-Time,Rural,Yes (Owned),66866,High,Married,Yes,1,Student Loan,43932,1373,18955
+Female,33,Musician,Full-Time,Urban,Yes (Loan),57424,High,Married,No,1,Student Loan,48651,2743,13565
+Male,23,Pilot,Full-Time,Urban,Yes (Loan),75126,High,Married,Yes,1,Student Loan,33737,5731,1419
+Male,24,Doctor,Full-Time,Rural,No,87667,High,Single,No,0,Student Loan,31203,3435,5701
+Female,24,Pilot,Full-Time,Rural,Yes (Owned),75360,High,Single,Yes,1,Student Loan,46979,5389,23507
+Female,38,Firefighter,Full-Time,Rural,Yes (Loan),61713,Medium,Married,Yes,1,Student Loan,43747,7384,7227
+Female,32,Doctor,Full-Time,Rural,Yes (Owned),116356,Medium,Married,Yes,0,Student Loan,40292,7016,21306
+Female,24,Architect,Full-Time,Urban,No,98852,High,Married,Yes,0,Student Loan,35228,4667,13663
+Male,29,Mechanic,Full-Time,Urban,Yes (Loan),73166,High,Single,Yes,0,Student Loan,21867,6934,3331
+Female,22,Pilot,Full-Time,Rural,Yes (Loan),40941,Medium,Single,No,0,Student Loan,47057,5183,9157
+Male,22,Pilot,Full-Time,Rural,No,61243,High,Married,Yes,1,Student Loan,46345,3204,15790
+Female,36,Musician,Full-Time,Rural,No,51294,Medium,Married,No,0,Student Loan,31926,2798,16284
+Male,22,Musician,Full-Time,Rural,Yes (Owned),67325,High,Single,No,2,Student Loan,44632,6904,7028
+Male,26,Teacher,Full-Time,Urban,Yes (Loan),45502,Medium,Single,Yes,0,Student Loan,39698,1822,13594
+Female,38,Teacher,Full-Time,Urban,No,60646,High,Single,Yes,1,Student Loan,47109,2451,13406
+Male,38,Marketing Specialist,Full-Time,Rural,Yes (Loan),88402,High,Single,Yes,1,Student Loan,32829,6631,8881
+Female,24,Pilot,Full-Time,Rural,Yes (Loan),61442,High,Single,No,1,Student Loan,26979,1176,12611
+Female,31,Doctor,Full-Time,Urban,No,87703,High,Single,Yes,2,Student Loan,39313,7228,17685
+Female,29,Teacher,Full-Time,Rural,Yes (Loan),115328,High,Married,Yes,1,Student Loan,46652,4047,11205
+Male,31,Mechanic,Full-Time,Rural,No,86416,High,Single,Yes,1,Student Loan,49778,6337,8570
+Female,31,Architect,Full-Time,Urban,Yes (Owned),113271,Medium,Married,Yes,2,Student Loan,39855,3568,21527
+Male,33,Doctor,Full-Time,Urban,No,73678,Medium,Married,No,0,Student Loan,32324,5873,22289
+Female,36,Doctor,Full-Time,Urban,No,62425,High,Single,Yes,2,Student Loan,49355,953,3864
+Male,27,Mechanic,Full-Time,Rural,No,106487,Medium,Married,Yes,2,Student Loan,49555,699,5660
+Female,23,Mechanic,Full-Time,Rural,No,81029,High,Single,Yes,0,Student Loan,22707,6372,22897
+Male,26,Writer,Full-Time,Urban,Yes (Owned),106536,High,Married,Yes,0,Student Loan,29517,6069,5742
+Female,37,Chef,Full-Time,Urban,Yes (Owned),98502,High,Single,Yes,2,Student Loan,39280,106,9504
+Female,37,Teacher,Full-Time,Rural,No,57821,Medium,Married,No,0,Student Loan,26194,1382,12171
+Female,22,Mechanic,Full-Time,Rural,Yes (Owned),78515,High,Single,Yes,2,Student Loan,30132,2224,4594
+Male,23,Pilot,Full-Time,Urban,Yes (Loan),92149,Medium,Married,No,0,Student Loan,35053,7931,18792
+Female,26,Chef,Full-Time,Rural,Yes (Owned),79132,High,Married,Yes,2,Student Loan,40595,7732,10378
+Female,27,Doctor,Full-Time,Rural,No,75914,Medium,Married,No,1,Student Loan,49072,2108,1099
+Male,27,Architect,Full-Time,Urban,Yes (Owned),99351,High,Married,Yes,2,Student Loan,45807,6770,21200
+Male,34,Musician,Full-Time,Urban,No,61524,Medium,Single,No,1,Student Loan,20537,6064,2070
+Male,27,Doctor,Full-Time,Rural,Yes (Owned),81320,Medium,Married,Yes,2,Student Loan,46293,1766,11235
+Male,31,Doctor,Full-Time,Urban,Yes (Owned),44236,Medium,Married,Yes,1,Student Loan,40161,2241,6309
+Male,31,Teacher,Full-Time,Rural,Yes (Owned),45710,Medium,Married,Yes,0,Student Loan,37925,172,12134
+Female,31,Musician,Full-Time,Urban,No,73702,High,Married,Yes,2,Student Loan,39335,7636,24064
+Female,32,Mechanic,Full-Time,Rural,No,114620,Medium,Single,No,0,Student Loan,49431,2559,16836
+Female,25,Teacher,Full-Time,Urban,No,117415,Medium,Single,Yes,0,Student Loan,42666,1625,18920
+Female,34,Mechanic,Full-Time,Urban,Yes (Owned),82574,High,Married,Yes,0,Student Loan,43731,4504,13949
+Female,30,Chef,Full-Time,Rural,Yes (Loan),61870,High,Married,Yes,0,Student Loan,21534,5475,2783
+Male,24,Chef,Full-Time,Rural,Yes (Loan),72552,Medium,Single,No,0,Student Loan,20784,2284,24228
+Female,32,Musician,Full-Time,Rural,Yes (Owned),89514,High,Married,Yes,1,Student Loan,35797,360,13941
+Female,22,Marketing Specialist,Full-Time,Rural,Yes (Loan),107202,Medium,Single,Yes,2,Student Loan,23415,4957,1667
+Female,37,Doctor,Full-Time,Urban,Yes (Loan),119752,Medium,Married,No,2,Student Loan,34283,6745,10043
+Male,26,Musician,Full-Time,Urban,No,88218,High,Single,Yes,2,Student Loan,42882,7513,24422
+Male,38,Doctor,Full-Time,Rural,Yes (Owned),104813,Medium,Married,Yes,0,Student Loan,28059,7437,6342
+Female,36,Writer,Full-Time,Rural,Yes (Owned),68091,Medium,Married,Yes,0,Student Loan,32968,4355,2717
+Female,27,Firefighter,Full-Time,Urban,Yes (Loan),114052,Medium,Married,Yes,2,Student Loan,32681,330,9589
+Female,31,Mechanic,Full-Time,Rural,No,89883,Medium,Single,Yes,0,Student Loan,35154,1102,8839
+Female,26,Teacher,Full-Time,Rural,Yes (Loan),86291,High,Married,Yes,2,Student Loan,22702,3376,24748
+Male,40,Chef,Full-Time,Rural,Yes (Loan),47024,High,Married,No,2,Student Loan,49862,6659,8188
+Female,38,Writer,Full-Time,Rural,Yes (Loan),80889,High,Married,No,1,Student Loan,48705,1967,24682
+Male,38,Chef,Full-Time,Urban,Yes (Owned),44731,High,Single,No,0,Student Loan,41852,6046,4535
+Female,23,Architect,Full-Time,Rural,No,94151,High,Married,No,1,Student Loan,37659,4903,10134
+Male,22,Firefighter,Full-Time,Rural,Yes (Loan),47499,Medium,Married,No,1,Student Loan,20936,7959,24309
+Male,34,Doctor,Full-Time,Rural,Yes (Loan),107408,High,Married,No,0,Student Loan,36429,3495,1142
+Male,29,Marketing Specialist,Full-Time,Urban,No,41729,High,Single,No,1,Student Loan,28201,2546,6393
+Female,39,Teacher,Full-Time,Rural,No,41522,Medium,Single,Yes,1,Student Loan,38113,3502,1862
+Female,26,Pilot,Full-Time,Urban,No,70108,Medium,Married,No,0,Student Loan,20002,4669,18893
+Female,30,Firefighter,Full-Time,Rural,No,107650,High,Married,Yes,1,Student Loan,39151,7112,3376
+Male,36,Marketing Specialist,Full-Time,Urban,No,49696,High,Single,Yes,0,Student Loan,34853,4115,8908
+Female,33,Writer,Full-Time,Urban,Yes (Loan),50488,High,Single,No,0,Student Loan,41120,3814,9075
+Male,26,Firefighter,Full-Time,Rural,No,108449,High,Single,No,2,Student Loan,21576,1856,7632
+Female,34,Writer,Full-Time,Urban,No,118856,High,Single,No,0,Student Loan,22315,1389,18250
+Female,29,Doctor,Full-Time,Rural,No,55864,High,Single,Yes,0,Student Loan,49576,7044,1389
+Male,24,Chef,Full-Time,Urban,Yes (Loan),57346,High,Married,Yes,0,Student Loan,22009,884,22738
+Female,39,Musician,Full-Time,Rural,No,98434,Medium,Married,No,2,Student Loan,24868,5525,24927
+Female,26,Chef,Full-Time,Rural,Yes (Owned),52620,High,Single,Yes,2,Student Loan,39860,5751,1363
+Male,30,Teacher,Full-Time,Urban,No,96479,High,Married,No,2,Student Loan,40801,5944,8869
+Female,32,Pilot,Full-Time,Rural,No,95082,High,Married,No,1,Student Loan,30269,2552,10640
+Female,33,Teacher,Full-Time,Rural,Yes (Loan),70546,High,Single,No,0,Student Loan,27253,4644,15704
+Male,35,Chef,Full-Time,Rural,No,68712,High,Married,Yes,0,Student Loan,32654,401,2134
+Male,38,Firefighter,Full-Time,Rural,Yes (Owned),54548,Medium,Single,No,0,Student Loan,32653,3793,5320
+Male,36,Musician,Full-Time,Rural,Yes (Owned),105251,Medium,Single,Yes,2,Student Loan,42589,1983,15590
+Female,32,Firefighter,Full-Time,Rural,No,110010,Medium,Single,Yes,2,Student Loan,27155,3380,19170
+Female,36,Teacher,Full-Time,Rural,No,63381,Medium,Married,Yes,0,Student Loan,42391,2077,7139
+Male,30,Pilot,Full-Time,Rural,Yes (Owned),106097,Medium,Married,Yes,2,Student Loan,21632,3259,17249
+Female,39,Mechanic,Full-Time,Urban,Yes (Owned),50866,Medium,Married,Yes,1,Student Loan,25055,2332,18942
+Female,28,Doctor,Full-Time,Rural,No,85571,Medium,Married,Yes,2,Student Loan,25167,125,24818
+Male,40,Pilot,Full-Time,Rural,Yes (Owned),79001,Medium,Married,Yes,1,Student Loan,25052,3828,19163
+Female,39,Architect,Full-Time,Urban,No,118376,Medium,Married,No,0,Student Loan,37851,1580,21878
+Male,39,Firefighter,Full-Time,Rural,Yes (Owned),118086,High,Single,Yes,1,Student Loan,21624,231,12617
+Female,24,Mechanic,Full-Time,Rural,Yes (Owned),98929,High,Married,Yes,1,Student Loan,45279,3601,23862
+Male,40,Marketing Specialist,Full-Time,Urban,No,42427,Medium,Married,No,1,Student Loan,47455,7201,18001
+Female,28,Mechanic,Full-Time,Urban,Yes (Owned),79050,Medium,Single,Yes,0,Student Loan,45939,949,17599
+Female,35,Doctor,Full-Time,Urban,No,65469,Medium,Single,Yes,2,Student Loan,44514,5251,7811
+Female,22,Mechanic,Full-Time,Urban,Yes (Owned),71390,Medium,Single,No,2,Student Loan,23835,4737,17306
+Female,39,Teacher,Full-Time,Urban,Yes (Loan),93216,High,Married,Yes,0,Student Loan,38117,5147,5154
+Female,30,Firefighter,Full-Time,Rural,Yes (Loan),79446,Medium,Single,No,2,Student Loan,35927,4009,3906
+Female,23,Firefighter,Full-Time,Urban,No,67955,High,Married,Yes,1,Student Loan,40296,1475,6484
+Female,35,Chef,Full-Time,Urban,No,85425,High,Single,Yes,0,Student Loan,23496,2663,21417
+Female,34,Firefighter,Full-Time,Urban,Yes (Loan),112679,Medium,Married,Yes,2,Student Loan,37580,3611,6217
+Male,29,Teacher,Full-Time,Rural,Yes (Owned),114170,Medium,Single,No,0,Student Loan,25510,250,15097
+Female,39,Architect,Full-Time,Urban,Yes (Owned),91353,Medium,Single,Yes,0,Student Loan,43836,5073,17118
+Male,29,Marketing Specialist,Full-Time,Rural,Yes (Loan),56114,High,Married,Yes,1,Student Loan,38391,104,451
+Male,32,Musician,Full-Time,Rural,Yes (Loan),68711,High,Married,No,0,Student Loan,46374,3235,19241
+Male,32,Architect,Full-Time,Urban,No,55542,Medium,Single,No,0,Student Loan,29986,1055,3238
+Female,37,Architect,Full-Time,Rural,Yes (Owned),59230,Medium,Single,Yes,2,Student Loan,33544,540,727
+Female,37,Writer,Full-Time,Urban,Yes (Owned),60971,High,Married,Yes,2,Student Loan,36726,6283,1676
+Male,40,Writer,Full-Time,Rural,Yes (Loan),85863,Medium,Single,No,0,Student Loan,40755,489,2255
+Female,24,Writer,Full-Time,Urban,Yes (Loan),42402,High,Married,Yes,0,Student Loan,40922,255,19465
+Female,34,Teacher,Full-Time,Urban,Yes (Loan),63947,High,Single,No,1,Student Loan,39810,4571,33
+Female,31,Firefighter,Full-Time,Rural,No,50877,High,Single,Yes,2,Student Loan,29444,1229,22858
+Female,31,Pilot,Full-Time,Urban,Yes (Owned),119650,High,Married,Yes,1,Student Loan,40829,7228,15186
+Male,38,Mechanic,Full-Time,Rural,Yes (Loan),43351,Medium,Married,Yes,0,Student Loan,38819,3195,6767
+Male,36,Architect,Full-Time,Rural,No,108480,High,Single,Yes,0,Student Loan,44654,1824,14638
+Male,22,Musician,Full-Time,Rural,Yes (Owned),101330,Medium,Single,Yes,0,Student Loan,24963,7701,16241
+Female,36,Musician,Full-Time,Urban,Yes (Owned),76863,High,Single,Yes,0,Student Loan,33428,4538,16282
+Male,34,Teacher,Full-Time,Urban,Yes (Owned),56451,High,Married,No,2,Student Loan,48683,4953,4747
+Female,28,Teacher,Full-Time,Rural,Yes (Owned),93078,High,Single,Yes,0,Student Loan,20970,4861,13725
+Male,25,Marketing Specialist,Full-Time,Rural,Yes (Loan),48729,High,Single,Yes,0,Student Loan,26122,4259,24162
+Male,38,Firefighter,Full-Time,Rural,No,59638,Medium,Married,No,0,Student Loan,42225,4585,13783
+Female,37,Chef,Full-Time,Urban,Yes (Owned),90633,Medium,Single,No,0,Student Loan,47056,5641,2691
+Female,39,Musician,Full-Time,Urban,No,88223,High,Single,No,0,Student Loan,34826,6536,61
+Male,32,Firefighter,Full-Time,Rural,No,94614,High,Single,No,1,Student Loan,28279,1009,52
+Male,28,Writer,Full-Time,Rural,Yes (Owned),61039,Medium,Single,Yes,0,Student Loan,28325,6448,20169
+Female,34,Chef,Full-Time,Urban,Yes (Loan),106179,High,Single,Yes,1,Student Loan,33878,6021,24107
+Male,40,Marketing Specialist,Full-Time,Urban,No,90986,Medium,Single,Yes,1,Student Loan,30305,5777,22855
+Male,28,Musician,Full-Time,Rural,Yes (Owned),114138,Medium,Single,No,0,Student Loan,32162,7997,8272
+Female,39,Musician,Full-Time,Urban,Yes (Owned),64460,Medium,Married,Yes,1,Student Loan,39686,2246,5840
+Female,40,Doctor,Full-Time,Rural,Yes (Loan),103918,High,Single,Yes,0,Student Loan,32185,179,22161
+Female,28,Pilot,Full-Time,Rural,Yes (Loan),98404,High,Single,No,2,Student Loan,21197,3075,11925
+Male,29,Doctor,Full-Time,Urban,No,69412,Medium,Single,No,1,Student Loan,20356,3075,24072
+Female,34,Pilot,Full-Time,Rural,No,98598,High,Married,Yes,1,Student Loan,40520,3991,20982
+Female,34,Firefighter,Full-Time,Rural,Yes (Loan),92257,Medium,Married,No,1,Student Loan,23449,3801,21327
+Male,31,Mechanic,Full-Time,Rural,Yes (Owned),86630,Medium,Married,No,1,Student Loan,25498,2586,12077
+Male,26,Marketing Specialist,Full-Time,Rural,No,50562,Medium,Single,No,1,Student Loan,23658,7450,16880
+Male,38,Pilot,Full-Time,Rural,Yes (Loan),103736,High,Married,No,1,Student Loan,23825,6292,12242
+Male,38,Architect,Full-Time,Urban,No,97131,High,Married,No,2,Student Loan,29703,4715,17266
+Male,25,Doctor,Full-Time,Urban,Yes (Owned),43261,High,Single,No,2,Student Loan,43307,6208,12723
+Male,33,Teacher,Full-Time,Rural,Yes (Loan),56139,High,Married,No,1,Student Loan,34986,4481,17231
+Female,31,Doctor,Full-Time,Rural,Yes (Loan),115164,Medium,Single,Yes,0,Student Loan,20158,1125,19008
+Male,24,Teacher,Full-Time,Rural,Yes (Owned),40026,Medium,Married,Yes,1,Student Loan,48673,1528,20992
+Male,28,Chef,Full-Time,Rural,Yes (Owned),64423,High,Married,No,1,Student Loan,48103,1147,19133
+Male,33,Writer,Full-Time,Urban,Yes (Owned),73196,Medium,Single,No,1,Student Loan,31727,7943,6426
+Female,27,Architect,Full-Time,Urban,No,106023,Medium,Single,No,1,Student Loan,47369,5291,805
+Male,30,Teacher,Full-Time,Rural,No,104056,High,Single,No,1,Student Loan,42217,5220,16200
+Female,28,Musician,Full-Time,Rural,No,56988,Medium,Single,Yes,1,Student Loan,41464,5021,11705
+Male,35,Teacher,Full-Time,Rural,No,91211,Medium,Married,No,2,Student Loan,26696,4915,4415
+Male,25,Musician,Full-Time,Rural,Yes (Owned),74047,Medium,Married,No,2,Student Loan,33665,2563,16681
+Male,34,Doctor,Full-Time,Urban,Yes (Loan),56912,Medium,Single,No,1,Student Loan,31357,1929,853
+Female,27,Pilot,Full-Time,Urban,No,76337,High,Single,No,2,Student Loan,24920,6056,11262
+Male,23,Musician,Full-Time,Rural,Yes (Loan),119373,Medium,Single,No,2,Student Loan,46084,1081,10852
+Male,35,Chef,Full-Time,Urban,No,76081,High,Married,No,1,Student Loan,26394,7943,22642
+Male,37,Mechanic,Full-Time,Urban,Yes (Loan),116277,High,Single,No,2,Student Loan,43105,3410,1980
+Male,33,Firefighter,Full-Time,Urban,No,50772,High,Single,Yes,1,Student Loan,35799,3371,1337
+Female,23,Doctor,Full-Time,Urban,No,108506,High,Married,Yes,1,Student Loan,31712,5151,23046
+Female,24,Teacher,Full-Time,Rural,Yes (Loan),110722,Medium,Single,Yes,1,Student Loan,25085,1395,23358
+Male,24,Marketing Specialist,Full-Time,Urban,Yes (Owned),97245,High,Single,Yes,2,Student Loan,32303,2566,23541
+Female,37,Marketing Specialist,Full-Time,Rural,No,110912,High,Married,No,1,Student Loan,43244,4986,6516
+Female,26,Writer,Full-Time,Rural,Yes (Loan),81085,Medium,Married,No,0,Student Loan,49937,5425,10353
+Female,33,Architect,Full-Time,Urban,Yes (Owned),117574,High,Married,No,0,Student Loan,20677,1013,468
+Female,31,Musician,Full-Time,Rural,No,89163,High,Married,No,2,Student Loan,47047,3085,4412
+Female,26,Mechanic,Full-Time,Rural,Yes (Loan),43768,Medium,Married,No,0,Student Loan,40089,1672,10516
+Male,24,Mechanic,Full-Time,Urban,No,100185,High,Married,Yes,2,Student Loan,43024,5128,16865
+Female,39,Mechanic,Full-Time,Rural,Yes (Loan),46561,High,Married,Yes,2,Student Loan,37773,2431,21799
+Female,23,Musician,Full-Time,Urban,Yes (Loan),75479,High,Married,Yes,1,Student Loan,30012,5939,23642
+Female,27,Architect,Full-Time,Urban,No,86259,High,Single,No,1,Student Loan,27825,1012,3496
+Female,36,Musician,Full-Time,Urban,Yes (Loan),92315,High,Single,Yes,2,Student Loan,37460,3679,21901
+Male,25,Writer,Full-Time,Rural,No,63660,Medium,Married,Yes,1,Student Loan,43678,7130,18776
+Female,34,Writer,Full-Time,Rural,Yes (Loan),58200,High,Single,Yes,0,Student Loan,39021,3179,20186
+Male,26,Pilot,Full-Time,Rural,Yes (Owned),77452,Medium,Married,No,1,Student Loan,46404,6217,21602
+Male,33,Mechanic,Full-Time,Urban,No,49547,Medium,Single,No,0,Student Loan,27715,7113,11026
+Female,28,Writer,Full-Time,Urban,Yes (Owned),74023,Medium,Married,Yes,0,Student Loan,20177,3775,22329
+Male,27,Musician,Full-Time,Rural,Yes (Owned),40839,Medium,Single,Yes,0,Student Loan,31060,4474,3790
+Female,27,Pilot,Full-Time,Rural,Yes (Owned),119808,Medium,Single,Yes,0,Student Loan,24316,7782,8878
+Male,39,Writer,Full-Time,Rural,Yes (Owned),91200,High,Single,Yes,1,Student Loan,24233,6726,405
+Male,31,Writer,Full-Time,Urban,Yes (Loan),64258,Medium,Married,Yes,1,Student Loan,28385,1501,19844
+Male,40,Teacher,Full-Time,Rural,Yes (Loan),87305,Medium,Single,No,1,Student Loan,27919,3520,20492
+Male,26,Writer,Full-Time,Rural,Yes (Loan),106070,Medium,Married,No,1,Student Loan,46735,2262,12143
+Female,34,Writer,Full-Time,Rural,Yes (Loan),93055,High,Married,Yes,2,Student Loan,22841,6483,15403
+Male,32,Mechanic,Full-Time,Urban,Yes (Loan),107698,High,Married,Yes,1,Student Loan,28501,2867,6628
+Female,22,Firefighter,Full-Time,Rural,Yes (Loan),89864,High,Single,Yes,1,Student Loan,23289,1494,1407
+Male,23,Chef,Full-Time,Urban,Yes (Owned),110259,High,Single,Yes,1,Student Loan,25237,6974,7003
+Female,32,Musician,Full-Time,Urban,No,111427,High,Married,Yes,1,Student Loan,39433,5935,15018
+Female,32,Pilot,Full-Time,Urban,Yes (Owned),96480,Medium,Single,Yes,0,Student Loan,21654,5889,4883
+Male,36,Writer,Full-Time,Urban,No,50050,Medium,Married,No,1,Student Loan,23521,3245,477
+Male,25,Musician,Full-Time,Urban,No,83058,Medium,Married,No,0,Student Loan,47756,3929,11178
+Female,26,Mechanic,Full-Time,Rural,Yes (Owned),43914,Medium,Single,No,2,Student Loan,32931,7504,22630
+Male,32,Architect,Full-Time,Rural,Yes (Owned),97215,High,Married,Yes,2,Student Loan,48295,1060,19489
+Male,22,Architect,Full-Time,Rural,Yes (Loan),53402,Medium,Single,Yes,0,Student Loan,44485,6694,1285
+Male,30,Musician,Full-Time,Rural,Yes (Owned),93597,Medium,Single,No,0,Student Loan,27518,729,15591
+Female,24,Marketing Specialist,Full-Time,Urban,Yes (Owned),46038,Medium,Married,Yes,1,Student Loan,23069,4720,19519
+Male,40,Writer,Full-Time,Rural,No,46630,High,Married,Yes,1,Student Loan,25644,4473,7777
+Male,30,Firefighter,Full-Time,Rural,No,101931,Medium,Single,No,0,Student Loan,36303,6454,4540
+Male,26,Teacher,Full-Time,Rural,Yes (Loan),82087,Medium,Single,No,1,Student Loan,44783,3612,1369
+Female,23,Pilot,Full-Time,Rural,No,82461,High,Single,No,2,Student Loan,23314,3917,6272
+Male,34,Pilot,Full-Time,Urban,No,63657,Medium,Single,No,1,Student Loan,33764,1954,16778
+Male,40,Marketing Specialist,Full-Time,Urban,Yes (Loan),112049,Medium,Single,No,0,Student Loan,37860,6138,15656
+Male,23,Mechanic,Full-Time,Urban,No,106506,Medium,Single,No,2,Student Loan,38632,4358,6812
+Male,31,Mechanic,Full-Time,Urban,No,81224,High,Single,Yes,1,Student Loan,40047,6776,11846
+Male,35,Doctor,Full-Time,Rural,No,94714,High,Single,No,2,Student Loan,34092,4466,10433
+Female,23,Firefighter,Full-Time,Rural,Yes (Owned),54838,High,Single,No,1,Student Loan,25430,6742,17643
+Male,32,Teacher,Full-Time,Rural,Yes (Loan),84000,Medium,Single,No,2,Student Loan,46576,465,2470
+Male,22,Writer,Full-Time,Urban,Yes (Loan),51249,Medium,Married,Yes,2,Student Loan,27989,3380,22395
+Male,35,Firefighter,Full-Time,Rural,Yes (Loan),83013,Medium,Single,Yes,1,Student Loan,45908,1717,12656
+Male,26,Teacher,Full-Time,Urban,Yes (Owned),73532,High,Single,No,0,Student Loan,26354,557,19695
+Male,29,Mechanic,Full-Time,Rural,Yes (Owned),106743,High,Married,Yes,2,Student Loan,25253,6264,21046
+Female,31,Musician,Full-Time,Rural,Yes (Loan),71956,High,Single,No,1,Student Loan,26691,3977,24006
+Female,40,Pilot,Full-Time,Urban,Yes (Loan),72126,High,Single,Yes,1,Student Loan,32192,6400,13760
+Female,35,Teacher,Full-Time,Urban,No,48963,Medium,Single,No,0,Student Loan,30809,2058,22684
+Female,40,Mechanic,Full-Time,Urban,No,88409,Medium,Single,Yes,0,Student Loan,28123,2416,6699
+Male,29,Mechanic,Full-Time,Rural,No,108917,Medium,Married,Yes,1,Student Loan,41849,7703,14696
+Male,37,Chef,Full-Time,Rural,Yes (Loan),110330,Medium,Single,No,2,Student Loan,28694,2157,13141
+Female,33,Doctor,Full-Time,Urban,No,47989,Medium,Married,No,1,Student Loan,34778,7382,145
+Male,24,Musician,Full-Time,Urban,Yes (Loan),76583,High,Single,No,0,Student Loan,27437,3079,9370
+Female,22,Pilot,Full-Time,Urban,Yes (Loan),93180,High,Married,No,0,Student Loan,39084,4924,22110
+Female,23,Pilot,Full-Time,Urban,Yes (Loan),54244,High,Single,Yes,0,Student Loan,29274,210,10894
+Male,26,Musician,Full-Time,Urban,Yes (Loan),73199,High,Married,Yes,2,Student Loan,43371,4755,1918
+Male,30,Mechanic,Full-Time,Rural,Yes (Loan),99748,High,Married,No,0,Student Loan,39662,4570,12097
+Male,34,Doctor,Full-Time,Rural,Yes (Loan),75902,High,Single,Yes,2,Student Loan,49360,5620,14939
+Male,30,Teacher,Full-Time,Rural,Yes (Loan),58611,High,Single,Yes,2,Student Loan,33653,7378,12232
+Male,33,Chef,Full-Time,Rural,Yes (Owned),116632,High,Married,Yes,0,Student Loan,27520,3333,10329
+Male,35,Marketing Specialist,Full-Time,Rural,Yes (Loan),82172,High,Married,Yes,0,Student Loan,40346,1899,21877
+Female,23,Chef,Full-Time,Rural,Yes (Loan),61026,High,Single,Yes,1,Student Loan,24830,2313,18843
+Male,38,Musician,Full-Time,Urban,Yes (Loan),63324,High,Married,Yes,1,Student Loan,47360,7882,15343
+Female,31,Teacher,Full-Time,Rural,Yes (Loan),99040,High,Married,Yes,0,Student Loan,25757,5782,22528
+Female,40,Mechanic,Full-Time,Rural,Yes (Loan),73819,Medium,Single,No,0,Student Loan,27698,838,5329
+Male,31,Writer,Full-Time,Urban,No,83578,High,Married,No,2,Student Loan,38329,7182,10697
+Male,22,Marketing Specialist,Full-Time,Rural,No,53933,Medium,Single,No,2,Student Loan,38322,348,17808
+Female,22,Musician,Full-Time,Rural,Yes (Loan),57864,Medium,Married,Yes,1,Student Loan,36073,5431,23339
+Female,30,Architect,Full-Time,Urban,Yes (Loan),98629,Medium,Single,Yes,2,Student Loan,30305,5493,2853
+Male,29,Doctor,Full-Time,Rural,Yes (Loan),115744,High,Married,No,2,Student Loan,36086,4496,15823
+Male,39,Musician,Full-Time,Rural,No,110442,High,Married,Yes,0,Student Loan,26310,5082,13393
+Female,38,Musician,Full-Time,Urban,Yes (Owned),72461,High,Single,Yes,1,Student Loan,37271,1246,16759
+Male,37,Musician,Full-Time,Urban,No,98302,High,Married,No,0,Student Loan,47711,5541,5461
+Male,32,Architect,Full-Time,Urban,No,76515,Medium,Single,No,1,Student Loan,42749,7564,94
+Male,27,Firefighter,Full-Time,Urban,Yes (Loan),104278,High,Married,No,2,Student Loan,32440,4335,13930
+Female,25,Marketing Specialist,Full-Time,Rural,Yes (Loan),51701,High,Single,Yes,0,Student Loan,37531,3921,20317
+Male,23,Teacher,Full-Time,Rural,Yes (Owned),74566,Medium,Single,Yes,2,Student Loan,42700,786,19814
+Female,36,Mechanic,Full-Time,Urban,Yes (Loan),51740,Medium,Single,Yes,2,Student Loan,37016,1014,21202
+Female,26,Pilot,Full-Time,Rural,Yes (Owned),41699,Medium,Single,Yes,1,Student Loan,43129,6862,15556
+Female,39,Architect,Full-Time,Urban,Yes (Owned),95622,High,Married,No,0,Student Loan,21960,1573,12988
+Male,39,Pilot,Full-Time,Rural,Yes (Loan),51111,High,Married,No,2,Student Loan,45779,1630,21438
+Male,22,Pilot,Full-Time,Urban,No,112298,Medium,Single,Yes,1,Student Loan,42318,2164,5029
+Female,29,Doctor,Full-Time,Rural,Yes (Owned),64008,High,Single,No,0,Student Loan,34782,5667,14059
+Female,26,Architect,Full-Time,Rural,No,87966,High,Single,No,2,Student Loan,46808,4138,17991
+Male,27,Mechanic,Full-Time,Rural,No,110137,High,Single,Yes,0,Student Loan,45891,3284,20828
+Female,38,Architect,Full-Time,Urban,Yes (Loan),119550,Medium,Married,Yes,1,Student Loan,35375,6193,22398
+Male,40,Writer,Full-Time,Urban,No,81496,High,Married,Yes,2,Student Loan,47119,2969,13749
+Male,31,Writer,Full-Time,Rural,Yes (Owned),53474,Medium,Single,Yes,1,Student Loan,46331,6556,24036
+Female,25,Doctor,Full-Time,Rural,Yes (Owned),114198,High,Single,Yes,1,Student Loan,27990,2841,8042
+Female,29,Architect,Full-Time,Urban,Yes (Owned),44823,Medium,Married,Yes,1,Student Loan,26921,7650,18955
+Female,27,Musician,Full-Time,Urban,Yes (Loan),42202,Medium,Single,Yes,1,Student Loan,24867,7828,2377
+Female,28,Chef,Full-Time,Rural,No,98815,High,Single,No,0,Student Loan,29203,3417,11340
+Female,39,Pilot,Full-Time,Urban,Yes (Loan),107667,High,Single,No,2,Student Loan,41969,5146,15401
+Male,25,Doctor,Full-Time,Rural,No,69475,High,Married,No,1,Student Loan,25809,1370,3656
+Female,23,Teacher,Full-Time,Rural,No,115311,Medium,Married,Yes,2,Student Loan,42830,6944,22597
+Male,25,Mechanic,Full-Time,Urban,Yes (Owned),96553,Medium,Married,No,1,Student Loan,33144,143,12286
+Female,33,Pilot,Full-Time,Urban,No,92380,High,Single,No,0,Student Loan,47242,6998,24578
+Male,25,Pilot,Full-Time,Rural,Yes (Owned),60560,High,Single,No,2,Student Loan,20632,287,5573
+Male,38,Marketing Specialist,Full-Time,Urban,Yes (Owned),83083,High,Married,No,1,Student Loan,32466,2415,8166
+Male,30,Writer,Full-Time,Urban,No,106533,High,Single,No,2,Student Loan,34334,5721,7611
+Male,25,Writer,Full-Time,Rural,Yes (Loan),54517,Medium,Married,No,0,Student Loan,23690,4102,22531
+Female,32,Firefighter,Full-Time,Rural,Yes (Loan),90263,High,Single,Yes,2,Student Loan,49070,3241,24753
+Female,36,Architect,Full-Time,Rural,Yes (Owned),46442,Medium,Single,No,1,Student Loan,45110,4905,4145
+Female,32,Chef,Full-Time,Rural,Yes (Owned),60842,High,Married,Yes,0,Student Loan,27958,7208,21796
+Male,24,Pilot,Full-Time,Urban,Yes (Loan),107277,High,Single,Yes,0,Student Loan,27364,4620,12805
+Female,23,Firefighter,Full-Time,Rural,Yes (Loan),55573,Medium,Single,Yes,1,Student Loan,25922,4304,17003
+Female,32,Musician,Full-Time,Urban,No,56026,Medium,Married,Yes,2,Student Loan,25008,4458,1429
+Female,26,Mechanic,Full-Time,Rural,Yes (Loan),60925,Medium,Married,No,1,Student Loan,43878,6826,17051
+Female,34,Chef,Full-Time,Urban,Yes (Loan),73050,High,Married,No,0,Student Loan,36955,5709,20926
+Female,26,Pilot,Full-Time,Urban,Yes (Owned),70672,High,Single,Yes,2,Student Loan,24609,7377,8647
+Female,34,Architect,Full-Time,Rural,Yes (Loan),72052,Medium,Single,Yes,2,Student Loan,24450,7618,21867
+Male,39,Musician,Full-Time,Rural,No,105557,High,Married,No,0,Student Loan,48589,4240,6713
+Male,29,Doctor,Full-Time,Rural,Yes (Owned),74748,High,Single,No,2,Student Loan,24804,7517,19389
+Male,40,Writer,Full-Time,Rural,Yes (Loan),73027,Medium,Married,No,2,Student Loan,39024,4124,16388
+Female,35,Firefighter,Full-Time,Rural,No,89345,High,Single,No,0,Student Loan,41485,4425,19053
+Female,36,Teacher,Full-Time,Rural,No,43828,High,Single,No,0,Student Loan,48403,1795,20631
+Male,33,Musician,Full-Time,Rural,Yes (Owned),72961,High,Married,No,0,Student Loan,20971,5623,5402
+Female,35,Firefighter,Full-Time,Rural,Yes (Owned),82204,High,Married,No,2,Student Loan,43277,6270,24254
+Male,32,Doctor,Full-Time,Rural,No,72164,High,Married,Yes,1,Student Loan,33470,6204,22774
+Female,25,Firefighter,Full-Time,Urban,Yes (Loan),112080,Medium,Single,Yes,0,Student Loan,37633,7980,20723
+Male,38,Mechanic,Full-Time,Urban,Yes (Loan),92138,High,Single,Yes,2,Student Loan,43416,1028,16483
+Male,27,Musician,Full-Time,Urban,Yes (Loan),100976,High,Single,Yes,0,Student Loan,46426,3235,20808
+Male,39,Writer,Full-Time,Urban,Yes (Owned),104531,Medium,Married,Yes,2,Student Loan,26129,849,9251
+Male,40,Firefighter,Full-Time,Urban,Yes (Owned),65996,High,Single,No,0,Student Loan,46793,3465,19327
+Male,32,Marketing Specialist,Full-Time,Rural,Yes (Owned),102780,Medium,Married,No,1,Student Loan,34132,7692,8855
+Male,22,Musician,Full-Time,Rural,No,100882,High,Married,No,2,Student Loan,26888,7861,5686
+Male,36,Firefighter,Full-Time,Urban,No,58916,High,Single,No,0,Student Loan,34004,3727,2596
+Male,37,Writer,Full-Time,Urban,Yes (Owned),40594,Medium,Single,No,0,Student Loan,20146,7927,8713
+Male,27,Teacher,Full-Time,Urban,Yes (Owned),100265,High,Married,No,2,Student Loan,28490,1803,21723
+Male,36,Mechanic,Full-Time,Rural,Yes (Loan),87211,Medium,Married,No,0,Student Loan,24167,2733,8885
+Male,23,Writer,Full-Time,Rural,Yes (Owned),40751,High,Married,Yes,2,Student Loan,46522,882,22627
+Male,37,Pilot,Full-Time,Urban,Yes (Loan),58025,High,Single,No,0,Student Loan,23956,4005,5583
+Male,33,Doctor,Full-Time,Rural,No,90067,Medium,Married,Yes,1,Student Loan,20554,3748,8114
+Male,40,Doctor,Full-Time,Rural,Yes (Loan),50235,Medium,Married,Yes,1,Student Loan,33715,3318,17375
+Male,39,Mechanic,Full-Time,Urban,Yes (Loan),79417,High,Single,Yes,2,Student Loan,21315,5753,15437
+Female,26,Firefighter,Full-Time,Rural,No,93349,High,Married,No,0,Student Loan,25485,1867,21762
+Female,40,Mechanic,Full-Time,Rural,Yes (Owned),91159,High,Single,Yes,2,Student Loan,24921,1248,4462
+Male,39,Chef,Full-Time,Urban,Yes (Loan),84447,High,Single,No,2,Student Loan,24745,418,15882
+Female,25,Architect,Full-Time,Rural,Yes (Owned),111533,High,Married,Yes,1,Student Loan,31221,858,13188
+Male,28,Pilot,Full-Time,Urban,Yes (Owned),73258,High,Married,Yes,1,Student Loan,49092,2062,17853
+Female,23,Firefighter,Full-Time,Rural,No,67560,Medium,Married,Yes,2,Student Loan,25224,314,12524
+Male,27,Mechanic,Full-Time,Rural,Yes (Loan),76059,High,Single,No,1,Student Loan,48135,5100,13528
+Male,38,Pilot,Full-Time,Urban,Yes (Owned),99491,Medium,Married,No,2,Student Loan,40000,1549,14261
+Male,29,Marketing Specialist,Full-Time,Rural,Yes (Owned),92883,High,Married,Yes,2,Student Loan,49214,6146,15347
+Male,30,Chef,Full-Time,Rural,Yes (Owned),74055,Medium,Married,Yes,1,Student Loan,40463,503,5414
+Female,33,Pilot,Full-Time,Rural,No,82403,Medium,Married,Yes,0,Student Loan,41039,4403,11633
+Female,32,Architect,Full-Time,Urban,No,65392,Medium,Single,Yes,0,Student Loan,39781,183,18839
+Female,22,Doctor,Full-Time,Rural,Yes (Loan),55387,High,Married,No,1,Student Loan,45690,6345,7860
+Female,33,Doctor,Full-Time,Rural,Yes (Loan),63760,High,Single,No,2,Student Loan,26338,2153,16638
+Female,29,Marketing Specialist,Full-Time,Urban,Yes (Owned),86909,Medium,Single,No,0,Student Loan,29369,7480,17057
+Female,30,Architect,Full-Time,Urban,No,96728,High,Married,Yes,2,Student Loan,25606,1425,10571
+Female,34,Chef,Full-Time,Rural,Yes (Owned),93390,High,Single,No,1,Student Loan,41586,5625,3883
+Female,36,Musician,Full-Time,Rural,No,102574,High,Single,No,2,Student Loan,22266,4433,11767
+Female,28,Firefighter,Full-Time,Urban,Yes (Owned),42921,High,Married,Yes,1,Student Loan,37328,4032,23624
+Male,28,Marketing Specialist,Full-Time,Urban,Yes (Owned),48745,Medium,Married,Yes,1,Student Loan,31423,4494,17446
+Male,25,Chef,Full-Time,Urban,No,83147,Medium,Married,Yes,2,Student Loan,26354,1436,15618
+Female,24,Doctor,Full-Time,Rural,Yes (Loan),104038,Medium,Married,No,2,Student Loan,26519,256,19794
+Male,28,Musician,Full-Time,Rural,Yes (Owned),51273,High,Single,No,2,Student Loan,30539,3961,13770
+Female,31,Doctor,Full-Time,Rural,Yes (Loan),75502,Medium,Single,Yes,2,Student Loan,32540,5695,18157
+Female,36,Teacher,Full-Time,Urban,Yes (Loan),43273,Medium,Married,No,0,Student Loan,40731,3146,6148
+Female,39,Musician,Full-Time,Rural,Yes (Owned),118488,Medium,Married,No,1,Student Loan,20147,6108,1888
+Female,30,Firefighter,Full-Time,Rural,Yes (Loan),77119,Medium,Married,No,0,Student Loan,20695,767,3960
+Female,35,Mechanic,Full-Time,Urban,Yes (Loan),99116,High,Married,No,0,Student Loan,48957,1385,5027
+Male,35,Architect,Full-Time,Rural,Yes (Owned),110003,Medium,Single,Yes,1,Student Loan,24651,1854,24193
+Female,29,Firefighter,Full-Time,Rural,No,73377,High,Married,No,1,Student Loan,24921,6150,15327
+Male,40,Firefighter,Full-Time,Rural,Yes (Owned),67445,High,Single,No,1,Student Loan,24250,6549,5176
+Male,28,Doctor,Full-Time,Urban,Yes (Owned),114691,High,Married,No,1,Student Loan,44948,3103,20941
+Female,30,Writer,Full-Time,Rural,No,77180,High,Married,Yes,1,Student Loan,39987,2307,10806
+Female,22,Mechanic,Full-Time,Urban,No,79062,High,Married,No,1,Student Loan,23738,3413,10423
+Male,35,Chef,Full-Time,Rural,No,92962,Medium,Married,Yes,2,Student Loan,49781,4130,24808
+Male,35,Architect,Full-Time,Rural,Yes (Owned),75493,Medium,Married,Yes,1,Student Loan,22667,7346,12149
+Female,37,Pilot,Full-Time,Urban,Yes (Loan),58076,Medium,Married,Yes,0,Student Loan,48335,2224,7535
+Female,25,Marketing Specialist,Full-Time,Rural,No,50765,High,Single,No,0,Student Loan,25226,3143,21408
+Female,36,Pilot,Full-Time,Urban,No,71294,Medium,Single,Yes,0,Student Loan,21052,1290,3968
+Female,37,Architect,Full-Time,Urban,Yes (Owned),74491,Medium,Married,Yes,1,Student Loan,23849,4954,17795
+Female,23,Marketing Specialist,Full-Time,Urban,No,69681,Medium,Married,Yes,0,Student Loan,38065,2342,17364
+Female,30,Chef,Full-Time,Rural,Yes (Loan),50365,High,Single,No,1,Student Loan,35872,3469,21296
+Female,23,Mechanic,Full-Time,Urban,No,86774,Medium,Single,No,0,Student Loan,43078,2498,12901
+Female,38,Pilot,Full-Time,Urban,No,115931,High,Married,No,0,Student Loan,34111,3392,10
+Female,28,Firefighter,Full-Time,Urban,Yes (Owned),85950,Medium,Married,Yes,0,Student Loan,36887,7165,22367
+Male,30,Chef,Full-Time,Rural,Yes (Owned),66788,Medium,Single,No,1,Student Loan,35531,4641,10699
+Male,40,Pilot,Full-Time,Urban,Yes (Loan),115731,High,Married,Yes,2,Student Loan,31687,2561,1148
+Female,38,Pilot,Full-Time,Urban,Yes (Owned),40573,High,Single,No,1,Student Loan,20554,1964,5891
+Female,27,Teacher,Full-Time,Rural,Yes (Loan),103770,High,Single,Yes,0,Student Loan,44223,5382,20615
+Female,38,Mechanic,Full-Time,Urban,No,61016,Medium,Married,No,2,Student Loan,25518,2364,5371
+Male,35,Pilot,Full-Time,Rural,No,67523,High,Married,Yes,2,Student Loan,39216,5879,23955
+Female,31,Pilot,Full-Time,Urban,Yes (Owned),79855,High,Married,No,0,Student Loan,21393,6994,10303
+Female,34,Mechanic,Full-Time,Rural,Yes (Loan),79329,High,Single,Yes,2,Student Loan,20499,3151,19989
+Male,26,Architect,Full-Time,Rural,Yes (Loan),54733,High,Married,No,0,Student Loan,48148,4322,14195
+Male,25,Musician,Full-Time,Rural,Yes (Loan),54903,High,Single,No,0,Student Loan,44208,2246,11748
+Male,25,Musician,Full-Time,Urban,Yes (Owned),98170,High,Married,No,1,Student Loan,48110,2043,9937
+Female,23,Firefighter,Full-Time,Urban,Yes (Owned),78177,Medium,Married,No,1,Student Loan,36989,3296,21455
+Male,36,Chef,Full-Time,Urban,Yes (Loan),85102,Medium,Single,Yes,0,Student Loan,24708,2518,1348
+Male,34,Chef,Full-Time,Urban,No,111461,High,Married,No,0,Student Loan,45613,7099,22890
+Male,28,Chef,Full-Time,Rural,Yes (Owned),117572,Medium,Married,No,0,Student Loan,35208,7705,11245
+Female,34,Architect,Full-Time,Urban,Yes (Loan),93445,High,Single,No,2,Student Loan,45045,6460,1494
+Female,39,Teacher,Full-Time,Rural,No,65630,High,Single,Yes,2,Student Loan,32737,638,8828
+Female,22,Doctor,Full-Time,Urban,Yes (Loan),98263,High,Married,No,0,Student Loan,46748,4370,10249
+Male,28,Architect,Full-Time,Rural,No,100228,High,Single,Yes,2,Student Loan,43313,5473,7846
+Male,33,Writer,Full-Time,Rural,No,80486,Medium,Married,No,2,Student Loan,41214,7383,4510
+Female,32,Writer,Full-Time,Urban,Yes (Loan),73229,High,Single,No,0,Student Loan,35869,4788,5729
+Male,30,Mechanic,Full-Time,Rural,Yes (Owned),114382,Medium,Single,Yes,2,Student Loan,31732,6737,6353
+Female,38,Doctor,Full-Time,Rural,No,77335,High,Married,Yes,0,Student Loan,40024,1606,12346
+Male,26,Writer,Full-Time,Urban,Yes (Owned),86941,Medium,Single,No,0,Student Loan,38618,1631,20634
+Male,37,Marketing Specialist,Full-Time,Urban,Yes (Loan),62717,Medium,Married,No,2,Student Loan,40214,2106,15249
+Male,22,Writer,Full-Time,Rural,No,79236,High,Married,Yes,0,Student Loan,22996,4408,22505
+Female,26,Firefighter,Full-Time,Urban,Yes (Loan),81570,High,Married,No,0,Student Loan,40795,853,17909
+Male,33,Architect,Full-Time,Rural,Yes (Owned),60549,High,Married,No,0,Student Loan,32763,5630,12563
+Female,39,Musician,Full-Time,Urban,No,96740,Medium,Single,Yes,2,Student Loan,25029,1872,3302
+Male,36,Musician,Full-Time,Rural,Yes (Owned),106470,High,Single,Yes,2,Student Loan,24510,562,19838
+Female,39,Musician,Full-Time,Urban,No,90643,Medium,Married,No,1,Student Loan,25202,2334,16473
+Female,23,Chef,Full-Time,Rural,No,73683,Medium,Single,No,1,Student Loan,41891,5446,5560
+Female,22,Architect,Full-Time,Urban,Yes (Owned),49010,High,Single,Yes,2,Student Loan,35395,489,4297
+Male,35,Marketing Specialist,Full-Time,Urban,No,94633,High,Married,No,0,Student Loan,41208,7621,16767
+Male,40,Pilot,Full-Time,Rural,Yes (Owned),43641,High,Married,No,1,Student Loan,31035,7759,3200
+Female,37,Mechanic,Full-Time,Urban,Yes (Owned),80567,Medium,Single,Yes,2,Student Loan,41445,2483,15040
+Female,26,Musician,Full-Time,Urban,Yes (Loan),117673,High,Single,Yes,1,Student Loan,46694,5156,13422
+Female,38,Doctor,Full-Time,Rural,No,76477,High,Single,No,2,Student Loan,49403,3430,2368
+Female,29,Chef,Full-Time,Urban,Yes (Loan),86145,Medium,Single,Yes,0,Student Loan,42237,4202,7304
+Male,33,Architect,Full-Time,Rural,Yes (Loan),105395,High,Single,No,2,Student Loan,38957,6892,19116
+Male,40,Chef,Full-Time,Urban,Yes (Owned),90228,Medium,Married,No,2,Student Loan,34850,3730,10455
+Male,33,Chef,Full-Time,Urban,No,112605,High,Single,No,0,Student Loan,21888,6213,5403
+Male,33,Firefighter,Full-Time,Rural,No,117138,High,Single,Yes,2,Student Loan,21627,3800,5091
+Female,23,Marketing Specialist,Full-Time,Urban,No,42025,High,Married,No,0,Student Loan,41412,4370,7921
+Male,31,Marketing Specialist,Full-Time,Rural,No,115261,Medium,Married,Yes,0,Student Loan,26954,6873,19359
+Female,29,Pilot,Full-Time,Rural,Yes (Loan),42974,Medium,Married,No,1,Student Loan,29276,2250,15387
+Female,36,Doctor,Full-Time,Rural,No,116473,High,Single,Yes,0,Student Loan,27457,4393,24517
+Female,29,Doctor,Full-Time,Urban,Yes (Owned),47907,High,Married,No,2,Student Loan,28655,4248,16775
+Female,31,Writer,Full-Time,Urban,No,45981,High,Single,Yes,0,Student Loan,28060,5956,2262
+Male,30,Chef,Full-Time,Urban,No,81614,Medium,Single,No,2,Student Loan,48960,6885,24859
+Female,28,Architect,Full-Time,Rural,Yes (Loan),99155,High,Single,No,2,Student Loan,38423,3597,24649
+Male,38,Marketing Specialist,Full-Time,Urban,No,85033,Medium,Single,Yes,2,Student Loan,31001,3571,8865
+Male,23,Pilot,Full-Time,Urban,No,60647,Medium,Single,No,1,Student Loan,45105,7395,11867
+Male,29,Teacher,Full-Time,Rural,Yes (Owned),53327,Medium,Married,Yes,1,Student Loan,23170,1557,9556
+Female,31,Architect,Full-Time,Rural,Yes (Loan),98387,Medium,Married,No,0,Student Loan,27589,3323,6455
+Female,36,Doctor,Full-Time,Rural,Yes (Owned),102207,Medium,Married,No,1,Student Loan,27833,1322,22599
+Female,36,Mechanic,Full-Time,Urban,Yes (Loan),75365,High,Single,Yes,0,Student Loan,32745,740,18449
+Male,29,Marketing Specialist,Full-Time,Urban,Yes (Owned),116694,High,Married,Yes,0,Student Loan,26937,609,14983
+Female,38,Writer,Full-Time,Urban,Yes (Loan),76235,High,Married,Yes,0,Student Loan,46036,4295,12287
+Male,39,Chef,Full-Time,Rural,Yes (Owned),99887,High,Single,No,2,Student Loan,33800,7873,10922
+Male,22,Doctor,Full-Time,Urban,Yes (Owned),65063,Medium,Single,No,2,Student Loan,41823,3379,16029
+Male,24,Musician,Full-Time,Urban,No,82524,High,Single,Yes,0,Student Loan,22091,1339,8150
+Female,30,Marketing Specialist,Full-Time,Urban,Yes (Owned),90597,High,Married,Yes,2,Student Loan,23833,2052,2605
+Male,37,Pilot,Full-Time,Rural,No,88226,Medium,Married,Yes,0,Student Loan,40933,6989,11461
+Female,32,Pilot,Full-Time,Urban,No,118533,Medium,Single,Yes,1,Student Loan,25557,7140,14610
+Male,33,Marketing Specialist,Full-Time,Urban,Yes (Loan),48224,High,Married,Yes,0,Student Loan,40817,6901,13994
+Male,36,Musician,Full-Time,Urban,Yes (Owned),86693,Medium,Married,No,2,Student Loan,36693,1603,11680
+Male,22,Chef,Full-Time,Urban,No,114739,Medium,Single,Yes,0,Student Loan,35176,1480,7421
+Male,31,Mechanic,Full-Time,Rural,No,94882,High,Single,Yes,0,Student Loan,23761,827,24321
+Female,35,Mechanic,Full-Time,Rural,No,95305,Medium,Married,No,0,Student Loan,49502,2710,18589
+Male,29,Writer,Full-Time,Urban,Yes (Owned),62667,High,Married,No,0,Student Loan,29624,1798,3844
+Female,37,Firefighter,Full-Time,Rural,No,80023,Medium,Married,No,0,Student Loan,49984,4602,6211
+Female,30,Writer,Full-Time,Urban,Yes (Owned),105916,Medium,Single,No,0,Student Loan,43054,2028,5708
+Female,39,Marketing Specialist,Full-Time,Urban,No,73129,Medium,Married,Yes,1,Student Loan,27102,1948,22110
+Female,24,Mechanic,Full-Time,Urban,Yes (Loan),57956,Medium,Single,Yes,0,Student Loan,40276,1892,16965
+Female,35,Writer,Full-Time,Rural,Yes (Owned),78822,Medium,Married,Yes,0,Student Loan,32056,5805,5778
+Female,40,Mechanic,Full-Time,Urban,Yes (Owned),56035,Medium,Single,No,2,Student Loan,31924,4916,6021
+Female,23,Architect,Full-Time,Urban,Yes (Loan),64942,High,Married,No,2,Student Loan,37717,5008,11278
+Female,34,Marketing Specialist,Full-Time,Rural,Yes (Loan),79243,High,Married,No,0,Student Loan,44646,5980,6284
+Male,37,Marketing Specialist,Full-Time,Urban,No,79462,High,Single,No,0,Student Loan,32093,6143,2435
+Female,36,Mechanic,Full-Time,Rural,Yes (Owned),79606,High,Married,No,0,Student Loan,23257,6535,24330
+Male,27,Doctor,Full-Time,Rural,Yes (Owned),88956,Medium,Single,No,1,Student Loan,49845,3261,12966
+Female,39,Marketing Specialist,Full-Time,Rural,Yes (Owned),52779,Medium,Single,No,2,Student Loan,31178,778,22022
+Female,25,Firefighter,Full-Time,Urban,Yes (Loan),110084,High,Married,No,0,Student Loan,48816,2072,6501
+Male,24,Marketing Specialist,Full-Time,Urban,No,96735,High,Married,No,1,Student Loan,30773,1219,2091
+Female,31,Writer,Full-Time,Rural,Yes (Loan),40023,High,Married,Yes,2,Student Loan,45464,3174,21139
+Male,24,Firefighter,Full-Time,Rural,Yes (Owned),87345,Medium,Married,Yes,1,Student Loan,48892,5708,9338
+Female,24,Writer,Full-Time,Rural,No,86264,Medium,Single,No,0,Student Loan,38561,4236,9024
+Male,37,Firefighter,Full-Time,Urban,Yes (Loan),70135,Medium,Married,Yes,1,Student Loan,46764,307,9021
+Female,28,Chef,Full-Time,Rural,Yes (Owned),49969,Medium,Married,No,1,Student Loan,21982,709,785
+Male,26,Musician,Full-Time,Urban,No,61593,High,Single,No,2,Student Loan,46897,1172,23192
+Male,29,Writer,Full-Time,Rural,Yes (Owned),88437,High,Married,No,2,Student Loan,41338,1677,15489
+Male,39,Musician,Full-Time,Rural,No,89266,High,Married,No,0,Student Loan,36636,2968,17222
+Female,26,Firefighter,Full-Time,Rural,No,48476,High,Married,No,2,Student Loan,42519,4629,10947
+Male,36,Teacher,Full-Time,Urban,No,105369,High,Single,No,1,Student Loan,37694,5554,6972
+Male,34,Chef,Full-Time,Urban,Yes (Loan),40377,Medium,Single,Yes,0,Student Loan,32062,3452,1628
+Male,22,Pilot,Full-Time,Rural,Yes (Loan),72671,Medium,Married,No,0,Student Loan,40428,4032,5872
+Female,23,Mechanic,Full-Time,Urban,Yes (Loan),71365,High,Married,No,1,Student Loan,22982,4866,19032
+Female,29,Musician,Full-Time,Rural,No,71672,Medium,Single,No,1,Student Loan,32700,4863,6706
+Male,34,Teacher,Full-Time,Urban,No,46647,High,Married,No,0,Student Loan,36840,6911,20710
+Male,28,Pilot,Full-Time,Urban,No,40820,Medium,Single,No,2,Student Loan,44092,4823,3123
+Male,32,Marketing Specialist,Full-Time,Rural,Yes (Loan),84580,Medium,Married,No,2,Student Loan,42474,6077,240
+Male,36,Mechanic,Full-Time,Rural,Yes (Loan),44221,High,Married,No,2,Student Loan,44272,5683,14948
+Female,23,Mechanic,Full-Time,Rural,Yes (Owned),116860,Medium,Single,No,1,Student Loan,43439,5463,15797
+Male,24,Mechanic,Full-Time,Urban,Yes (Loan),86630,High,Married,Yes,1,Student Loan,32885,748,4166
+Female,26,Marketing Specialist,Full-Time,Urban,Yes (Loan),91598,Medium,Married,No,2,Student Loan,32428,5731,1542
+Female,29,Musician,Full-Time,Urban,Yes (Owned),87301,Medium,Married,Yes,0,Student Loan,48713,3479,24544
+Female,39,Mechanic,Full-Time,Urban,No,42510,High,Single,No,0,Student Loan,42162,1445,6056
+Female,26,Pilot,Full-Time,Rural,Yes (Owned),85166,Medium,Married,No,0,Student Loan,38076,2739,12366
+Female,29,Mechanic,Full-Time,Urban,Yes (Loan),113308,High,Single,No,0,Student Loan,32232,3828,3190
+Female,35,Mechanic,Full-Time,Rural,Yes (Loan),90167,High,Married,Yes,1,Student Loan,28731,4072,20619
+Male,38,Chef,Full-Time,Urban,Yes (Owned),58918,High,Married,No,1,Student Loan,41264,3421,19589
+Male,35,Musician,Full-Time,Rural,Yes (Loan),67856,High,Married,Yes,2,Student Loan,22544,6268,18684
+Male,31,Pilot,Full-Time,Rural,Yes (Owned),45312,High,Single,Yes,2,Student Loan,20427,4434,24622
+Male,33,Mechanic,Full-Time,Rural,Yes (Owned),65601,High,Married,Yes,1,Student Loan,34163,703,1186
+Male,24,Chef,Full-Time,Rural,Yes (Loan),108223,Medium,Married,No,2,Student Loan,40326,684,23271
+Female,32,Architect,Full-Time,Urban,No,68496,High,Single,No,1,Student Loan,45296,6507,1891
+Female,34,Musician,Full-Time,Rural,Yes (Loan),114899,High,Single,No,0,Student Loan,25817,4437,21950
+Male,32,Writer,Full-Time,Rural,No,98467,Medium,Single,No,1,Student Loan,22758,1563,18773
+Female,34,Pilot,Full-Time,Rural,Yes (Loan),54852,Medium,Married,No,1,Student Loan,30551,4687,5553
+Male,39,Musician,Full-Time,Rural,Yes (Loan),57217,Medium,Single,No,1,Student Loan,43295,5350,11180
+Female,27,Marketing Specialist,Full-Time,Rural,Yes (Owned),55762,Medium,Married,Yes,0,Student Loan,43548,5468,14266
+Male,29,Marketing Specialist,Full-Time,Rural,Yes (Loan),116781,Medium,Married,No,2,Student Loan,22355,3021,2768
+Female,30,Mechanic,Full-Time,Rural,No,116770,High,Single,No,1,Student Loan,38361,6640,7438
+Male,29,Writer,Full-Time,Urban,Yes (Owned),90515,High,Single,No,2,Student Loan,44469,4487,16281
+Female,28,Marketing Specialist,Full-Time,Rural,No,64898,High,Married,Yes,1,Student Loan,37432,849,9859
+Male,39,Pilot,Full-Time,Rural,Yes (Owned),92830,Medium,Single,No,0,Student Loan,45236,4237,3514
+Female,33,Doctor,Full-Time,Urban,Yes (Owned),92503,Medium,Married,No,2,Student Loan,25331,1228,10123
+Male,39,Architect,Full-Time,Rural,Yes (Loan),117726,Medium,Single,No,2,Student Loan,39385,7186,1785
+Male,32,Doctor,Full-Time,Urban,Yes (Owned),103259,Medium,Married,No,1,Student Loan,27425,5753,14531
+Female,30,Writer,Full-Time,Rural,Yes (Owned),55491,Medium,Married,Yes,0,Student Loan,47049,6204,15174
+Female,27,Firefighter,Full-Time,Rural,Yes (Owned),87985,Medium,Single,Yes,0,Student Loan,22749,5158,5211
+Female,39,Mechanic,Full-Time,Urban,Yes (Loan),79472,High,Married,Yes,2,Student Loan,45993,4931,6151
+Female,27,Teacher,Full-Time,Rural,Yes (Loan),57466,High,Single,Yes,0,Student Loan,48910,1739,9383
+Male,22,Writer,Full-Time,Rural,Yes (Loan),92330,High,Married,Yes,1,Student Loan,22380,7416,14549
+Female,23,Firefighter,Full-Time,Urban,Yes (Owned),85524,High,Married,No,0,Student Loan,24189,5234,14157
+Male,33,Firefighter,Full-Time,Rural,No,55573,High,Single,No,0,Student Loan,45016,659,16103
+Female,38,Writer,Full-Time,Urban,Yes (Owned),89114,Medium,Married,No,0,Student Loan,24613,3610,23596
+Female,40,Architect,Full-Time,Urban,Yes (Loan),62303,High,Single,Yes,0,Student Loan,36730,1797,8772
+Female,33,Doctor,Full-Time,Urban,Yes (Loan),86277,Medium,Married,Yes,2,Student Loan,33530,4678,12881
+Male,23,Architect,Full-Time,Rural,No,51005,High,Single,No,2,Student Loan,42787,2568,21598
+Female,40,Architect,Full-Time,Rural,No,68217,High,Single,No,1,Student Loan,48046,6308,16892
+Male,23,Mechanic,Full-Time,Rural,Yes (Owned),59069,Medium,Single,No,1,Student Loan,29126,5120,16794
+Female,34,Marketing Specialist,Full-Time,Rural,Yes (Loan),94526,Medium,Single,Yes,2,Student Loan,49208,1360,19051
+Female,33,Mechanic,Full-Time,Rural,Yes (Loan),55744,High,Married,No,0,Student Loan,25116,6177,12305
+Female,24,Mechanic,Full-Time,Rural,Yes (Loan),76703,High,Married,Yes,0,Student Loan,24892,2976,20541
+Female,31,Mechanic,Full-Time,Rural,Yes (Owned),86366,Medium,Single,Yes,2,Student Loan,40136,7320,12147
+Male,31,Doctor,Full-Time,Rural,Yes (Loan),93076,High,Single,No,1,Student Loan,33624,7439,5886
+Male,32,Mechanic,Full-Time,Urban,No,117400,Medium,Married,No,0,Student Loan,23330,2309,925
+Female,39,Musician,Full-Time,Urban,Yes (Loan),53341,High,Married,No,0,Student Loan,39089,3225,15669
+Female,23,Doctor,Full-Time,Urban,No,55163,Medium,Married,Yes,0,Student Loan,35925,3402,21592
+Male,29,Teacher,Full-Time,Urban,No,67590,High,Single,Yes,0,Student Loan,39259,5815,3276
+Female,36,Doctor,Full-Time,Rural,No,89057,High,Single,No,2,Student Loan,37051,6274,17309
+Female,29,Writer,Full-Time,Rural,No,108738,High,Married,No,2,Student Loan,33467,494,16112
+Female,34,Marketing Specialist,Full-Time,Rural,Yes (Owned),106623,High,Married,Yes,2,Student Loan,39067,4797,10972
+Male,27,Writer,Full-Time,Urban,No,72205,Medium,Married,Yes,1,Student Loan,49402,1281,11445
+Male,32,Teacher,Full-Time,Rural,Yes (Owned),107753,Medium,Single,No,2,Student Loan,37525,7510,11045
+Male,32,Chef,Full-Time,Rural,Yes (Owned),100980,Medium,Single,Yes,0,Student Loan,33461,3475,17175
+Female,34,Teacher,Full-Time,Rural,Yes (Owned),82573,Medium,Single,Yes,0,Student Loan,36747,888,1162
+Male,37,Chef,Full-Time,Rural,Yes (Owned),81947,Medium,Married,Yes,2,Student Loan,39427,1004,6795
+Male,32,Writer,Full-Time,Urban,Yes (Owned),57264,Medium,Married,Yes,0,Student Loan,30529,5449,10417
+Male,29,Pilot,Full-Time,Urban,No,118247,High,Married,Yes,2,Student Loan,43542,1292,3507
+Female,31,Teacher,Full-Time,Rural,Yes (Loan),93523,Medium,Single,Yes,0,Student Loan,28143,5566,14178
+Male,40,Teacher,Full-Time,Rural,Yes (Loan),48625,High,Single,Yes,0,Student Loan,26003,1812,23968
+Female,22,Chef,Full-Time,Urban,No,78109,High,Single,Yes,1,Student Loan,26035,7447,9946
+Female,32,Pilot,Full-Time,Urban,Yes (Owned),89186,Medium,Married,Yes,1,Student Loan,26854,7939,17839
+Female,23,Firefighter,Full-Time,Rural,No,43792,High,Married,Yes,0,Student Loan,26044,5755,5525
+Male,29,Chef,Full-Time,Rural,Yes (Loan),46669,High,Married,No,2,Student Loan,31980,7291,5864
+Male,33,Marketing Specialist,Full-Time,Urban,Yes (Loan),100800,Medium,Married,No,2,Student Loan,45519,1111,13246
+Female,31,Marketing Specialist,Full-Time,Rural,Yes (Loan),79960,High,Married,Yes,1,Student Loan,29993,1183,14175
+Female,22,Mechanic,Full-Time,Urban,Yes (Owned),92430,High,Married,No,2,Student Loan,24005,1690,12894
+Male,40,Pilot,Full-Time,Urban,Yes (Owned),50023,Medium,Married,Yes,2,Student Loan,43455,1671,5234
+Male,22,Doctor,Full-Time,Urban,Yes (Owned),87794,Medium,Married,No,1,Student Loan,35419,862,6334
+Female,37,Mechanic,Full-Time,Rural,Yes (Owned),88330,High,Single,No,2,Student Loan,26589,1048,7003
+Male,32,Chef,Full-Time,Urban,Yes (Owned),113138,Medium,Married,Yes,1,Student Loan,47403,7929,1494
+Male,32,Writer,Full-Time,Urban,Yes (Loan),73133,High,Single,No,1,Student Loan,28695,4359,1344
+Male,25,Teacher,Full-Time,Urban,No,78401,High,Single,No,2,Student Loan,43612,5802,8128
+Male,27,Doctor,Full-Time,Rural,Yes (Loan),57638,Medium,Married,Yes,2,Student Loan,26155,570,21468
+Female,30,Doctor,Full-Time,Rural,No,115221,High,Married,Yes,2,Student Loan,37474,898,9516
+Male,32,Chef,Full-Time,Urban,Yes (Owned),108516,Medium,Married,Yes,2,Student Loan,21528,2012,15769
+Female,35,Musician,Full-Time,Rural,Yes (Loan),88988,High,Married,Yes,2,Student Loan,37254,3809,4130
+Female,40,Musician,Full-Time,Urban,No,95229,Medium,Single,Yes,0,Student Loan,26890,7045,24391
+Male,26,Writer,Full-Time,Rural,No,78227,Medium,Married,Yes,1,Student Loan,40863,5124,2865
+Male,36,Doctor,Full-Time,Urban,Yes (Owned),91853,Medium,Single,Yes,0,Student Loan,31907,1384,19236
+Male,22,Pilot,Full-Time,Urban,Yes (Loan),102374,Medium,Single,No,2,Student Loan,49303,938,5384
+Female,40,Musician,Full-Time,Rural,No,88009,Medium,Single,No,0,Student Loan,36930,7218,10190
+Female,34,Architect,Full-Time,Rural,Yes (Owned),76641,Medium,Married,No,1,Student Loan,27550,3261,12006
+Male,25,Chef,Full-Time,Urban,Yes (Owned),105006,Medium,Single,No,1,Student Loan,37677,4363,20880
+Female,36,Marketing Specialist,Full-Time,Rural,Yes (Loan),64872,Medium,Single,No,1,Student Loan,47801,2398,4523
+Male,30,Chef,Full-Time,Urban,No,64529,High,Single,Yes,1,Student Loan,37013,1347,21246
+Male,35,Mechanic,Full-Time,Rural,Yes (Owned),109843,High,Married,No,0,Student Loan,48902,2235,11487
+Female,34,Marketing Specialist,Full-Time,Rural,No,47385,High,Single,Yes,1,Student Loan,22572,7242,1907
+Male,34,Musician,Full-Time,Rural,Yes (Owned),69921,High,Single,No,1,Student Loan,38680,3175,1921
+Female,33,Writer,Full-Time,Urban,Yes (Owned),115734,Medium,Single,Yes,0,Student Loan,34662,1859,9813
+Male,39,Musician,Full-Time,Urban,Yes (Loan),90519,High,Married,Yes,0,Student Loan,38859,1819,926
+Male,26,Chef,Full-Time,Urban,No,65424,High,Single,No,1,Student Loan,48720,896,15068
+Male,35,Pilot,Full-Time,Urban,Yes (Loan),51497,Medium,Single,No,0,Student Loan,36875,7328,23518
+Female,36,Marketing Specialist,Full-Time,Urban,No,97299,Medium,Married,Yes,1,Student Loan,41094,7035,24133
+Male,24,Doctor,Full-Time,Urban,Yes (Loan),97684,High,Married,No,0,Student Loan,46350,1549,21707
+Male,34,Doctor,Full-Time,Rural,Yes (Owned),54125,Medium,Single,Yes,0,Student Loan,21924,6521,21916
+Male,22,Firefighter,Full-Time,Urban,Yes (Loan),107970,Medium,Single,Yes,1,Student Loan,21630,2907,2147
+Female,39,Pilot,Full-Time,Urban,Yes (Loan),85465,Medium,Single,Yes,0,Student Loan,26646,6068,10695
+Female,23,Doctor,Full-Time,Rural,Yes (Owned),70030,High,Married,Yes,1,Student Loan,23907,4426,11205
+Male,28,Architect,Full-Time,Urban,No,44304,Medium,Single,No,0,Student Loan,25808,3645,5315
+Male,36,Chef,Full-Time,Rural,Yes (Owned),52214,High,Married,Yes,0,Student Loan,27992,990,2972
+Female,38,Mechanic,Full-Time,Rural,No,87904,High,Married,No,0,Student Loan,41122,6042,9807
+Female,27,Chef,Full-Time,Urban,Yes (Owned),95701,Medium,Single,Yes,0,Student Loan,42026,5858,4456
+Female,27,Pilot,Full-Time,Urban,Yes (Loan),41991,High,Single,Yes,1,Student Loan,46583,3034,5419
+Male,27,Architect,Full-Time,Urban,Yes (Owned),116435,High,Single,Yes,2,Student Loan,22354,4417,11271
+Female,29,Marketing Specialist,Full-Time,Urban,No,48837,Medium,Married,No,0,Student Loan,38919,7084,1343
+Female,29,Writer,Full-Time,Urban,Yes (Owned),90813,Medium,Married,No,0,Student Loan,33843,3446,3250
+Male,26,Architect,Full-Time,Urban,No,70837,High,Married,No,0,Student Loan,33073,3726,7926
+Female,29,Pilot,Full-Time,Rural,Yes (Owned),111768,Medium,Married,No,2,Student Loan,44387,2964,558
+Female,23,Pilot,Full-Time,Urban,Yes (Loan),100922,Medium,Married,Yes,1,Student Loan,22164,3170,19542
+Female,33,Writer,Full-Time,Urban,Yes (Loan),111599,High,Married,Yes,2,Student Loan,34557,7434,18555
+Male,24,Musician,Full-Time,Urban,Yes (Owned),89719,Medium,Married,No,1,Student Loan,20713,7346,187
+Male,36,Writer,Full-Time,Rural,Yes (Owned),56548,High,Single,Yes,0,Student Loan,36357,7554,4977
+Male,36,Writer,Full-Time,Urban,Yes (Owned),100771,High,Married,No,1,Student Loan,45416,2357,16877
+Male,40,Musician,Full-Time,Rural,No,68994,Medium,Single,Yes,0,Student Loan,27612,4652,16253
+Male,33,Marketing Specialist,Full-Time,Urban,Yes (Loan),119838,Medium,Single,Yes,0,Student Loan,26738,4120,24276
+Male,31,Architect,Full-Time,Urban,Yes (Owned),53760,High,Single,No,2,Student Loan,27024,4339,451
+Male,30,Teacher,Full-Time,Rural,No,86457,Medium,Single,Yes,2,Student Loan,40159,2305,609
+Female,33,Mechanic,Full-Time,Rural,Yes (Owned),59727,High,Single,No,2,Student Loan,36575,7020,14552
+Female,36,Doctor,Full-Time,Urban,Yes (Owned),45593,High,Single,Yes,0,Student Loan,23323,2899,8373
+Female,37,Marketing Specialist,Full-Time,Urban,No,45817,High,Married,No,0,Student Loan,20737,2349,2711
+Male,26,Writer,Full-Time,Rural,Yes (Loan),40860,High,Married,Yes,2,Student Loan,36593,7589,5425
+Male,25,Pilot,Full-Time,Rural,Yes (Owned),43809,High,Married,Yes,2,Student Loan,41644,7887,18697
+Female,29,Marketing Specialist,Full-Time,Urban,Yes (Owned),112707,Medium,Married,No,0,Student Loan,43591,4373,16436
+Male,29,Writer,Full-Time,Rural,Yes (Loan),94762,Medium,Single,Yes,0,Student Loan,40492,5698,664
+Male,25,Pilot,Full-Time,Rural,No,58262,Medium,Single,Yes,0,Student Loan,49353,6346,1792
+Female,37,Musician,Full-Time,Urban,No,119312,Medium,Single,No,0,Student Loan,27709,6340,14436
+Male,28,Writer,Full-Time,Rural,No,83890,High,Married,No,1,Student Loan,41291,6390,24589
+Female,26,Writer,Full-Time,Urban,Yes (Owned),106415,Medium,Single,No,2,Student Loan,47176,1033,8763
+Female,38,Musician,Full-Time,Rural,Yes (Loan),47888,High,Single,No,0,Student Loan,24043,906,14371
+Male,39,Mechanic,Full-Time,Urban,Yes (Loan),40919,High,Married,No,0,Student Loan,31801,4896,610
+Female,29,Marketing Specialist,Full-Time,Urban,Yes (Owned),117914,High,Married,No,2,Student Loan,46352,4100,15673
+Female,26,Mechanic,Full-Time,Rural,Yes (Owned),99227,High,Married,No,2,Student Loan,22553,1804,11722
+Male,22,Musician,Full-Time,Rural,Yes (Loan),97873,High,Married,No,0,Student Loan,40737,1520,16783
+Female,22,Teacher,Full-Time,Urban,Yes (Owned),79823,Medium,Single,Yes,2,Student Loan,20250,6245,17258
+Male,38,Marketing Specialist,Full-Time,Urban,Yes (Loan),54756,Medium,Married,Yes,0,Student Loan,40649,2068,3076
+Female,32,Chef,Full-Time,Urban,Yes (Loan),100915,High,Married,Yes,1,Student Loan,25477,3736,14844
+Male,26,Musician,Full-Time,Rural,No,89822,Medium,Single,No,0,Student Loan,36071,1935,24862
+Female,36,Writer,Full-Time,Rural,No,113227,Medium,Married,No,2,Student Loan,45539,6434,22790
+Female,40,Chef,Full-Time,Urban,Yes (Owned),53379,High,Married,Yes,2,Student Loan,20234,7494,16154
+Female,26,Firefighter,Full-Time,Rural,Yes (Owned),115895,Medium,Married,No,2,Student Loan,43510,1576,13078
+Female,37,Pilot,Full-Time,Rural,Yes (Loan),69529,Medium,Married,Yes,2,Student Loan,25727,1587,15904
+Male,32,Musician,Full-Time,Urban,Yes (Owned),77242,High,Single,No,2,Student Loan,25394,612,24951
+Female,22,Writer,Full-Time,Rural,No,82665,Medium,Single,No,1,Student Loan,39486,2807,2365
+Female,35,Musician,Full-Time,Rural,Yes (Owned),42053,Medium,Married,No,0,Student Loan,28228,1659,15924
+Female,22,Pilot,Full-Time,Rural,Yes (Loan),86660,Medium,Single,Yes,1,Student Loan,32686,7627,7232
+Female,22,Firefighter,Full-Time,Rural,Yes (Owned),84775,Medium,Single,No,0,Student Loan,22154,7717,12587
+Male,37,Pilot,Full-Time,Rural,No,67305,Medium,Married,No,1,Student Loan,48473,7642,19282
+Female,28,Firefighter,Full-Time,Urban,No,42837,Medium,Married,Yes,2,Student Loan,49878,7668,21954
+Female,33,Writer,Full-Time,Urban,Yes (Owned),48736,Medium,Single,Yes,1,Student Loan,33914,2480,17034
+Female,38,Pilot,Full-Time,Rural,No,95343,High,Single,Yes,0,Student Loan,20978,7007,12199
+Female,36,Marketing Specialist,Full-Time,Rural,No,82363,Medium,Married,No,0,Student Loan,46656,1813,12055
+Female,38,Chef,Full-Time,Rural,Yes (Loan),75787,High,Single,Yes,2,Student Loan,26597,3251,5197
+Female,33,Pilot,Full-Time,Urban,Yes (Loan),116517,Medium,Married,No,0,Student Loan,33114,7295,17844
+Female,26,Teacher,Full-Time,Rural,No,67805,Medium,Single,Yes,1,Student Loan,32252,7659,1719
+Female,34,Teacher,Full-Time,Urban,No,53182,Medium,Married,Yes,2,Student Loan,47456,2705,13889
+Male,38,Architect,Full-Time,Rural,Yes (Owned),60599,High,Married,No,1,Student Loan,44105,1846,19561
+Male,35,Firefighter,Full-Time,Rural,Yes (Owned),91137,High,Single,Yes,0,Student Loan,24708,7540,8702
+Female,40,Firefighter,Full-Time,Rural,No,70559,Medium,Single,Yes,0,Student Loan,42738,1239,2191
+Female,22,Firefighter,Full-Time,Rural,Yes (Owned),100766,Medium,Married,No,1,Student Loan,34124,7388,12198
+Male,24,Pilot,Full-Time,Rural,No,87529,High,Single,No,2,Student Loan,23618,5415,24357
+Male,23,Marketing Specialist,Full-Time,Urban,Yes (Loan),71946,Medium,Single,No,2,Student Loan,39442,1492,11017
+Female,32,Mechanic,Full-Time,Rural,Yes (Owned),88377,Medium,Single,Yes,1,Student Loan,44640,1944,20827
+Female,29,Pilot,Full-Time,Urban,Yes (Loan),41286,Medium,Married,No,1,Student Loan,28839,7011,3295
+Female,25,Teacher,Full-Time,Rural,Yes (Loan),107378,High,Married,Yes,2,Student Loan,39382,5802,12501
+Male,26,Chef,Full-Time,Urban,Yes (Owned),46207,Medium,Single,Yes,0,Student Loan,35685,7066,9120
+Male,28,Chef,Full-Time,Rural,No,66025,Medium,Married,Yes,0,Student Loan,42348,7088,20278
+Male,32,Mechanic,Full-Time,Urban,Yes (Owned),78292,Medium,Single,No,1,Student Loan,30674,3620,4619
+Male,28,Pilot,Full-Time,Rural,Yes (Loan),43843,Medium,Married,No,1,Student Loan,41735,2397,6424
+Male,34,Chef,Full-Time,Urban,Yes (Owned),53301,Medium,Married,Yes,1,Student Loan,47948,6195,3607
+Male,38,Musician,Full-Time,Rural,Yes (Owned),96784,High,Married,No,2,Student Loan,43581,5163,15203
+Female,36,Musician,Full-Time,Rural,Yes (Loan),75123,Medium,Married,No,0,Student Loan,32888,1771,1711
+Female,39,Chef,Full-Time,Rural,Yes (Loan),69903,High,Single,Yes,1,Student Loan,36048,4027,11571
+Female,36,Pilot,Full-Time,Urban,Yes (Loan),104444,High,Married,Yes,1,Student Loan,45286,4180,20457
+Female,29,Musician,Full-Time,Rural,No,52812,High,Married,No,1,Student Loan,35370,5794,11460
+Female,37,Musician,Full-Time,Rural,Yes (Loan),60693,Medium,Married,Yes,1,Student Loan,25092,5060,21179
+Female,23,Writer,Full-Time,Urban,Yes (Owned),99686,High,Married,Yes,0,Student Loan,41804,1458,15917
+Male,26,Doctor,Full-Time,Urban,Yes (Owned),116762,High,Single,Yes,1,Student Loan,49482,5679,22662
+Female,35,Mechanic,Full-Time,Rural,No,82694,Medium,Single,Yes,0,Student Loan,49296,2477,3785
+Male,30,Chef,Full-Time,Urban,Yes (Loan),75322,Medium,Single,No,0,Student Loan,41403,1595,6283
+Male,25,Pilot,Full-Time,Urban,No,84964,High,Married,Yes,1,Student Loan,27685,4789,19612
+Female,22,Pilot,Full-Time,Rural,Yes (Loan),117209,Medium,Married,No,0,Student Loan,23124,3208,7451
+Male,23,Writer,Full-Time,Urban,Yes (Owned),91933,High,Single,Yes,0,Student Loan,20615,2661,18905
+Male,39,Firefighter,Full-Time,Urban,Yes (Loan),114906,Medium,Single,No,0,Student Loan,26565,7000,11769
+Male,36,Writer,Full-Time,Urban,Yes (Loan),91558,Medium,Married,No,0,Student Loan,30382,6225,7159
+Male,36,Marketing Specialist,Full-Time,Urban,Yes (Loan),51742,High,Married,No,1,Student Loan,42917,1175,10066
+Male,32,Writer,Full-Time,Rural,No,77799,High,Married,No,2,Student Loan,25123,3847,3634
+Female,27,Firefighter,Full-Time,Urban,Yes (Owned),119589,High,Single,Yes,1,Student Loan,26445,2914,19940
+Female,28,Musician,Full-Time,Urban,No,96117,Medium,Married,No,2,Student Loan,48988,1632,24032
+Female,31,Architect,Full-Time,Rural,No,49972,Medium,Married,No,2,Student Loan,20812,3135,18376
+Male,36,Chef,Full-Time,Urban,No,87521,Medium,Married,Yes,1,Student Loan,30102,517,15601
+Female,39,Firefighter,Full-Time,Urban,Yes (Owned),51808,Medium,Single,Yes,0,Student Loan,43584,4118,7385
+Female,26,Chef,Full-Time,Rural,Yes (Owned),41394,Medium,Single,Yes,0,Student Loan,45075,1624,5767
+Female,38,Mechanic,Full-Time,Urban,Yes (Loan),93914,High,Single,Yes,0,Student Loan,27767,3109,16847
+Male,27,Teacher,Full-Time,Urban,No,54295,High,Married,No,2,Student Loan,49044,1010,18912
+Male,39,Writer,Full-Time,Rural,Yes (Owned),95252,High,Married,No,0,Student Loan,27067,2046,9012
+Female,22,Chef,Full-Time,Rural,Yes (Loan),91911,Medium,Single,Yes,0,Student Loan,32785,5657,4832
+Female,39,Firefighter,Full-Time,Rural,No,73115,High,Single,Yes,0,Student Loan,45382,4671,16253
+Female,38,Pilot,Full-Time,Rural,Yes (Loan),43372,Medium,Single,No,1,Student Loan,27443,7790,5634
+Male,27,Architect,Full-Time,Rural,No,71360,Medium,Married,Yes,0,Student Loan,26834,512,23751
+Male,32,Writer,Full-Time,Urban,Yes (Owned),117982,High,Married,Yes,2,Student Loan,21495,5081,20128
+Male,22,Doctor,Full-Time,Rural,Yes (Loan),48110,Medium,Married,No,1,Student Loan,49752,7664,17257
+Male,26,Musician,Full-Time,Urban,Yes (Loan),52310,High,Married,No,0,Student Loan,36577,2754,4453
+Male,31,Marketing Specialist,Full-Time,Rural,Yes (Owned),69638,Medium,Married,Yes,2,Student Loan,31643,1488,4983
+Male,30,Doctor,Full-Time,Urban,No,73625,High,Single,Yes,0,Student Loan,33224,2745,9301
+Male,36,Writer,Full-Time,Urban,Yes (Loan),72611,High,Married,Yes,1,Student Loan,33406,1736,20861
+Female,39,Teacher,Full-Time,Urban,Yes (Owned),44135,Medium,Single,No,1,Student Loan,21209,5860,24634
+Male,37,Doctor,Full-Time,Urban,Yes (Loan),112257,Medium,Single,Yes,0,Student Loan,49756,6904,20119
+Male,22,Marketing Specialist,Full-Time,Rural,No,60766,Medium,Married,Yes,1,Student Loan,20793,3165,5997
+Female,23,Teacher,Full-Time,Rural,Yes (Owned),114990,High,Married,No,0,Student Loan,23928,1352,5453
+Female,30,Firefighter,Full-Time,Rural,Yes (Owned),67702,Medium,Married,Yes,0,Student Loan,37239,3651,18903
+Male,32,Chef,Full-Time,Rural,No,70829,Medium,Married,No,0,Student Loan,36102,7280,17130
+Male,27,Pilot,Full-Time,Urban,No,74544,High,Married,Yes,2,Student Loan,46034,3328,22836
+Male,37,Musician,Full-Time,Rural,No,71509,Medium,Single,No,0,Student Loan,38030,5653,4739
+Female,38,Firefighter,Full-Time,Urban,Yes (Owned),48880,High,Married,No,0,Student Loan,49679,1086,15013
+Female,23,Teacher,Full-Time,Rural,No,119784,Medium,Single,Yes,1,Student Loan,48782,2734,4201
+Male,39,Firefighter,Full-Time,Rural,No,92892,High,Married,Yes,0,Student Loan,36562,6993,4169
+Male,35,Chef,Full-Time,Rural,No,59595,Medium,Married,Yes,1,Student Loan,20475,3439,24185
+Female,23,Chef,Full-Time,Rural,Yes (Owned),110076,High,Single,Yes,0,Student Loan,45597,7010,16522
+Male,25,Mechanic,Full-Time,Urban,Yes (Owned),65961,Medium,Married,Yes,2,Student Loan,23640,5110,3380
+Male,29,Doctor,Full-Time,Urban,Yes (Owned),50107,High,Single,Yes,2,Student Loan,48289,5970,6857
+Male,29,Marketing Specialist,Full-Time,Urban,Yes (Loan),78838,Medium,Married,Yes,0,Student Loan,20575,635,1175
+Male,27,Writer,Full-Time,Rural,Yes (Owned),86900,High,Single,No,0,Student Loan,39510,1483,19619
+Male,30,Mechanic,Full-Time,Rural,No,102315,Medium,Single,No,1,Student Loan,44038,6308,8476
+Male,36,Marketing Specialist,Full-Time,Urban,Yes (Loan),116911,Medium,Single,No,2,Student Loan,21151,999,14232
+Male,35,Teacher,Full-Time,Urban,Yes (Owned),82332,High,Single,No,0,Student Loan,28091,4918,15249
+Male,37,Pilot,Full-Time,Urban,No,74662,High,Married,Yes,2,Student Loan,27987,5675,6170
+Male,34,Pilot,Full-Time,Rural,Yes (Owned),43944,High,Single,Yes,0,Student Loan,24105,1363,23387
+Male,24,Doctor,Full-Time,Rural,Yes (Loan),107529,Medium,Single,Yes,1,Student Loan,22425,4651,24928
+Female,24,Doctor,Full-Time,Urban,Yes (Owned),103360,High,Married,No,1,Student Loan,49974,5632,16678
+Female,22,Teacher,Full-Time,Rural,Yes (Loan),117286,High,Married,Yes,2,Student Loan,42353,2367,16723
+Female,34,Doctor,Full-Time,Rural,Yes (Loan),48955,Medium,Single,Yes,0,Student Loan,49684,408,12630
+Female,29,Doctor,Full-Time,Rural,Yes (Loan),102262,High,Married,No,0,Student Loan,34221,2301,14205
+Female,29,Chef,Full-Time,Urban,No,74283,Medium,Married,Yes,1,Student Loan,44071,230,12411
+Male,29,Architect,Full-Time,Rural,No,109617,High,Single,No,0,Student Loan,30741,3295,4785
+Female,32,Pilot,Full-Time,Urban,Yes (Loan),42664,High,Married,Yes,0,Student Loan,24123,7178,13297
+Male,30,Architect,Full-Time,Urban,No,64254,High,Single,Yes,1,Student Loan,34843,4591,20968
+Male,39,Firefighter,Full-Time,Rural,Yes (Owned),54554,High,Married,Yes,1,Student Loan,37627,3045,24950
+Female,24,Mechanic,Full-Time,Rural,Yes (Loan),81511,High,Single,No,1,Student Loan,40469,668,19604
+Female,33,Teacher,Full-Time,Urban,No,96146,Medium,Married,Yes,0,Student Loan,42527,5447,19522
+Male,32,Chef,Full-Time,Urban,No,48629,High,Married,Yes,1,Student Loan,34317,1587,2587
+Male,26,Mechanic,Full-Time,Rural,Yes (Owned),55159,High,Single,No,0,Student Loan,27715,7926,21713
+Male,23,Writer,Full-Time,Rural,Yes (Owned),96213,Medium,Single,No,2,Student Loan,47363,5888,12815
+Male,28,Musician,Full-Time,Urban,Yes (Owned),85279,Medium,Single,No,2,Student Loan,22191,1875,10992
+Female,33,Pilot,Full-Time,Urban,Yes (Loan),104161,High,Single,Yes,1,Student Loan,25478,445,3105
+Male,31,Mechanic,Full-Time,Urban,Yes (Loan),74014,High,Married,No,0,Student Loan,44634,7742,7944
+Male,24,Mechanic,Full-Time,Rural,Yes (Loan),42462,Medium,Married,Yes,1,Student Loan,24954,1893,7303
+Male,24,Pilot,Full-Time,Rural,Yes (Loan),57985,High,Single,Yes,2,Student Loan,33594,275,18451
