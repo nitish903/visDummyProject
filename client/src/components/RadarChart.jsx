@@ -33,23 +33,21 @@ const RadarChart = ({ data, variables, width = 300, height = 300 }) => {
       const rawValue = data[v.key];
       let value = 0;
       if (v.type === "numerical") {
-        console.log("TYPE",v,rawValue,data[v.key]);
+        console.log("TYPE", v, rawValue, data[v.key]);
         value = +rawValue || 0;
       } else if (v.type === "categorical") {
         value = v.categories.includes(rawValue) ? rawValue : v.categories[0];
       }
       return { axis: v.label, value, key: v.key, rawValue };
     });
-// console.log("RADAR DATA",radarData,data)
+    // console.log("RADAR DATA",radarData,data)
     // Line generator
     const line = d3
       .lineRadial()
       .radius((d, i) => {
         const v = variables[i];
         const scale = scales[v.key];
-        return v.type === "numerical"
-          ? scale(d.value)
-          : scale(d.value) ?? 0;
+        return v.type === "numerical" ? scale(d.value) : scale(d.value) ?? 0;
       })
       .angle((d, i) => i * angleSlice);
 
@@ -114,10 +112,7 @@ const RadarChart = ({ data, variables, width = 300, height = 300 }) => {
       const v = variables[i];
       const scale = scales[v.key];
       const angle = angleSlice * i - Math.PI / 2;
-      const r =
-        v.type === "numerical"
-          ? scale(d.value)
-          : scale(d.value) ?? 0;
+      const r = v.type === "numerical" ? scale(d.value) : scale(d.value) ?? 0;
 
       const cx = center.x + Math.cos(angle) * r;
       const cy = center.y + Math.sin(angle) * r;
@@ -130,9 +125,7 @@ const RadarChart = ({ data, variables, width = 300, height = 300 }) => {
         .attr("fill", "#d35859");
 
       // Optional: show raw value as tooltip
-      svg
-        .append("title")
-        .text(`${v.label}: ${d.rawValue}`);
+      svg.append("title").text(`${v.label}: ${d.rawValue}`);
     });
   }, [data, variables, width, height]);
 

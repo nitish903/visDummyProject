@@ -16,7 +16,7 @@ const App = () => {
   const [selectedInfo, setSelectedInfo] = useState(null);
   const [lineplotData, setLinePlotData] = useState([]);
   const [yaxisValue, setYaxisValue] = useState("financialStress");
-  const [radarData,setRadarData]=useState([])
+  const [radarData, setRadarData] = useState([]);
 
   useEffect(() => {
     const processData = async () => {
@@ -44,14 +44,14 @@ const App = () => {
         workHours: +d["Work/Study Hours"],
         age: +d.Age,
         satisfaction: +d.Satisfaction,
-        diet: d['Dietary Habits'],
+        diet: d["Dietary Habits"],
         degree: d.Degree,
-        suicidal: d['Have you ever had suicidal thoughts ?'],
-        student: d['Working Professional or Student'],
-        sleep:d['Sleep Duration'],
-        family_mental:d['Family History of Mental Illness'],
+        suicidal: d["Have you ever had suicidal thoughts ?"],
+        student: d["Working Professional or Student"],
+        sleep: d["Sleep Duration"],
+        family_mental: d["Family History of Mental Illness"],
       }));
-setRadarData(cleanMental)
+      setRadarData(cleanMental);
       const merged = cleanFinancial
         .map((f) => {
           const m = cleanMental.find(
@@ -78,7 +78,7 @@ setRadarData(cleanMental)
             stress: stress || 0,
           }))
         );
-      console.log("DATA APP",cleanMental)
+      console.log("DATA APP", cleanMental);
       const depressionScale = { Low: 1, Medium: 2, High: 3 };
       const pcp = merged.map((d) => ({
         profession: d.profession,
@@ -161,19 +161,19 @@ setRadarData(cleanMental)
   if (loading) return <div className="loading">Processing data...</div>;
 
   return (
-<div className="App">
-  <h1>Debt, Profession & Mental Health Analytics</h1>
-  <div className="dashboard5">
-    <div className="dashboard-row">
-      {/* Heatmap */}
-      <div className="heatmap-component chart-container">
-        <div className="chart-inner">
-          <Heatmap data={heatmapData} onCellClick={handleCellClick} />
-        </div>
-      </div>
-      {/* Info Tab */}
-      <div className="chart-container" style={{flex: 0.8}}>
-        <h4>Information Tab</h4>
+    <div className="App">
+      <h1>Debt, Profession & Mental Health Analytics</h1>
+      <div className="dashboard5">
+        <div className="dashboard-row">
+          {/* Heatmap */}
+          <div className="heatmap-component chart-container">
+            <div className="chart-inner">
+              <Heatmap data={heatmapData} onCellClick={handleCellClick} />
+            </div>
+          </div>
+          {/* Info Tab */}
+          <div className="chart-container" style={{ flex: 0.8 }}>
+            <h4>Information Tab</h4>
             {selectedInfo ? (
               <div className="info-tab">
                 <p>
@@ -268,39 +268,42 @@ setRadarData(cleanMental)
             )}
           </div>
           {/* Parallel Coordinates */}
-      <div className="pcp-component chart-container">
-        <h3>Multivariate Relationships</h3>
-        <div className="chart-inner">
-          <ParallelCoordinatesPlot data={pcpData} onBrush={setFilteredData} />
+          <div className="pcp-component chart-container">
+            <h3>Multivariate Relationships</h3>
+            <div className="chart-inner">
+              <ParallelCoordinatesPlot
+                data={pcpData}
+                onBrush={setFilteredData}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="dashboard-row">
+          <div className="chart-container small-plot-3">
+            <div className="chart-inner">
+              <LinePlot data={lineplotData} yAxisProp={yaxisValue} />
+            </div>
+          </div>
+
+          {/* Bee Swarm */}
+          <div className="chart-container small-plot-2">
+            <h3>Bee Swarm Plot</h3>
+            <div className="chart-inner">
+              <BeeSwarmPlot data={filteredData} />
+            </div>
+          </div>
+
+          {/* Radar Chart */}
+          <div className="chart-container small-plot-1">
+            <h3>Radar Chart</h3>
+            <div className="chart-inner">
+              <Plot3RadarContainer financialData={radarData} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div className="dashboard-row">
-      <div className="chart-container small-plot-3">
-        <div className="chart-inner">
-          <LinePlot data={lineplotData} yAxisProp={yaxisValue} />
-        </div>
-      </div>
-
-      {/* Bee Swarm */}
-      <div className="chart-container small-plot-2">
-        <h3>Bee Swarm Plot</h3>
-        <div className="chart-inner">
-          <BeeSwarmPlot data={filteredData} />
-        </div>
-      </div>
-
-      {/* Radar Chart */}
-      <div className="chart-container small-plot-1">
-        <h3>Radar Chart</h3>
-        <div className="chart-inner">
-          <Plot3RadarContainer financialData={radarData} />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
   );
 };
 
