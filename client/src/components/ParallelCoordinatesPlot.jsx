@@ -64,7 +64,6 @@ const ParallelCoordinatesPlot = ({ data, main_profession, onBrush, onResetProfes
 
     // Path generator
     const lineGen = d3.line();
-console.log("DATA IS ",filteredData,main_profession,data)
     // Draw lines (one per data row)
 const paths = svg
   .selectAll(".pcp-line")

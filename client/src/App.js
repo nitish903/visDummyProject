@@ -37,13 +37,13 @@ const [mainProfession, setMainProfession] = useState(null);
         monthlyDebt: +d.monthly_debt_payment,
         costOfLiving: d.cost_of_living,
       }));
-
       const cleanMental = mental.map((d) => ({
         profession: d.Profession,
         financialStress: +d["Financial Stress"],
         depression: d.Depression,
         workHours: +d["Work/Study Hours"],
         age: +d.Age,
+        // gender: d.Gender,
         satisfaction: +d.Satisfaction,
         diet: d["Dietary Habits"],
         degree: d.Degree,
@@ -180,11 +180,8 @@ const [mainProfession, setMainProfession] = useState(null);
               {selectedInfo ? (
                 <div className="info-tab">
                   <p>
-                    <button
-                          className="info-button"
-                          onClick={() => setYaxisValue("salary")}
-                        ><strong>Profession:</strong> </button>
-                    {selectedInfo.profession}
+           <strong>Profession: </strong>
+                    {selectedInfo.profession} 
                   </p>
                   <p>
                     <strong>Debt Level:</strong> {selectedInfo.debtLevel}
@@ -315,7 +312,7 @@ const [mainProfession, setMainProfession] = useState(null);
 
           {/* Radar Chart */}
           <div className="chart-wrapper">
-            <h3 className="chart-heading">Radar Chart</h3>
+            <h3 className="chart-heading">Radar Chart for Degree </h3>
             <div className="chart-container small-plot-1">
                 <Plot3RadarContainer financialData={radarData} />
             </div>

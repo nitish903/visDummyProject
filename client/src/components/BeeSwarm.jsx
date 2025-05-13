@@ -10,6 +10,10 @@ const BeeSwarmPlot = ({
 }) => {
   const svgRef = useRef();
   const margin = { top: 30, right: 30, bottom: 60, left: 60 };
+    const legendData = [
+      { label: "Depression", color: "#ff4d4d" },
+      { label: "No Depression", color: "blueviolet" },
+    ];
 
   const drawChart = useCallback(() => {
     if (!data.length) return null;
@@ -29,6 +33,33 @@ const BeeSwarmPlot = ({
     const professions = [...new Set(data.map((d) => d.profession))].sort(
       (a, b) => a.localeCompare(b)
     );
+const legendGroup = svg
+  .append("g")
+  .attr(
+    "transform",
+    `translate(${margin.left}, ${height - margin.bottom / 2 + 20})`
+  );
+
+legendData.forEach((item, index) => {
+  const legendItem = legendGroup
+    .append("g")
+    .attr("transform", `translate(${index * 150}, 0)`); // space between items
+
+  legendItem
+    .append("circle")
+    .attr("r", 5)
+    .attr("cx", 0)
+    .attr("cy", 0)
+    .style("fill", item.color);
+
+  legendItem
+    .append("text")
+    .attr("x", 10)
+    .attr("y", 0)
+    .attr("dominant-baseline", "middle")
+    .style("font-size", "12px")
+    .text(item.label);
+});
 
     // Scales
     const xScale = d3
