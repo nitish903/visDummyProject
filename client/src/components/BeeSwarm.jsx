@@ -10,10 +10,10 @@ const BeeSwarmPlot = ({
 }) => {
   const svgRef = useRef();
   const margin = { top: 30, right: 30, bottom: 60, left: 60 };
-    const legendData = [
-      { label: "Depression", color: "#ff4d4d" },
-      { label: "No Depression", color: "blueviolet" },
-    ];
+  const legendData = [
+    { label: "Depression", color: "#ff4d4d" },
+    { label: "No Depression", color: "blueviolet" },
+  ];
 
   const drawChart = useCallback(() => {
     if (!data.length) return null;
@@ -33,33 +33,33 @@ const BeeSwarmPlot = ({
     const professions = [...new Set(data.map((d) => d.profession))].sort(
       (a, b) => a.localeCompare(b)
     );
-const legendGroup = svg
-  .append("g")
-  .attr(
-    "transform",
-    `translate(${margin.left}, ${height - margin.bottom / 2 + 20})`
-  );
+    const legendGroup = svg
+      .append("g")
+      .attr(
+        "transform",
+        `translate(${margin.left}, ${height - margin.bottom / 2 + 20})`
+      );
 
-legendData.forEach((item, index) => {
-  const legendItem = legendGroup
-    .append("g")
-    .attr("transform", `translate(${index * 150}, 0)`); // space between items
+    legendData.forEach((item, index) => {
+      const legendItem = legendGroup
+        .append("g")
+        .attr("transform", `translate(${index * 150}, 0)`); // space between items
 
-  legendItem
-    .append("circle")
-    .attr("r", 5)
-    .attr("cx", 0)
-    .attr("cy", 0)
-    .style("fill", item.color);
+      legendItem
+        .append("circle")
+        .attr("r", 5)
+        .attr("cx", 0)
+        .attr("cy", 0)
+        .style("fill", item.color);
 
-  legendItem
-    .append("text")
-    .attr("x", 10)
-    .attr("y", 0)
-    .attr("dominant-baseline", "middle")
-    .style("font-size", "12px")
-    .text(item.label);
-});
+      legendItem
+        .append("text")
+        .attr("x", 10)
+        .attr("y", 0)
+        .attr("dominant-baseline", "middle")
+        .style("font-size", "12px")
+        .text(item.label);
+    });
 
     // Scales
     const xScale = d3
@@ -97,6 +97,46 @@ legendData.forEach((item, index) => {
     // Run simulation
     simulation.nodes(data);
     for (let i = 0; i < 150; i++) simulation.tick();
+    if (selectedPoint) {
+      const selectedProfession = selectedPoint.profession;
+      const selectedY = selectedPoint.y;
+
+      const yThreshold = 15;
+
+      const clusterPoints = data.filter(
+        (d) =>
+          d.profession === selectedProfession &&
+          Math.abs(d.y - selectedY) <= yThreshold
+      );
+
+      if (clusterPoints.length > 1) {
+        const xValues = clusterPoints.map((d) => d.x);
+        const yValues = clusterPoints.map((d) => d.y);
+
+        const xMin = d3.min(xValues);
+        const xMax = d3.max(xValues);
+        const yMin = d3.min(yValues);
+        const yMax = d3.max(yValues);
+
+        const xCenter = (xMin + xMax) / 2;
+        const yCenter = (yMin + yMax) / 2;
+
+        // Increased padding for bigger ellipse
+        const xRadius = (xMax - xMin) / 2 + 12; // was +6
+        const yRadius = (yMax - yMin) / 2 + 18; // was +6
+
+        mainGroup
+          .append("ellipse")
+          .attr("cx", xCenter)
+          .attr("cy", yCenter)
+          .attr("rx", xRadius)
+          .attr("ry", yRadius)
+          .style("fill", "none")
+          .style("stroke", "red")
+          .style("stroke-width", 2)
+          .lower();
+      }
+    }
 
     // Draw circles with transitions and hover effect
     mainGroup
@@ -138,7 +178,7 @@ legendData.forEach((item, index) => {
               const originalColor =
                 selectedPoint && d === selectedPoint
                   ? "yellow"
-                  : d.depression ===1
+                  : d.depression === 1
                   ? "#ff4d4d"
                   : "blueviolet";
               d3.select(this).style("fill", originalColor);
@@ -180,9 +220,7 @@ legendData.forEach((item, index) => {
     drawChart();
   }, [drawChart]);
 
-  return (
-      <svg ref={svgRef} />
-  );
+  return <svg ref={svgRef} />;
 };
 
 export default React.memo(BeeSwarmPlot, (prevProps, nextProps) => {
