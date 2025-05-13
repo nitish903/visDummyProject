@@ -21,7 +21,7 @@ const LinePlot = ({
       .select(svgRef.current)
       .attr("width", width)
       .attr("height", height);
-    const scale = 0.8;
+    const scale = 0.95 ;
     // Main group with margins
     const g = svg
       .append("g")
@@ -85,7 +85,7 @@ const LinePlot = ({
       .attr("class", "line-path")
       .attr("d", line)
       .attr("fill", "none")
-      .attr("stroke", "steelblue")
+      .attr("stroke", "#d35859")
       .attr("stroke-width", 2);
 
     // Draw axes
@@ -123,7 +123,7 @@ const LinePlot = ({
       .attr("cx", (d) => xScale(d.age))
       .attr("cy", (d) => yScale(d[yAxisProp]))
       .attr("r", 4)
-      .attr("fill", "#69b3a2");
+      .attr("fill", "black");
 
     // Interactivity
     g.select(".line-path")
@@ -131,7 +131,7 @@ const LinePlot = ({
         d3.select(this).attr("stroke", "orange").attr("stroke-width", 3);
       })
       .on("mouseout", function () {
-        d3.select(this).attr("stroke", "steelblue").attr("stroke-width", 2);
+        d3.select(this).attr("stroke", "#d35859").attr("stroke-width", 2);
       });
   }, [data, yAxisProp, width, height, margin]);
 

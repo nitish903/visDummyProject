@@ -80,10 +80,10 @@ const BeeSwarmPlot = ({
             .attr("r", 0)
             .style("fill", (d) =>
               selectedPoint && d === selectedPoint
-                ? "orange"
+                ? "black"
                 : d.depression === "Yes"
                 ? "#ff4d4d"
-                : "#69b3a2"
+                : "#d35859"
             )
             .style("stroke", (d) =>
               selectedPoint && d === selectedPoint ? "black" : "none"
@@ -106,10 +106,10 @@ const BeeSwarmPlot = ({
             .on("mouseout", function (event, d) {
               const originalColor =
                 selectedPoint && d === selectedPoint
-                  ? "orange"
-                  : d.depression === "Yes"
+                  ? "black"
+                  : d.depression === "YES"
                   ? "#ff4d4d"
-                  : "#69b3a2";
+                  : "#d35859";
               d3.select(this).style("fill", originalColor);
             }),
         (update) => update,
