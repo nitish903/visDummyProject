@@ -1,12 +1,12 @@
-import React, { useRef, useEffect } from 'react';
-import * as d3 from 'd3';
+import React, { useRef, useEffect } from "react";
+import * as d3 from "d3";
 
-const LinePlot = ({ 
-  data, 
+const LinePlot = ({
+  data,
   yAxisProp,
-  width = 800, 
+  width = 800,
   height = 450,
-  margin = { top: 40, right: 40, bottom: 60, left: 70 }
+  margin = { top: 40, right: 40, bottom: 60, left: 70 },
 }) => {
   const svgRef = useRef();
 
@@ -17,59 +17,68 @@ const LinePlot = ({
     d3.select(svgRef.current).selectAll("*").remove();
 
     // Create SVG container
-    const svg = d3.select(svgRef.current)
+    const svg = d3
+      .select(svgRef.current)
       .attr("width", width)
       .attr("height", height);
-    const scale=0.8;
+    const scale = 0.8;
     // Main group with margins
-    const g = svg.append("g")
-      .attr("transform", `translate(${margin.left},${margin.top}) scale(${scale})`);
+    const g = svg
+      .append("g")
+      .attr(
+        "transform",
+        `translate(${margin.left},${margin.top}) scale(${scale})`
+      );
 
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
 
     // Detect data type for y-axis
     const sampleValue = data[0][yAxisProp];
-    const isYCategorical = typeof sampleValue === 'string';
+    const isYCategorical = typeof sampleValue === "string";
 
     // Process data
     const groupedData = Array.from(
-      d3.group(data, d => d.age),
+      d3.group(data, (d) => d.age),
       ([age, values]) => ({
         age: +age,
-        [yAxisProp]: isYCategorical 
+        [yAxisProp]: isYCategorical
           ? values[0][yAxisProp] // Take first categorical value
-          : d3.mean(values, d => +d[yAxisProp]) // Average numerical values
+          : d3.mean(values, (d) => +d[yAxisProp]), // Average numerical values
       })
     ).sort((a, b) => a.age - b.age);
 
     // Create scales
-    const xScale = d3.scaleLinear()
-      .domain(d3.extent(groupedData, d => d.age))
+    const xScale = d3
+      .scaleLinear()
+      .domain(d3.extent(groupedData, (d) => d.age))
       .range([0, innerWidth]);
 
-    const yScale = isYCategorical 
-      ? d3.scalePoint()
-          .domain([...new Set(data.map(d => d[yAxisProp]))])
+    const yScale = isYCategorical
+      ? d3
+          .scalePoint()
+          .domain([...new Set(data.map((d) => d[yAxisProp]))])
           .range([innerHeight, 0])
           .padding(0.5)
-      : d3.scaleLinear()
-          .domain(d3.extent(groupedData, d => d[yAxisProp]))
+      : d3
+          .scaleLinear()
+          .domain(d3.extent(groupedData, (d) => d[yAxisProp]))
           .nice()
           .range([innerHeight, 0]);
 
     // Line generator
-    const line = d3.line()
-      .x(d => xScale(d.age))
-      .y(d => yScale(d[yAxisProp]))
+    const line = d3
+      .line()
+      .x((d) => xScale(d.age))
+      .y((d) => yScale(d[yAxisProp]))
       .curve(d3.curveMonotoneX);
-  g.append("text")
-    .attr("x", width / 2)
-    .attr("y", -10) // Just above the plot area
-    .attr("text-anchor", "middle")
-    .style("font-size", "28px")
-    .style("font-weight", "bold")
-    .text("DEBT OVER TIME");
+    g.append("text")
+      .attr("x", width / 2)
+      .attr("y", -10) // Just above the plot area
+      .attr("text-anchor", "middle")
+      .style("font-size", "28px")
+      .style("font-weight", "bold");
+
     // Draw line
     g.append("path")
       .datum(groupedData)
@@ -87,9 +96,7 @@ const LinePlot = ({
 
     g.append("g")
       .attr("class", "y-axis")
-      .call(isYCategorical 
-        ? d3.axisLeft(yScale)
-        : d3.axisLeft(yScale));
+      .call(isYCategorical ? d3.axisLeft(yScale) : d3.axisLeft(yScale));
 
     // Axis labels
     g.append("text")
@@ -113,24 +120,19 @@ const LinePlot = ({
       .enter()
       .append("circle")
       .attr("class", "dot")
-      .attr("cx", d => xScale(d.age))
-      .attr("cy", d => yScale(d[yAxisProp]))
+      .attr("cx", (d) => xScale(d.age))
+      .attr("cy", (d) => yScale(d[yAxisProp]))
       .attr("r", 4)
       .attr("fill", "#69b3a2");
 
     // Interactivity
     g.select(".line-path")
-      .on("mouseover", function() {
-        d3.select(this)
-          .attr("stroke", "orange")
-          .attr("stroke-width", 3);
+      .on("mouseover", function () {
+        d3.select(this).attr("stroke", "orange").attr("stroke-width", 3);
       })
-      .on("mouseout", function() {
-        d3.select(this)
-          .attr("stroke", "steelblue")
-          .attr("stroke-width", 2);
+      .on("mouseout", function () {
+        d3.select(this).attr("stroke", "steelblue").attr("stroke-width", 2);
       });
-
   }, [data, yAxisProp, width, height, margin]);
 
   return <svg ref={svgRef} />;

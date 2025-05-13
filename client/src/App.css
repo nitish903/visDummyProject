@@ -29,7 +29,31 @@ h3 {
 }
 .dashboard-row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+.dashboard-row.first-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.chart-wrapper.heatmap {
+  flex-basis: 30%;
+  max-width: 30%;
+}
+
+.chart-wrapper.info {
+  flex-basis: 20%;
+  max-width: 20%;
+}
+
+.chart-wrapper.pcp {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
 .heatmap-component {
   width: 100%;
   height: 100%;
@@ -43,10 +67,27 @@ h3 {
   width: 100%;
   max-width: 100%;
 }
+.chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.chart-heading {
+  background-color: #ffecec; /* soft light pink */
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #a10802;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f5c6c3;
+}
 
 .chart-container {
   background: white;
-  /* padding: 16px; */
   margin: 20px;
   border-radius: 30px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
@@ -58,32 +99,38 @@ h3 {
   align-items: center;
   justify-content: center;
 }
-.stress-low { color: #4CAF50; }
-.stress-moderate { color: #FFC107; }
-.stress-high { color: #F44336; }
-.info-tab button {
-  background: none;
-  border: none;
-  color: #2196F3;
-  cursor: pointer;
-  padding: 0;
-  text-decoration: underline;
-}
 
 .info-tab {
-  font-size: 14px;
+  font-size: 17px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 svg {
-    display: block;
-    margin: 0 auto;
-    background: white;
-    border-radius: 20px;
-    width: 100% !important;
-    /* height: auto !important; */
-    /* max-width: 98%; */
-    max-height: 400px;
+  display: block;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  width: 100% !important;
+  /* height: auto !important; */
+  /* max-width: 98%; */
+  max-height: 400px;
+}
+.stress-low {
+  color: #4caf50;
+}
+.stress-moderate {
+  color: #ffc107;
+}
+.stress-high {
+  color: #f44336;
+}
+.info-tab button {
+  background: none;
+  border: none;
+  color: #2196f3;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
 }
 
 .axis text {

@@ -18,9 +18,8 @@ const App = () => {
   const [yaxisValue, setYaxisValue] = useState("financialStress");
   const [radarData, setRadarData] = useState([]);
   const memoizedPCPData = useMemo(() => pcpData, [pcpData]);
-  
+
   useEffect(() => {
-    
     const processData = async () => {
       const financial = await d3.csv("/Data/financial_data.csv");
       setFinancialData(financial);
@@ -160,144 +159,169 @@ const App = () => {
   return (
     <div className="App">
       <h1>Debt, Profession & Mental Health Analytics</h1>
+
       <div className="dashboard5">
-        <div className="dashboard-row">
+        <div className="dashboard-row first-row">
           {/* Heatmap */}
-          <div className="heatmap-component chart-container">
-            <div className="chart-inner">
-              <Heatmap data={heatmapData} onCellClick={handleCellClick} />
+          <div className="chart-wrapper">
+            <h3 className="chart-heading heatmap-heading">
+              Financial Stress by Profession and Debt
+            </h3>
+
+            <div className="heatmap-component chart-container">
+              <div className="chart-inner">
+                <Heatmap data={heatmapData} onCellClick={handleCellClick} />
+              </div>
             </div>
           </div>
+
           {/* Info Tab */}
-          <div className="chart-container" style={{ flex: 0.8 }}>
-            <h4>Information Tab</h4>
-            {selectedInfo ? (
-              <div className="info-tab">
-                <p>
-                  <strong>Profession:</strong> {selectedInfo.profession}
-                </p>
-                <p>
-                  <strong>Debt Level:</strong> {selectedInfo.debtLevel}
-                </p>
-                {selectedInfo.matches && (
-                  <>
-                    <p>
-                      <strong>Individuals:</strong> {selectedInfo.matches}
-                    </p>
-                    <p>
-                      <button
-                        className="info-button"
-                        onClick={() => setYaxisValue("financialStress")}
-                      >
-                        Stress Level:
-                      </button>
-                      <span
-                        className={`stress-${selectedInfo.stressLevel.toLowerCase()}`}
-                      >
-                        {selectedInfo.stressLevel} ({selectedInfo.stressValue})
-                      </span>
-                    </p>
+          <div className="chart-wrapper info">
+            <h3 className="chart-heading info-heading">Information Tab</h3>
+            <div className="chart-container" style={{ flex: 0.8 }}>
+              {selectedInfo ? (
+                <div className="info-tab">
+                  <p>
+                    <strong>Profession:</strong> {selectedInfo.profession}
+                  </p>
+                  <p>
+                    <strong>Debt Level:</strong> {selectedInfo.debtLevel}
+                  </p>
+                  {selectedInfo.matches && (
+                    <>
+                      <p>
+                        <strong>Individuals:</strong> {selectedInfo.matches}
+                      </p>
+                      <p>
+                        <button
+                          className="info-button"
+                          onClick={() => setYaxisValue("financialStress")}
+                        >
+                          Stress Level:
+                        </button>
+                        <span
+                          className={`stress-${selectedInfo.stressLevel.toLowerCase()}`}
+                        >
+                          {selectedInfo.stressLevel} ({selectedInfo.stressValue}
+                          )
+                        </span>
+                      </p>
 
-                    <p>
-                      <button
-                        className="info-button"
-                        onClick={() => setYaxisValue("salary")}
-                      >
-                        Avg Salary:
-                      </button>
-                      ${selectedInfo.avgSalary}
-                    </p>
+                      <p>
+                        <button
+                          className="info-button"
+                          onClick={() => setYaxisValue("salary")}
+                        >
+                          Avg Salary:
+                        </button>
+                        ${selectedInfo.avgSalary}
+                      </p>
 
-                    <p>
-                      <button
-                        className="info-button"
-                        onClick={() => setYaxisValue("monthlyDebt")}
-                      >
-                        Avg Debt:
-                      </button>
-                      ${selectedInfo.avgDebt}
-                    </p>
+                      <p>
+                        <button
+                          className="info-button"
+                          onClick={() => setYaxisValue("monthlyDebt")}
+                        >
+                          Avg Debt:
+                        </button>
+                        ${selectedInfo.avgDebt}
+                      </p>
 
-                    <p>
-                      <button
-                        className="info-button"
-                        onClick={() => setYaxisValue("savings")}
-                      >
-                        Avg Savings:
-                      </button>
-                      ${selectedInfo.avgSavings}
-                    </p>
+                      <p>
+                        <button
+                          className="info-button"
+                          onClick={() => setYaxisValue("savings")}
+                        >
+                          Avg Savings:
+                        </button>
+                        ${selectedInfo.avgSavings}
+                      </p>
 
-                    <p>
-                      <button
-                        className="info-button"
-                        onClick={() => setYaxisValue("costOfLiving")}
-                      >
-                        Cost of Living:
-                      </button>
-                      {selectedInfo.costOfLiving}
-                    </p>
+                      <p>
+                        <button
+                          className="info-button"
+                          onClick={() => setYaxisValue("costOfLiving")}
+                        >
+                          Cost of Living:
+                        </button>
+                        {selectedInfo.costOfLiving}
+                      </p>
 
-                    <p>
-                      <button
-                        className="info-button"
-                        onClick={() => setYaxisValue("maritalStatus")}
-                      >
-                        Marital Status:
-                      </button>
-                      {selectedInfo.maritalStatus}
-                    </p>
+                      <p>
+                        <button
+                          className="info-button"
+                          onClick={() => setYaxisValue("maritalStatus")}
+                        >
+                          Marital Status:
+                        </button>
+                        {selectedInfo.maritalStatus}
+                      </p>
 
-                    <p>
-                      <button
-                        className="info-button"
-                        onClick={() => setYaxisValue("hasKids")}
-                      >
-                        Has Kids:
-                      </button>
-                      {selectedInfo.hasKids}
-                    </p>
-                  </>
-                )}
-              </div>
-            ) : (
-              <p>Click a heatmap block to see details</p>
-            )}
+                      <p>
+                        <button
+                          className="info-button"
+                          onClick={() => setYaxisValue("hasKids")}
+                        >
+                          Has Kids:
+                        </button>
+                        {selectedInfo.hasKids}
+                      </p>
+                    </>
+                  )}
+                </div>
+              ) : (
+                <p>Click a heatmap block to see details</p>
+              )}
+            </div>
           </div>
           {/* Parallel Coordinates */}
-          <div className="pcp-component chart-container">
-            <h3>Multivariate Relationships</h3>
-            <div className="chart-inner">
-              <ParallelCoordinatesPlot
-  data={pcpData}
-  onBrush={(selected) => {
-    setSelectedPoint(selected.length === 1 ? selected[0] : null);
-  }}
-/>
+          <div className="chart-wrapper pcp">
+            <h3 className="chart-heading pcp-heading">Multivariate Plot</h3>
+            <div className="pcp-component chart-container">
+              <div className="chart-inner">
+                <ParallelCoordinatesPlot
+                  data={pcpData}
+                  onBrush={(selected) => {
+                    setSelectedPoint(
+                      selected.length === 1 ? selected[0] : null
+                    );
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
 
         <div className="dashboard-row">
-          <div className="chart-container small-plot-3">
-            <div className="chart-inner">
-              <LinePlot data={lineplotData} yAxisProp={yaxisValue} />
+          {/* Line Plot */}
+          <div className="chart-wrapper">
+            <h3 className="chart-heading">Debt Over Time</h3>
+            <div className="chart-container small-plot-3">
+              <div className="chart-inner">
+                <LinePlot data={lineplotData} yAxisProp={yaxisValue} />
+              </div>
             </div>
           </div>
-
           {/* Bee Swarm */}
-          <div className="chart-container small-plot-2">
-            <div className="chart-inner">
-            <h3>Bee Swarm Plot</h3>
-              <BeeSwarmPlot data={memoizedPCPData} selectedPoint={selectedPoint} />
+          <div className="chart-wrapper">
+            <h3 className="chart-heading">Bee Swarm Plot</h3>
+            <div className="chart-container small-plot-2">
+              <div className="chart-inner">
+                <BeeSwarmPlot
+                  data={memoizedPCPData}
+                  selectedPoint={selectedPoint}
+                />
+              </div>
             </div>
           </div>
 
           {/* Radar Chart */}
-          <div className="chart-container small-plot-1">
-                        <div className="chart-inner">
-            <h3>Radar Chart</h3>
-              <Plot3RadarContainer financialData={radarData} />
+          <div className="chart-wrapper">
+            <h3 className="chart-heading">Radar Chart</h3>
+            <div className="chart-container small-plot-1">
+              <div className="chart-inner">
+                <Plot3RadarContainer financialData={radarData} />
+              </div>
             </div>
           </div>
         </div>
