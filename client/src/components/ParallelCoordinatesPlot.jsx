@@ -11,6 +11,7 @@ const ParallelCoordinatesPlot = ({ data, onBrush }) => {
     financialStress: "Financial Stress",
     depression: "Depression",
   };
+  
   useEffect(() => {
     if (!data.length) return;
     // SVG dimensions
@@ -37,6 +38,11 @@ const ParallelCoordinatesPlot = ({ data, onBrush }) => {
       "financialStress",
       "depression",
     ];
+    // Color scale based on profession
+    const color = d3
+      .scaleOrdinal()
+      .domain([...new Set(data.map((d) => d.profession))])
+      .range(d3.schemeCategory10); // or any D3 categorical palette
 
     // Y scales
     const y = {};
@@ -58,58 +64,55 @@ const ParallelCoordinatesPlot = ({ data, onBrush }) => {
     const lineGen = d3.line();
 
     // Draw lines (one per data row)
-    const paths = svg
+const paths = svg
+  .selectAll(".pcp-line")
+  .data(data, (d, i) => i)
+  .join("path")
+  .attr("class", "pcp-line")
+  .attr("d", (d) =>
+    lineGen(
+      dimensions.map((p) => [
+        x(p),
+        y[p](typeof d[p] === "string" ? d[p].length : d[p]),
+      ])
+    )
+  )
+  .style("fill", "none")
+  .style("stroke", (d) => color(d.profession))
+  .style("stroke-width", 1)
+  .style("opacity", 0.5)
+  .on("mouseover", function (event, d) {
+    if (!d3.select(this).classed("selected")) {
+      d3.select(this)
+        .style("stroke", "orange")
+        .style("stroke-width", 3)
+        .style("opacity", 1);
+    }
+  })
+  .on("mouseout", function (event, d) {
+    if (!d3.select(this).classed("selected")) {
+      d3.select(this)
+        .style("stroke", color(d.profession))
+        .style("stroke-width", 1)
+        .style("opacity", 0.5);
+    }
+  })
+  .on("click", function (event, d) {
+    svg
       .selectAll(".pcp-line")
-      .data(data, (d, i) => i)
-      .join("path")
-      .attr("class", "pcp-line")
-      .attr("d", (d) =>
-        lineGen(
-          dimensions.map((p) => [
-            x(p),
-            y[p](typeof d[p] === "string" ? d[p].length : d[p]),
-          ])
-        )
-      )
-      .style("fill", "none")
-      .style("stroke", "#69b3a2")
+      .classed("selected", false)
+      .style("stroke", (d) => color(d.profession))
       .style("stroke-width", 1)
-      .style("opacity", 0.5)
-      .on("mouseover", function (event, d) {
-        if (!d3.select(this).classed("selected")) {
-          d3.select(this)
-            .style("stroke", "orange")
-            .style("stroke-width", 3)
-            .style("opacity", 1);
-        }
-      })
-      .on("mouseout", function (event, d) {
-        if (!d3.select(this).classed("selected")) {
-          d3.select(this)
-            .style("stroke", "#69b3a2")
-            .style("stroke-width", 1)
-            .style("opacity", 0.5);
-        }
-      })
-      .on("click", function (event, d) {
-        // Deselect all
-        svg
-          .selectAll(".pcp-line")
-          .classed("selected", false)
-          .style("stroke", "#69b3a2")
-          .style("stroke-width", 1)
-          .style("opacity", 0.5);
+      .style("opacity", 0.5);
 
-        // Select this
-        d3.select(this)
-          .classed("selected", true)
-          .style("stroke", "red")
-          .style("stroke-width", 3)
-          .style("opacity", 1);
+    d3.select(this)
+      .classed("selected", true)
+      .style("stroke", "red")
+      .style("stroke-width", 3)
+      .style("opacity", 1);
 
-        // Notify parent
-        if (onBrush) onBrush([d]);
-      });
+    if (onBrush) onBrush([d]);
+  });
 
     // Draw axes
     svg

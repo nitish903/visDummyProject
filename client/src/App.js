@@ -158,7 +158,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Debt, Profession & Mental Health Analytics</h1>
+      <h1 className="chart-heading large-font">Debt, Profession & Mental Health Analytics</h1>
 
       <div className="dashboard5">
         <div className="dashboard-row first-row">
@@ -169,9 +169,7 @@ const App = () => {
             </h3>
 
             <div className="heatmap-component chart-container">
-              <div className="chart-inner">
                 <Heatmap data={heatmapData} onCellClick={handleCellClick} />
-              </div>
             </div>
           </div>
 
@@ -278,7 +276,6 @@ const App = () => {
           <div className="chart-wrapper pcp">
             <h3 className="chart-heading pcp-heading">Multivariate Plot</h3>
             <div className="pcp-component chart-container">
-              <div className="chart-inner">
                 <ParallelCoordinatesPlot
                   data={pcpData}
                   onBrush={(selected) => {
@@ -287,7 +284,6 @@ const App = () => {
                     );
                   }}
                 />
-              </div>
             </div>
           </div>
         </div>
@@ -297,21 +293,17 @@ const App = () => {
           <div className="chart-wrapper">
             <h3 className="chart-heading">Debt Over Time</h3>
             <div className="chart-container small-plot-3">
-              <div className="chart-inner">
                 <LinePlot data={lineplotData} yAxisProp={yaxisValue} />
               </div>
-            </div>
           </div>
           {/* Bee Swarm */}
           <div className="chart-wrapper">
             <h3 className="chart-heading">Bee Swarm Plot</h3>
             <div className="chart-container small-plot-2">
-              <div className="chart-inner">
                 <BeeSwarmPlot
                   data={memoizedPCPData}
                   selectedPoint={selectedPoint}
                 />
-              </div>
             </div>
           </div>
 
@@ -319,9 +311,7 @@ const App = () => {
           <div className="chart-wrapper">
             <h3 className="chart-heading">Radar Chart</h3>
             <div className="chart-container small-plot-1">
-              <div className="chart-inner">
                 <Plot3RadarContainer financialData={radarData} />
-              </div>
             </div>
           </div>
         </div>

@@ -78,6 +78,7 @@ h3 {
   background-color: #ffecec; /* soft light pink */
   padding: 10px 16px;
   border-radius: 12px;
+  margin-left:40px;
   font-size: 1.2rem;
   font-weight: 600;
   color: #a10802;
@@ -99,7 +100,10 @@ h3 {
   align-items: center;
   justify-content: center;
 }
-
+.large-font{
+  margin: 0px;
+  font-size:50px;
+}
 .info-tab {
   font-size: 17px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -110,7 +114,6 @@ svg {
   margin: 0 auto;
   background: white;
   border-radius: 20px;
-  width: 100% !important;
   /* height: auto !important; */
   /* max-width: 98%; */
   max-height: 400px;
