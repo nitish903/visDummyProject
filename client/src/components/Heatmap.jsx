@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 
-const margin = { top: 40, right: 20, bottom: 50, left: 60 }; // Reduced margins
-const width = 400; // Increased width
-const height = 350;
+const margin = { top: 10, right: 20, bottom: 70, left: 80 };
+const width = 600;
+const height = 400;
 
 const Heatmap = ({ data, onCellClick }) => {
   const svgRef = useRef();
@@ -14,9 +14,7 @@ const Heatmap = ({ data, onCellClick }) => {
 
     d3.select(svgRef.current).selectAll("*").remove();
 
-    const professions = Array.from(
-      new Set(data.map((d) => d.profession))
-    ).sort();
+    const professions = Array.from(new Set(data.map((d) => d.profession))).sort();
     const debtLevels = Array.from(new Set(data.map((d) => d.debtLevel))).sort(
       (a, b) => {
         const getLow = (s) => +s.replace(/[^0-9]/g, "").split("-")[0];
@@ -30,9 +28,7 @@ const Heatmap = ({ data, onCellClick }) => {
       .attr("height", height + margin.top + margin.bottom)
       .attr(
         "viewBox",
-        `0 0 ${width + margin.left + margin.right} ${
-          height + margin.top + margin.bottom
-        }`
+        `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`
       );
 
     const g = svg
@@ -95,22 +91,7 @@ const Heatmap = ({ data, onCellClick }) => {
 
     // Scales
     const x = d3.scaleBand().domain(debtLevels).range([0, width]).padding(0.05);
-
-    const y = d3
-      .scaleBand()
-      .domain(professions)
-      .range([0, height])
-      .padding(0.05);
-
-    // Title
-    g.append("text")
-      .attr("x", width / 2)
-      .attr("y", -15)
-      .style("text-anchor", "middle")
-      .style("font-size", "24px")
-      .style("font-weight", "bold")
-      .style("margin", "20px");
-    // .text("Financial Stress by Profession & Debt");
+    const y = d3.scaleBand().domain(professions).range([0, height]).padding(0.05);
 
     // Heatmap cells
     g.selectAll("rect")
@@ -139,10 +120,11 @@ const Heatmap = ({ data, onCellClick }) => {
       .on("click", (event, d) => onCellClick?.(d.profession, d.debtLevel));
 
     // Cell labels
-    g.selectAll("text")
+    g.selectAll("text.cell-label")
       .data(data)
       .enter()
       .append("text")
+      .attr("class", "cell-label")
       .text((d) => d3.format(".1f")(d.stress))
       .attr("x", (d) => x(d.debtLevel) + x.bandwidth() / 2)
       .attr("y", (d) => y(d.profession) + y.bandwidth() / 2)
@@ -155,39 +137,42 @@ const Heatmap = ({ data, onCellClick }) => {
       });
 
     // Axes
+    const xAxis = d3.axisBottom(x).tickPadding(10);
     g.append("g")
       .attr("transform", `translate(0,${height})`)
-      .call(d3.axisBottom(x))
+      .call(xAxis)
       .selectAll("text")
-      .attr("transform", "rotate(-40)")
+      .attr("transform", "rotate(-60)")
       .style("text-anchor", "end")
-      .style("font-size", "12px");
+      .style("font-size", "11px");
 
     g.append("g")
-      .call(d3.axisLeft(y))
+      .call(d3.axisLeft(y).tickPadding(10))
       .selectAll("text")
-      .style("font-size", "12px");
+      .style("font-size", "11px");
 
     // Axis labels
     svg
       .append("text")
       .attr("x", margin.left + width / 2)
-      .attr("y", margin.top + height + 50)
+      .attr("y", margin.top + height + margin.bottom - 10)
       .style("text-anchor", "middle")
+      .style("font-size", "14px")
       .text("Debt Level");
 
     svg
       .append("text")
       .attr(
         "transform",
-        `translate(${margin.left - 40},${margin.top + height / 2}) rotate(-90)`
+        `translate(${margin.left - 50},${margin.top + height / 2}) rotate(-90)`
       )
       .style("text-anchor", "middle")
+      .style("font-size", "14px")
       .text("Profession");
   }, [data, onCellClick]);
 
   return (
-    <div style={{ position: "relative", width: "100%", maxWidth: "600px" }}>
+    <div style={{ position: "relative", width: "100%", maxWidth: "800px" }}>
       <svg
         ref={svgRef}
         style={{

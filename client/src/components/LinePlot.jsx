@@ -5,7 +5,7 @@ const LinePlot = ({
   data,
   yAxisProp,
   width = 800,
-  height = 450,
+  height = 430,
   margin = { top: 40, right: 40, bottom: 60, left: 70 },
 }) => {
   const svgRef = useRef();

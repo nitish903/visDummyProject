@@ -3,8 +3,8 @@ import * as d3 from "d3";
 
 const BeeSwarmPlot = ({
   data,
-  width = 500,
-  height = 300,
+  width = 600,
+  height = 400,
   onPointClick = () => {},
   selectedPoint = null,
 }) => {
@@ -81,7 +81,7 @@ const BeeSwarmPlot = ({
             .style("fill", (d) =>
               selectedPoint && d === selectedPoint
                 ? "black"
-                : d.depression === "Yes"
+                : d.depression === 1
                 ? "#ff4d4d"
                 : "#d35859"
             )
@@ -107,7 +107,7 @@ const BeeSwarmPlot = ({
               const originalColor =
                 selectedPoint && d === selectedPoint
                   ? "black"
-                  : d.depression === "YES"
+                  : d.depression ===1
                   ? "#ff4d4d"
                   : "#d35859";
               d3.select(this).style("fill", originalColor);
