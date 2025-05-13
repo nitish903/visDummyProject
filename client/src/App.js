@@ -18,7 +18,7 @@ const App = () => {
   const [yaxisValue, setYaxisValue] = useState("financialStress");
   const [radarData, setRadarData] = useState([]);
   const memoizedPCPData = useMemo(() => pcpData, [pcpData]);
-
+const [mainProfession, setMainProfession] = useState(null);
   useEffect(() => {
     const processData = async () => {
       const financial = await d3.csv("/Data/financial_data.csv");
@@ -152,6 +152,7 @@ const App = () => {
         stressValue: stressValue.toFixed(2),
       });
     }
+         setMainProfession(selectedInfo?.profession)
   };
 
   if (loading) return <div className="loading">Processing data...</div>;
@@ -179,7 +180,11 @@ const App = () => {
               {selectedInfo ? (
                 <div className="info-tab">
                   <p>
-                    <strong>Profession:</strong> {selectedInfo.profession}
+                    <button
+                          className="info-button"
+                          onClick={() => setYaxisValue("salary")}
+                        ><strong>Profession:</strong> </button>
+                    {selectedInfo.profession}
                   </p>
                   <p>
                     <strong>Debt Level:</strong> {selectedInfo.debtLevel}
@@ -275,14 +280,16 @@ const App = () => {
           <div className="chart-wrapper pcp">
             <h3 className="chart-heading pcp-heading">Multivariate Plot</h3>
             <div className="pcp-component chart-container">
-                <ParallelCoordinatesPlot
-                  data={pcpData}
-                  onBrush={(selected) => {
+                                <ParallelCoordinatesPlot
+    data={pcpData}
+    main_profession={mainProfession}
+    onBrush={(selected) => {
                     setSelectedPoint(
                       selected.length === 1 ? selected[0] : null
                     );
                   }}
-                />
+    onResetProfession={() => setMainProfession(null)}
+  />
             </div>
           </div>
         </div>

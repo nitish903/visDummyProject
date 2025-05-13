@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import * as d3 from "d3";
 import "../App.css";
 
-const ParallelCoordinatesPlot = ({ data, onBrush }) => {
+const ParallelCoordinatesPlot = ({ data, main_profession, onBrush, onResetProfession }) => {
   const svgRef = useRef();
   const prettyLabels = {
     profession: "Profession",
@@ -11,7 +11,9 @@ const ParallelCoordinatesPlot = ({ data, onBrush }) => {
     financialStress: "Financial Stress",
     depression: "Depression",
   };
-  
+  const filteredData = main_profession
+  ? data.filter((d) => d.profession === main_profession)
+  : data;
   useEffect(() => {
     if (!data.length) return;
     // SVG dimensions
@@ -62,11 +64,11 @@ const ParallelCoordinatesPlot = ({ data, onBrush }) => {
 
     // Path generator
     const lineGen = d3.line();
-
+console.log("DATA IS ",filteredData,main_profession,data)
     // Draw lines (one per data row)
 const paths = svg
   .selectAll(".pcp-line")
-  .data(data, (d, i) => i)
+.data(filteredData, (d, i) => i)
   .join("path")
   .attr("class", "pcp-line")
   .attr("d", (d) =>
@@ -176,7 +178,7 @@ const paths = svg
       });
 
       // Filter data
-      const selected = data.filter((d) =>
+ const selected = filteredData.filter((d) =>
         actives.every((active) => {
           const dim = active.dimension;
           const scale = y[dim];
@@ -206,7 +208,26 @@ const paths = svg
     };
   }, [data, onBrush]);
 
-  return <svg ref={svgRef} />;
+  return <div style={{ display: "flex", alignItems: "center" }}>
+  <button
+    style={{
+      marginRight: "10px",
+      padding: "6px 10px",
+      fontSize: "12px",
+      cursor: "pointer",
+      backgroundColor: "#f0f0f0",
+      border: "1px solid #ccc",
+      borderRadius: "4px",
+      marginTop: "-300px",
+      position:"absolute",
+    }}
+    onClick={() => onResetProfession && onResetProfession()}
+  >
+    Reset
+  </button>
+  <svg ref={svgRef} />
+</div>
+
 };
 
 export default ParallelCoordinatesPlot;

@@ -80,13 +80,13 @@ const BeeSwarmPlot = ({
             .attr("r", 0)
             .style("fill", (d) =>
               selectedPoint && d === selectedPoint
-                ? "black"
+                ? "yellow"
                 : d.depression === 1
                 ? "#ff4d4d"
                 : "blueviolet"
             )
             .style("stroke", (d) =>
-              selectedPoint && d === selectedPoint ? "black" : "none"
+              selectedPoint && d === selectedPoint ? "yellow" : "none"
             )
             .style("stroke-width", (d) =>
               selectedPoint && d === selectedPoint ? 2 : 0
@@ -106,7 +106,7 @@ const BeeSwarmPlot = ({
             .on("mouseout", function (event, d) {
               const originalColor =
                 selectedPoint && d === selectedPoint
-                  ? "black"
+                  ? "yellow"
                   : d.depression ===1
                   ? "#ff4d4d"
                   : "blueviolet";
