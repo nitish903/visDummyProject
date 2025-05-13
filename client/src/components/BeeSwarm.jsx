@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useEffect, useMemo } from "react";
+import React, { useRef, useCallback, useEffect } from "react";
 import * as d3 from "d3";
 
 const BeeSwarmPlot = ({
@@ -67,7 +67,7 @@ const BeeSwarmPlot = ({
     simulation.nodes(data);
     for (let i = 0; i < 150; i++) simulation.tick();
 
-    // Draw circles with transitions
+    // Draw circles with transitions and hover effect
     mainGroup
       .selectAll("circle")
       .data(data)
@@ -79,15 +79,18 @@ const BeeSwarmPlot = ({
             .attr("cy", (d) => d.y)
             .attr("r", 0)
             .style("fill", (d) =>
-  selectedPoint && d === selectedPoint
-    ? "orange"
-    : d.depression === "Yes"
-    ? "#ff4d4d"
-    : "#69b3a2"
-)
-.style("stroke", (d) => (selectedPoint && d === selectedPoint ? "black" : "none"))
-.style("stroke-width", (d) => (selectedPoint && d === selectedPoint ? 2 : 0))
-
+              selectedPoint && d === selectedPoint
+                ? "orange"
+                : d.depression === "Yes"
+                ? "#ff4d4d"
+                : "#69b3a2"
+            )
+            .style("stroke", (d) =>
+              selectedPoint && d === selectedPoint ? "black" : "none"
+            )
+            .style("stroke-width", (d) =>
+              selectedPoint && d === selectedPoint ? 2 : 0
+            )
             .call((enter) =>
               enter
                 .transition()
@@ -95,7 +98,20 @@ const BeeSwarmPlot = ({
                 .attr("r", 4)
                 .style("opacity", 0.7)
             )
-            .on("click", (event, d) => onPointClick(d)),
+            .on("click", (event, d) => onPointClick(d))
+            // --- HOVER HANDLERS ---
+            .on("mouseover", function (event, d) {
+              d3.select(this).style("fill", "yellow");
+            })
+            .on("mouseout", function (event, d) {
+              const originalColor =
+                selectedPoint && d === selectedPoint
+                  ? "orange"
+                  : d.depression === "Yes"
+                  ? "#ff4d4d"
+                  : "#69b3a2";
+              d3.select(this).style("fill", originalColor);
+            }),
         (update) => update,
         (exit) => exit.remove()
       )
@@ -127,69 +143,17 @@ const BeeSwarmPlot = ({
       .attr("x", -innerHeight / 2)
       .attr("text-anchor", "middle")
       .text("Financial Stress Level");
-  }, [data, width, height, margin]);
+  }, [data, width, height, margin, selectedPoint, onPointClick]);
 
   useEffect(() => {
     drawChart();
   }, [drawChart]);
 
   return (
-    <div className="chart-container">
       <svg ref={svgRef} />
-      <div className="legend">
-        <div className="legend-item">
-          <span
-            className="legend-color"
-            style={{ backgroundColor: "#ff4d4d" }}
-          />
-        </div>
-        <div className="legend-item">
-          <span
-            className="legend-color"
-            style={{ backgroundColor: "#69b3a2" }}
-          />
-        </div>
-      </div>
-    </div>
   );
 };
-
-// export default BeeSwarmPlot;
 
 export default React.memo(BeeSwarmPlot, (prevProps, nextProps) => {
   return prevProps.selectedPoint === nextProps.selectedPoint;
 });
-// CSS for the component (add to your stylesheet)
-/*
-.chart-container {
-  position: relative;
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.legend {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(255,255,255,0.9);
-  padding: 8px;
-  border-radius: 4px;
-  font-size: 12px;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 4px;
-}
-
-.legend-color {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-right: 6px;
-}
-*/

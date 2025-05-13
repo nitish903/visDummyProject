@@ -97,8 +97,9 @@ const Heatmap = ({ data, onCellClick }) => {
       .attr("x", width / 2)
       .attr("y", -15)
       .style("text-anchor", "middle")
-      .style("font-size", "16px")
+      .style("font-size", "24px")
       .style("font-weight", "bold")
+      .style("margin","20px")
       .text("Financial Stress by Profession & Debt");
 
     // Heatmap cells

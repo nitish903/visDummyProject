@@ -287,16 +287,16 @@ const App = () => {
 
           {/* Bee Swarm */}
           <div className="chart-container small-plot-2">
-            <h3>Bee Swarm Plot</h3>
             <div className="chart-inner">
+            <h3>Bee Swarm Plot</h3>
               <BeeSwarmPlot data={memoizedPCPData} selectedPoint={selectedPoint} />
             </div>
           </div>
 
           {/* Radar Chart */}
           <div className="chart-container small-plot-1">
+                        <div className="chart-inner">
             <h3>Radar Chart</h3>
-            <div className="chart-inner">
               <Plot3RadarContainer financialData={radarData} />
             </div>
           </div>

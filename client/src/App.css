@@ -11,6 +11,10 @@ h1 {
   color: #a10802;
   margin: 0;
 }
+h3 {
+  text-align: center;
+  margin: 0;
+}
 
 .dashboard5 {
   display: flex;
@@ -54,12 +58,6 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-.chart-inner {
-  flex: 1;
-  min-height: 0;
-  position: relative;
-}
-
 .stress-low { color: #4CAF50; }
 .stress-moderate { color: #FFC107; }
 .stress-high { color: #F44336; }
@@ -72,34 +70,20 @@ h1 {
   text-decoration: underline;
 }
 
-/* Second row: three small plots */
-.small-plot-1 {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-.small-plot-2 {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-.small-plot-3 {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-
 .info-tab {
   font-size: 14px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 svg {
-  display: block;
-  margin: 0 auto;
-  background: white;
-  border-radius: 20px;
-  width: 100% !important;
-  height: auto !important;
-  max-width: 98%;
-  max-height: 340px;
+    display: block;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    width: 100% !important;
+    /* height: auto !important; */
+    /* max-width: 98%; */
+    max-height: 400px;
 }
 
 .axis text {

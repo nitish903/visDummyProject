@@ -20,7 +20,7 @@ const LinePlot = ({
     const svg = d3.select(svgRef.current)
       .attr("width", width)
       .attr("height", height);
-    const scale=0.75;
+    const scale=0.8;
     // Main group with margins
     const g = svg.append("g")
       .attr("transform", `translate(${margin.left},${margin.top}) scale(${scale})`);
@@ -69,7 +69,7 @@ const LinePlot = ({
     .attr("text-anchor", "middle")
     .style("font-size", "28px")
     .style("font-weight", "bold")
-    .text("Line Plot");
+    .text("DEBT OVER TIME");
     // Draw line
     g.append("path")
       .datum(groupedData)

@@ -43,10 +43,18 @@ const radarVariables = [
 ];
 
 const Plot3RadarContainer = ({ financialData }) => {
-  const degrees = useMemo(
-    () => Array.from(new Set(financialData.map((d) => d.degree))).sort(),
-    [financialData]
-  );
+  const degrees = [
+    "B.Tech",
+    "BE",
+    "BA",
+    "BSc",
+    "B.Com",
+    "MBA",
+    "MSc",
+    "MA",
+    "PhD",
+    "MBBS",
+  ];
   const [selectedDegree, setselectedDegree] = useState(degrees[0] || "");
 
   // Helper to compute mode for categorical variables
