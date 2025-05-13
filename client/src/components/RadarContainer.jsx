@@ -2,16 +2,41 @@ import React, { useState, useMemo } from "react";
 import RadarChart from "./RadarChart";
 import * as d3 from "d3";
 
-// Example: variables to show on radar
+// Updated radar variables
 const radarVariables = [
-  { key: "salary", label: "Salary", domain: [0, 200000] },
-  { key: "debt_amount", label: "Debt Amount", domain: [0, 150000] },
-  { key: "monthly_debt_payment", label: "Monthly Payment", domain: [0, 5000] },
-  { key: "savings", label: "Savings", domain: [0, 100000] },
+  {
+    key: "satisfaction",
+    label: "Satisfaction",
+    domain: [1, 5],
+    type: "numerical",
+  },
+  {
+    key: "depression",
+    label: "Depression",
+    categories: ["No", "Yes"],
+    type: "categorical",
+  },
+  {
+    key: "diet",
+    label: "Diet Quality",
+    categories: ["Poor", "Moderate", "Excellent"],
+    type: "categorical",
+  },
+{
+  key: "sleep",
+  label: "Sleep Hours",
+  categories: ["<6 hours", "6-7 hours", "7-8 hours", "8+ hours", "More than 8 hours"],
+  type: "categorical"
+},
+  {
+    key: "workHours",
+    label: "Work Hours",
+    domain: [0, 12],
+    type: "numerical",
+  },
 ];
 
 const Plot3RadarContainer = ({ financialData }) => {
-  // Get unique professions
   const professions = useMemo(
     () => Array.from(new Set(financialData.map((d) => d.profession))).sort(),
     [financialData]
@@ -20,20 +45,35 @@ const Plot3RadarContainer = ({ financialData }) => {
     professions[0] || ""
   );
 
-  // Aggregate data for the selected profession
+  // Helper to compute mode for categorical variables
+  const mode = (values) => {
+    const frequency = {};
+    values.forEach((v) => {
+      if (v != null && v !== "") {
+        frequency[v] = (frequency[v] || 0) + 1;
+      }
+    });
+    return Object.entries(frequency).sort((a, b) => b[1] - a[1])[0]?.[0] || "";
+  };
+
   const professionData = useMemo(() => {
     const rows = financialData.filter(
       (d) => d.profession === selectedProfession
     );
     if (!rows.length) return {};
-    // Use mean for each variable
-    const mean = (key) => d3.mean(rows, (r) => +r[key] || 0);
+
     const result = {};
     radarVariables.forEach((v) => {
-      result[v.key] = mean(v.key);
+      const values = rows.map((r) => r[v.key]);
+      if (v.type === "numerical") {
+        result[v.key] = d3.mean(values, (d) => +d || 0);
+      } else if (v.type === "categorical") {
+        result[v.key] = mode(values);
+      }
     });
     return result;
   }, [financialData, selectedProfession]);
+
   return (
     <div>
       <div style={{ marginBottom: "12px" }}>

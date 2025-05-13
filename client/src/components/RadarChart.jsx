@@ -6,38 +6,60 @@ const RadarChart = ({ data, variables, width = 300, height = 300 }) => {
 
   useEffect(() => {
     if (!data || !variables.length) return;
-    console.log("DATA IS ",data)
+
     d3.select(svgRef.current).selectAll("*").remove();
 
     const radius = Math.min(width, height) / 2 - 40;
     const center = { x: width / 2, y: height / 2 };
     const angleSlice = (2 * Math.PI) / variables.length;
 
-    // Scales for each variable
+    // Scales
     const scales = {};
     variables.forEach((v) => {
-      scales[v.key] = d3.scaleLinear().domain(v.domain).range([0, radius]);
+      if (v.type === "numerical") {
+        scales[v.key] = d3.scaleLinear().domain(v.domain).range([0, radius]);
+      } else if (v.type === "categorical") {
+        // Map category to index (0 to categories.length - 1)
+        scales[v.key] = d3
+          .scalePoint()
+          .domain(v.categories)
+          .range([0, radius])
+          .padding(0.5);
+      }
     });
 
-    // Radar line
+    // Radar data: convert categorical values to positions
+    const radarData = variables.map((v) => {
+      const rawValue = data[v.key];
+      let value = 0;
+      if (v.type === "numerical") {
+        console.log("TYPE",v,rawValue,data[v.key]);
+        value = +rawValue || 0;
+      } else if (v.type === "categorical") {
+        value = v.categories.includes(rawValue) ? rawValue : v.categories[0];
+      }
+      return { axis: v.label, value, key: v.key, rawValue };
+    });
+// console.log("RADAR DATA",radarData,data)
+    // Line generator
     const line = d3
       .lineRadial()
-      .radius((d, i) => scales[variables[i].key](d.value))
+      .radius((d, i) => {
+        const v = variables[i];
+        const scale = scales[v.key];
+        return v.type === "numerical"
+          ? scale(d.value)
+          : scale(d.value) ?? 0;
+      })
       .angle((d, i) => i * angleSlice);
 
-    // Prepare data for radar
-    const radarData = variables.map((v) => ({
-      axis: v.label,
-      value: +data[v.key] || 0,
-    }));
-
-    // SVG
+    // SVG setup
     const svg = d3
       .select(svgRef.current)
       .attr("width", width)
       .attr("height", height);
-    svg.selectAll("*").remove();
-    // Draw grid
+
+    // Draw grid circles
     const levels = 5;
     for (let level = 1; level <= levels; level++) {
       svg
@@ -50,11 +72,13 @@ const RadarChart = ({ data, variables, width = 300, height = 300 }) => {
         .attr("stroke-dasharray", "2,2");
     }
 
-    // Draw axes
+    // Draw axes and labels
     variables.forEach((v, i) => {
       const angle = angleSlice * i - Math.PI / 2;
       const x = center.x + Math.cos(angle) * radius;
       const y = center.y + Math.sin(angle) * radius;
+
+      // Axis line
       svg
         .append("line")
         .attr("x1", center.x)
@@ -62,7 +86,8 @@ const RadarChart = ({ data, variables, width = 300, height = 300 }) => {
         .attr("x2", x)
         .attr("y2", y)
         .attr("stroke", "#bbb");
-      // Axis labels
+
+      // Label
       svg
         .append("text")
         .attr("x", center.x + Math.cos(angle) * (radius + 15))
@@ -86,14 +111,28 @@ const RadarChart = ({ data, variables, width = 300, height = 300 }) => {
 
     // Draw data points
     radarData.forEach((d, i) => {
+      const v = variables[i];
+      const scale = scales[v.key];
       const angle = angleSlice * i - Math.PI / 2;
-      const r = scales[variables[i].key](d.value);
+      const r =
+        v.type === "numerical"
+          ? scale(d.value)
+          : scale(d.value) ?? 0;
+
+      const cx = center.x + Math.cos(angle) * r;
+      const cy = center.y + Math.sin(angle) * r;
+
       svg
         .append("circle")
-        .attr("cx", center.x + Math.cos(angle) * r)
-        .attr("cy", center.y + Math.sin(angle) * r)
+        .attr("cx", cx)
+        .attr("cy", cy)
         .attr("r", 4)
         .attr("fill", "#d35859");
+
+      // Optional: show raw value as tooltip
+      svg
+        .append("title")
+        .text(`${v.label}: ${d.rawValue}`);
     });
   }, [data, variables, width, height]);
 

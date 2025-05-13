@@ -16,6 +16,7 @@ const App = () => {
   const [selectedInfo, setSelectedInfo] = useState(null);
   const [lineplotData, setLinePlotData] = useState([]);
   const [yaxisValue, setYaxisValue] = useState("financialStress");
+  const [radarData,setRadarData]=useState([])
 
   useEffect(() => {
     const processData = async () => {
@@ -42,8 +43,15 @@ const App = () => {
         depression: d.Depression,
         workHours: +d["Work/Study Hours"],
         age: +d.Age,
+        satisfaction: +d.Satisfaction,
+        diet: d['Dietary Habits'],
+        degree: d.Degree,
+        suicidal: d['Have you ever had suicidal thoughts ?'],
+        student: d['Working Professional or Student'],
+        sleep:d['Sleep Duration'],
+        family_mental:d['Family History of Mental Illness'],
       }));
-
+setRadarData(cleanMental)
       const merged = cleanFinancial
         .map((f) => {
           const m = cleanMental.find(
@@ -70,7 +78,7 @@ const App = () => {
             stress: stress || 0,
           }))
         );
-
+      console.log("DATA APP",cleanMental)
       const depressionScale = { Low: 1, Medium: 2, High: 3 };
       const pcp = merged.map((d) => ({
         profession: d.profession,
@@ -287,7 +295,7 @@ const App = () => {
       <div className="chart-container small-plot-1">
         <h3>Radar Chart</h3>
         <div className="chart-inner">
-          <Plot3RadarContainer financialData={financialData} />
+          <Plot3RadarContainer financialData={radarData} />
         </div>
       </div>
     </div>
