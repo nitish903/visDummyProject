@@ -60,13 +60,6 @@ h1 {
   position: relative;
 }
 
-/* Ensure D3 charts fill their containers */
-.chart-inner > svg,
-.chart-inner > div {
-  width: 100% !important;
-  height: 100% !important;
-}
-
 .stress-low { color: #4CAF50; }
 .stress-moderate { color: #FFC107; }
 .stress-high { color: #F44336; }

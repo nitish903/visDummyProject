@@ -33,14 +33,13 @@ const RadarChart = ({ data, variables, width = 300, height = 300 }) => {
       const rawValue = data[v.key];
       let value = 0;
       if (v.type === "numerical") {
-        console.log("TYPE", v, rawValue, data[v.key]);
         value = +rawValue || 0;
       } else if (v.type === "categorical") {
         value = v.categories.includes(rawValue) ? rawValue : v.categories[0];
       }
       return { axis: v.label, value, key: v.key, rawValue };
     });
-    // console.log("RADAR DATA",radarData,data)
+
     // Line generator
     const line = d3
       .lineRadial()

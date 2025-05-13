@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./App.css";
 import Heatmap from "./components/Heatmap";
 import ParallelCoordinatesPlot from "./components/ParallelCoordinatesPlot";
@@ -12,13 +12,15 @@ const App = () => {
   const [pcpData, setPcpData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [financialData, setFinancialData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
   const [selectedInfo, setSelectedInfo] = useState(null);
+  const [selectedPoint, setSelectedPoint] = useState(null);
   const [lineplotData, setLinePlotData] = useState([]);
   const [yaxisValue, setYaxisValue] = useState("financialStress");
   const [radarData, setRadarData] = useState([]);
-
+  const memoizedPCPData = useMemo(() => pcpData, [pcpData]);
+  
   useEffect(() => {
+    
     const processData = async () => {
       const financial = await d3.csv("/Data/financial_data.csv");
       setFinancialData(financial);
@@ -78,7 +80,6 @@ const App = () => {
             stress: stress || 0,
           }))
         );
-      console.log("DATA APP", cleanMental);
       const depressionScale = { Low: 1, Medium: 2, High: 3 };
       const pcp = merged.map((d) => ({
         profession: d.profession,
@@ -95,10 +96,6 @@ const App = () => {
 
     processData();
   }, []);
-
-  useEffect(() => {
-    if (pcpData.length) setFilteredData(pcpData);
-  }, [pcpData]);
 
   const handleCellClick = (profession, debtLevel) => {
     const heatmapEntry = heatmapData.find(
@@ -272,9 +269,11 @@ const App = () => {
             <h3>Multivariate Relationships</h3>
             <div className="chart-inner">
               <ParallelCoordinatesPlot
-                data={pcpData}
-                onBrush={setFilteredData}
-              />
+  data={pcpData}
+  onBrush={(selected) => {
+    setSelectedPoint(selected.length === 1 ? selected[0] : null);
+  }}
+/>
             </div>
           </div>
         </div>
@@ -290,7 +289,7 @@ const App = () => {
           <div className="chart-container small-plot-2">
             <h3>Bee Swarm Plot</h3>
             <div className="chart-inner">
-              <BeeSwarmPlot data={filteredData} />
+              <BeeSwarmPlot data={memoizedPCPData} selectedPoint={selectedPoint} />
             </div>
           </div>
 

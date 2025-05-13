@@ -1,86 +1,195 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useCallback, useEffect, useMemo } from "react";
 import * as d3 from "d3";
 
-const BeeSwarmPlot = ({ data }) => {
+const BeeSwarmPlot = ({
+  data,
+  width = 500,
+  height = 300,
+  onPointClick = () => {},
+  selectedPoint = null,
+}) => {
   const svgRef = useRef();
+  const margin = { top: 30, right: 30, bottom: 60, left: 60 };
 
-  useEffect(() => {
-    if (!data.length) return;
+  const drawChart = useCallback(() => {
+    if (!data.length) return null;
 
-    const margin = { top: 20, right: 30, bottom: 40, left: 60 };
-    const width = 500 - margin.left - margin.right;
-    const height = 250 - margin.top - margin.bottom;
+    const innerWidth = width - margin.left - margin.right;
+    const innerHeight = height - margin.top - margin.bottom;
+    const svg = d3.select(svgRef.current);
+    svg.selectAll("*").remove();
 
-    d3.select(svgRef.current).selectAll("*").remove();
-    const svg = d3
-      .select(svgRef.current)
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+    const mainGroup = svg
+      .attr("width", width)
+      .attr("height", height)
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    // X scale: group by profession
-    const x = d3
+    // Sort professions alphabetically
+    const professions = [...new Set(data.map((d) => d.profession))].sort(
+      (a, b) => a.localeCompare(b)
+    );
+
+    // Scales
+    const xScale = d3
       .scaleBand()
-      .domain([...new Set(data.map((d) => d.profession))])
-      .range([0, width])
+      .domain(professions)
+      .range([0, innerWidth])
       .padding(0.1);
 
-    // Y scale
-    const y = d3
+    const yScale = d3
       .scaleLinear()
       .domain(d3.extent(data, (d) => +d.financialStress))
       .nice()
-      .range([height, 0]);
+      .range([innerHeight, 0]);
 
-    // Initialize node positions
-    data.forEach((d) => {
-      d.x = x(d.profession) + x.bandwidth() / 2;
-      d.y = y(d.financialStress);
-    });
-
-    // Simulation
+    // Simulation setup
     const simulation = d3
-      .forceSimulation(data)
+      .forceSimulation()
+      .alphaDecay(0.05)
       .force(
         "x",
-        d3.forceX((d) => x(d.profession) + x.bandwidth() / 2).strength(1)
+        d3
+          .forceX((d) => xScale(d.profession) + xScale.bandwidth() / 2)
+          .strength(0.5)
       )
-      .force("y", d3.forceY((d) => y(d.financialStress)).strength(1))
-      .force("collide", d3.forceCollide(5))
+      .force("y", d3.forceY((d) => yScale(d.financialStress)).strength(1))
+      .force("collide", d3.forceCollide(4))
       .stop();
 
-    // Run simulation
-    for (let i = 0; i < 200; i++) simulation.tick();
+    // Initialize positions
+    data.forEach((d) => {
+      d.x = xScale(d.profession) + xScale.bandwidth() / 2;
+      d.y = yScale(d.financialStress);
+    });
 
-    // Draw circles
-    svg
-      .append("g")
+    // Run simulation
+    simulation.nodes(data);
+    for (let i = 0; i < 150; i++) simulation.tick();
+
+    // Draw circles with transitions
+    mainGroup
       .selectAll("circle")
       .data(data)
-      .join("circle")
-      .attr("cx", (d) => d.x)
-      .attr("cy", (d) => d.y)
-      .attr("r", 4)
-      .style("fill", (d) => (d.depression === "Yes" ? "#ff4d4d" : "#69b3a2"))
-      .style("opacity", 0.7)
-      .append("title")
-      .text((d) => `Stress: ${d.financialStress}, Depression: ${d.depression}`);
+      .join(
+        (enter) =>
+          enter
+            .append("circle")
+            .attr("cx", (d) => d.x)
+            .attr("cy", (d) => d.y)
+            .attr("r", 0)
+            .style("fill", (d) =>
+  selectedPoint && d === selectedPoint
+    ? "orange"
+    : d.depression === "Yes"
+    ? "#ff4d4d"
+    : "#69b3a2"
+)
+.style("stroke", (d) => (selectedPoint && d === selectedPoint ? "black" : "none"))
+.style("stroke-width", (d) => (selectedPoint && d === selectedPoint ? 2 : 0))
 
-    // Add axes
-    svg
+            .call((enter) =>
+              enter
+                .transition()
+                .duration(600)
+                .attr("r", 4)
+                .style("opacity", 0.7)
+            )
+            .on("click", (event, d) => onPointClick(d)),
+        (update) => update,
+        (exit) => exit.remove()
+      )
+      .append("title")
+      .text(
+        (d) =>
+          `${d.profession}\nStress: ${d.financialStress}\nDepression: ${d.depression}`
+      );
+
+    // Axes
+    const xAxis = d3.axisBottom(xScale).tickSize(0).tickPadding(10);
+
+    mainGroup
       .append("g")
-      .attr("transform", `translate(0, ${height})`)
-      .call(d3.axisBottom(x).tickSize(0))
+      .attr("transform", `translate(0, ${innerHeight})`)
+      .call(xAxis)
       .selectAll("text")
       .attr("transform", "rotate(-30)")
       .style("text-anchor", "end")
-      .style("font-size", "12px");
+      .style("font-size", "10px");
 
-    svg.append("g").call(d3.axisLeft(y));
-  }, [data]);
+    mainGroup
+      .append("g")
+      .call(d3.axisLeft(yScale).ticks(5))
+      .append("text")
+      .attr("fill", "#000")
+      .attr("transform", "rotate(-90)")
+      .attr("y", -40)
+      .attr("x", -innerHeight / 2)
+      .attr("text-anchor", "middle")
+      .text("Financial Stress Level");
+  }, [data, width, height, margin]);
 
-  return <svg ref={svgRef}></svg>;
+  useEffect(() => {
+    drawChart();
+  }, [drawChart]);
+
+  return (
+    <div className="chart-container">
+      <svg ref={svgRef} />
+      <div className="legend">
+        <div className="legend-item">
+          <span
+            className="legend-color"
+            style={{ backgroundColor: "#ff4d4d" }}
+          />
+        </div>
+        <div className="legend-item">
+          <span
+            className="legend-color"
+            style={{ backgroundColor: "#69b3a2" }}
+          />
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default BeeSwarmPlot;
+// export default BeeSwarmPlot;
+
+export default React.memo(BeeSwarmPlot, (prevProps, nextProps) => {
+  return prevProps.selectedPoint === nextProps.selectedPoint;
+});
+// CSS for the component (add to your stylesheet)
+/*
+.chart-container {
+  position: relative;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.legend {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.9);
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+*/

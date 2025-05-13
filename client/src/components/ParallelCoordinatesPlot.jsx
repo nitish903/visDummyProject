@@ -4,14 +4,19 @@ import "../App.css";
 
 const ParallelCoordinatesPlot = ({ data, onBrush }) => {
   const svgRef = useRef();
-
+  const prettyLabels = {
+    profession: "Profession",
+    salary: "Salary",
+    debtRatio: "Debt Ratio",
+    financialStress: "Financial Stress",
+    depression: "Depression",
+  };
   useEffect(() => {
     if (!data.length) return;
-
     // SVG dimensions
-    const margin = { top: 10, right: 30, bottom: 40, left: 60 };
+    const margin = { top: 50, right: 30, bottom: 40, left: 60 };
     const width = 1000 - margin.left - margin.right;
-    const height = 280 - margin.top - margin.bottom;
+    const height = 320 - margin.top - margin.bottom;
 
     // Clear previous SVG content
     d3.select(svgRef.current).selectAll("*").remove();
@@ -115,6 +120,15 @@ const ParallelCoordinatesPlot = ({ data, onBrush }) => {
       .attr("transform", (d) => `translate(${x(d)},0)`)
       .each(function (dim) {
         d3.select(this).call(d3.axisLeft(y[dim]));
+
+        // 👉 Append axis label
+        d3.select(this)
+          .append("text")
+          .attr("y", -10)
+          .attr("text-anchor", "middle")
+          .style("fill", "black")
+          .style("font-size", "12px")
+          .text(prettyLabels[dim] || dim);
       });
 
     // Brushing
