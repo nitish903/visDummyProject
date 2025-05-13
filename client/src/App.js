@@ -79,13 +79,13 @@ const App = () => {
             stress: stress || 0,
           }))
         );
-      const depressionScale = { Low: 1, Medium: 2, High: 3 };
+      const depressionScale = { "No":0, "Yes":1 };
       const pcp = merged.map((d) => ({
         profession: d.profession,
         salary: d.salary,
         debtRatio: d.debtAmount / (d.salary || 1),
         financialStress: d.financialStress,
-        depression: depressionScale[d.depression] || 1,
+        depression: depressionScale[d.depression],
       }));
 
       setHeatmapData(heatmap);
@@ -155,7 +155,6 @@ const App = () => {
   };
 
   if (loading) return <div className="loading">Processing data...</div>;
-
   return (
     <div className="App">
       <h1 className="chart-heading large-font">Debt, Profession & Mental Health Analytics</h1>
@@ -293,7 +292,7 @@ const App = () => {
           <div className="chart-wrapper">
             <h3 className="chart-heading">Debt Over Time</h3>
             <div className="chart-container small-plot-3">
-                <LinePlot data={lineplotData} yAxisProp={yaxisValue} />
+                <LinePlot data={lineplotData} profession={selectedInfo?.profession} yAxisProp={yaxisValue} />
               </div>
           </div>
           {/* Bee Swarm */}

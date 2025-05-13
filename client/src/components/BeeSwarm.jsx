@@ -83,7 +83,7 @@ const BeeSwarmPlot = ({
                 ? "black"
                 : d.depression === 1
                 ? "#ff4d4d"
-                : "#d35859"
+                : "blueviolet"
             )
             .style("stroke", (d) =>
               selectedPoint && d === selectedPoint ? "black" : "none"
@@ -109,7 +109,7 @@ const BeeSwarmPlot = ({
                   ? "black"
                   : d.depression ===1
                   ? "#ff4d4d"
-                  : "#d35859";
+                  : "blueviolet";
               d3.select(this).style("fill", originalColor);
             }),
         (update) => update,
@@ -118,7 +118,7 @@ const BeeSwarmPlot = ({
       .append("title")
       .text(
         (d) =>
-          `${d.profession}\nStress: ${d.financialStress}\nDepression: ${d.depression}`
+          `${d.profession}\nStress: ${d.financialStress}\nDepression: ${d.depression}\nDebtRatio: ${d.debtRatio}\nSalary: ${d.salary}`
       );
 
     // Axes
